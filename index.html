@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Deccan — Hyderabad &amp; the Kingdoms of the South | دکن · దక్కన్</title>
+<meta name="description" content="Six centuries of Deccan history — Daulatabad, Warangal, the Bahmani sultans, Vijayanagar, Bijapur, Golconda and the Nizams of Hyderabad — told from J. D. B. Gribble's History of the Deccan, navigable by map and by chronology.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🕌</text></svg>">
+</head>
+<body>
+
+<!-- ======================= NAV ======================= -->
+<nav class="nav">
+  <a class="brand" href="#top">The <span>Deccan</span></a>
+  <button class="nav-toggle" aria-label="Menu">☰</button>
+  <ul>
+    <li><a href="#map">The Map</a></li>
+    <li><a href="#chronicle">Chronicle</a></li>
+    <li><a href="#kingdoms">Kingdoms</a></li>
+    <li><a href="#city">Hyderabad</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ul>
+</nav>
+
+<!-- ======================= HERO ======================= -->
+<header class="hero" id="top">
+  <div class="hero-bg" style="background-image:url('images/charminar.jpg')"></div>
+  <div class="hero-veil"></div>
+  <p class="kicker">Hyderabad · India · 1294 – 1948</p>
+  <h1>The Deccan</h1>
+  <div class="scripts">
+    <span lang="ur">دکن</span><span class="dot"></span>
+    <span lang="te">దక్కన్</span><span class="dot"></span>
+    <span lang="hi">दख्खन</span>
+  </div>
+  <p class="lede">Six centuries of kings, fortresses and fatal treasure on the high plateau of Southern India — the story that ends at the Char Minar of Hyderabad.</p>
+  <a class="cta" href="#map">Explore the Map ›</a>
+  <div class="scroll-hint">Scroll to cross the Vindhyas</div>
+</header>
+
+<!-- ======================= MAP ======================= -->
+<section id="map">
+  <div class="section-head reveal">
+    <p class="kicker">Navigate by Place</p>
+    <h2>The Map</h2>
+    <p class="script"><span lang="ur">نقشہ</span> · <span lang="te">పటము</span></p>
+    <p class="sub">Every kingdom of Gribble's history had its citadel. Choose a marker to open that city — its rise, its treasure, and its fall.</p>
+    <div class="rule"></div>
+  </div>
+
+  <div class="wrap reveal">
+    <div class="map-frame">
+      <svg id="deccan-svg" viewBox="0 0 900 760" aria-label="Map of the Deccan plateau">
+        <!-- graticule -->
+        <g stroke="rgba(201,166,107,0.05)" stroke-width="1">
+          <line x1="0" y1="150" x2="900" y2="150"/><line x1="0" y1="300" x2="900" y2="300"/>
+          <line x1="0" y1="450" x2="900" y2="450"/><line x1="0" y1="600" x2="900" y2="600"/>
+          <line x1="150" y1="0" x2="150" y2="760"/><line x1="300" y1="0" x2="300" y2="760"/>
+          <line x1="450" y1="0" x2="450" y2="760"/><line x1="600" y1="0" x2="600" y2="760"/>
+          <line x1="750" y1="0" x2="750" y2="760"/>
+        </g>
+
+        <!-- seas -->
+        <path d="M 0,0 L 40,0 C 70,150 110,300 140,450 C 160,560 180,660 198,760 L 0,760 Z" fill="#0b0f13"/>
+        <path d="M 900,340 C 830,420 760,520 700,620 C 675,670 655,715 640,760 L 900,760 Z" fill="#0b0f13"/>
+        <!-- coastlines -->
+        <path d="M 40,0 C 70,150 110,300 140,450 C 160,560 180,660 198,760" fill="none" stroke="rgba(201,166,107,0.4)" stroke-width="1.4"/>
+        <path d="M 900,340 C 830,420 760,520 700,620 C 675,670 655,715 640,760" fill="none" stroke="rgba(201,166,107,0.4)" stroke-width="1.4"/>
+
+        <text class="sea-label" x="78" y="565" font-size="13" transform="rotate(-77 78 565)">Arabian Sea</text>
+        <text class="sea-label" x="795" y="590" font-size="13" transform="rotate(-52 795 590)">Bay of Bengal</text>
+
+        <!-- rivers -->
+        <path class="river" d="M 118,178 C 260,218 380,240 480,290 C 570,335 665,385 772,440"/>
+        <text class="river-label" x="398" y="252" font-size="14" transform="rotate(11 398 252)">Godavari</text>
+        <path class="river" d="M 100,350 C 220,420 330,470 450,480 C 560,490 645,472 752,506"/>
+        <text class="river-label" x="472" y="470" font-size="14">Krishna</text>
+        <path class="river" d="M 165,560 C 250,556 335,540 400,515 C 430,504 446,494 456,484"/>
+        <text class="river-label" x="222" y="547" font-size="13" transform="rotate(-7 222 547)">Tungabhadra</text>
+        <path class="river" d="M 150,300 C 230,340 300,405 356,466"/>
+        <text class="river-label" x="238" y="352" font-size="12" transform="rotate(35 238 352)">Bhima</text>
+
+        <!-- region labels -->
+        <text class="region-label" x="300" y="248" font-size="30" opacity="0.5" letter-spacing="14">THE DECCAN</text>
+        <text class="region-label" x="150" y="86" font-size="12">Khandesh</text>
+        <text class="region-label" x="560" y="140" font-size="12">Berar</text>
+        <text class="region-label" x="612" y="452" font-size="12">Telingana</text>
+        <text class="region-label" x="430" y="688" font-size="12">The Carnatic</text>
+
+        <!-- cartouche -->
+        <g transform="translate(566,38)">
+          <rect x="0" y="0" width="300" height="58" fill="none" stroke="rgba(201,166,107,0.3)"/>
+          <rect x="4" y="4" width="292" height="50" fill="none" stroke="rgba(201,166,107,0.16)"/>
+          <text x="150" y="26" text-anchor="middle" class="region-label" font-size="11" opacity="0.9">A CHART OF THE DECCAN</text>
+          <text x="150" y="43" text-anchor="middle" class="region-label" font-size="9" opacity="0.7">FROM THE VINDHYAS TO THE TUNGABHADRA</text>
+        </g>
+
+        <!-- compass -->
+        <g transform="translate(64,84)" opacity="0.65">
+          <circle r="22" fill="none" stroke="rgba(201,166,107,0.4)"/>
+          <path d="M 0,-19 L 5,7 L 0,3 L -5,7 Z" fill="#c9a66b"/>
+          <text x="0" y="-30" text-anchor="middle" fill="#c9a66b" font-size="12" font-family="Jost">N</text>
+        </g>
+
+        <!-- markers injected by js -->
+        <g id="marker-layer"></g>
+      </svg>
+    </div>
+    <p class="map-caption">Tap a numbered marker — or a name below — to open that place</p>
+    <div class="map-chips"></div>
+  </div>
+</section>
+
+<!-- ======================= CHRONICLE ======================= -->
+<section id="chronicle">
+  <div class="section-head reveal">
+    <p class="kicker">Navigate by Time</p>
+    <h2>Chronicle</h2>
+    <p class="script"><span lang="ur">تاریخ</span> · <span lang="te">చరిత్ర</span></p>
+    <p class="sub">From the raid of 1294 to the last Nizam — the whole arc of Gribble's history. Select any event to unfold it.</p>
+    <div class="rule"></div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="era-label reveal"><div class="badge"><span class="kicker">The Old Hindu Deccan</span><div class="years">before 1294</div></div></div>
+
+    <div class="event reveal">
+      <div class="year">6th – 10th c.</div>
+      <h4>Ellora &amp; Ajanta</h4>
+      <p class="teaser">Cave-temples of a forgotten golden age.</p>
+      <div class="detail"><p>Of the ancient kingdoms of the Deccan almost nothing survives but ruins — yet ruins "sufficient to show how advanced they were in civilization." The wonderful caves of Ellora and Ajanta prove the height of their architecture, while across Telingana the remains of immense irrigation tanks show rulers devoted to the improvement of agriculture.</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">13th c.</div>
+      <h4>Deogiri &amp; Warangal</h4>
+      <p class="teaser">Two great kingdoms, rich beyond rumour.</p>
+      <div class="detail"><p>The two northernmost Hindu kingdoms had their capitals at Deogiri and Warangal — the one extending to the western coast, the other over all the Telugu country. In both were "enormous accumulations of wealth, consisting of gold, precious stones, and elephants." The people were brave, happy and prosperous; and it was this wealth that drew the armies of Delhi south.</p></div>
+    </div>
+
+    <div class="era-label reveal"><div class="badge"><span class="kicker">The Invasions from Delhi</span><div class="years">1294 – 1347</div></div></div>
+
+    <div class="event reveal">
+      <div class="year">1294</div>
+      <h4>Ala-ud-din raids Deogiri</h4>
+      <p class="teaser">A secret march, a fatal treasure, a stolen throne.</p>
+      <div class="detail"><p>Without his emperor's leave, Ala-ud-din marched south and extorted from Rajah Ram Deo a treasure "the like of which had never been seen." With it he baited a trap on the Ganges for his old uncle, the Sultan Jelal-ud-din — who was embraced, kissed, and beheaded at the water's edge — and golden stars were fired into the crowds of Delhi till men forgot the crime. Gribble traces a curse on this Hindu gold: nearly every hand that grasped it came to a violent end.</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1309 – 1311</div>
+      <h4>Malik Kafur rides south</h4>
+      <p class="teaser">Warangal stripped; Madura sacked; a mosque at Rameswaram.</p>
+      <div class="detail"><p>Ala-ud-din's general Malik Kafur besieged Warangal behind a wall of felled sacred trees and left with a thousand camels groaning under treasure. Two years later he swept to the far south — Mysore, then Madura — returning with 512 elephants, five thousand horses and "five hundred mans of jewels of every description." The invasions plundered but did not hold: "they bent, but they did not break."</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1323</div>
+      <h4>The fall of Warangal</h4>
+      <p class="teaser">Telingana annexed; refugees ride south.</p>
+      <div class="detail"><p>Ulugh Khan took the ill-fated city at last; the Rajah and his treasures went to Delhi, and Warangal's very name was changed to Sultanpur. But among the fugitives of its army rode the brothers Bukka and Hari Hara — and out of this defeat, within thirteen years, Vijayanagar would be born.</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1327</div>
+      <h4>Tughluk's mad capital</h4>
+      <p class="teaser">All Delhi ordered to Daulatabad.</p>
+      <div class="detail"><p>Muhammad Tughluk ordered the entire population of Delhi — "so complete was the ruin that not a cat or dog was left" — to march seven hundred miles to Deogiri, renamed Daulatabad. Thousands died on the road. His forced copper currency turned "the house of every Hindu into a mint" and collapsed; famine followed; and province after province rose in revolt against the tyrant.</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1336</div>
+      <h4>Vijayanagar founded</h4>
+      <p class="teaser">The City of Victory rises on the Tungabhadra.</p>
+      <div class="detail"><p>Guided by the sage Vidyaranya — and, legend says, by a revealed treasure — the brothers from Warangal built a new city in the granite gorge of the Tungabhadra. For two hundred and fifty years it would stand as "the bulwark against further invasion," the last great Hindu empire of the south.</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1347</div>
+      <h4>The Bahmani revolt</h4>
+      <p class="teaser">A ploughman crowned Sultan of the Deccan.</p>
+      <div class="detail"><p>The Deccan amirs rose against Tughluk, and the crown was pressed on Hassan Gangu — once a Delhi field-labourer whose plough had turned up buried gold, and whose Brahmin master, casting his horoscope, had foretold this very day. As Sultan Ala-ud-din Hassan Bahmani he made Gulburga his capital and his old patron Gangu his minister of finance. "The time for the birth of a new kingdom had arrived; and when the hour has come, the man is always ready."</p></div>
+    </div>
+
+    <div class="era-label reveal"><div class="badge"><span class="kicker">The Bahmani Sultanate</span><div class="years">1347 – 1518</div></div></div>
+
+    <div class="event reveal">
+      <div class="year">1358 – 1375</div>
+      <h4>Muhammad Shah &amp; the turquoise throne</h4>
+      <p class="teaser">Golconda bought with a treaty; a war begun over a song.</p>
+      <div class="detail"><p>Muhammad Shah wrung from Warangal the fortress of Golconda and a throne of ebony plated with gold, valued in time at a crore of pagodas. Flushed with wine at its inauguration, he rewarded three hundred singers with a draft on the treasury of Vijayanagar; the insulted Rajah paraded the envoy on an ass, and the war that followed cost — by the chroniclers' count — half a million lives, until Muhammad swore thereafter to spare the unarmed, "a custom kept in the Deccan ever since."</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1378 – 1397</div>
+      <h4>Mahmud the peaceable — and Hafiz's ode</h4>
+      <p class="teaser">The poet of Shiraz turns back at sea.</p>
+      <div class="detail"><p>Under Mahmud Shah the kingdom knew nineteen years of peace, schools in every principal town, and famine-grain retailed cheap from ten thousand bullocks. Poets flocked to Gulburga; the great Hafiz himself embarked from Persia, was driven back by a storm, and sent an ode instead — "to risk a short voyage would not be too bold; but now I am sure one wave of the sea cannot be repaid by treasures of gold." The Sultan, delighted, paid him a thousand pieces of gold for it.</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1398 – 1422</div>
+      <h4>Firoz Shah &amp; the beautiful Pertal</h4>
+      <p class="teaser">A village girl, two empires at war, a royal wedding.</p>
+      <div class="detail"><p>Firoz Shah fought twenty-four campaigns and married a princess of Vijayanagar, riding into the rival capital over six miles of cloth-of-gold. One of his wars began over Pertal, the farmer's daughter of Mudkal, whose beauty a travelling Brahmin reported to the Hindu king — and who refused him, declaring she would wed "a great prince of Islam." She did: the Sultan gave her to his own son. "The story contains all the elements of a historical romance," sighs Gribble — "would that there were a Meadows Taylor still alive to give it to us!"</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1432</div>
+      <h4>The capital moves to Bidar</h4>
+      <p class="teaser">Ahmed Shah builds a splendid new city.</p>
+      <div class="detail"><p>After sacking Warangal for the last time and taking "possession of the buried treasures of ages," Ahmed Shah — struck by its healthy air and abundant water — moved the throne to Bidar. "Soon, as if by magic, rose one of the most splendid cities of India or of the world."</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1443</div>
+      <h4>An ambassador at Vijayanagar</h4>
+      <p class="teaser">Abdur Razzak counts the seven walls.</p>
+      <div class="detail"><p>The Persian envoy found a city of seven fortified circles, markets of jewels and fresh flowers, water running in polished stone channels, and a mint "with hollow chambers full of masses of molten gold." Even market-workers wore jewels at ear, neck, arm and finger. Later travellers — Nicolo Conti, Varthema, Barbosa — confirm a capital unequalled in the world of its day.</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1481</div>
+      <h4>The murder of Mahmud Gawan</h4>
+      <p class="teaser">"The ruin of the Deccan was the date of his death."</p>
+      <div class="detail"><p>The incorruptible old minister — conqueror of Goa, builder of the Bidar madrasa, a man who gave his wealth to the poor and wore plain white — was destroyed by a forged letter sealed with his stolen seal. The drunken Sultan Muhammad ordered him cut down where he knelt; too late, the king learned the truth, and died crying out that Mahmud Gawan was tearing him to pieces. The chronogram of his own death reads: <i>the ruin of the Deccan</i>.</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1490 – 1518</div>
+      <h4>The kingdom breaks in five</h4>
+      <p class="teaser">Bijapur, Ahmednagar, Berar, Bidar, Golconda.</p>
+      <div class="detail"><p>After Gawan's murder the governors went their own ways: Yusuf Adil Shah at Bijapur, Malik Ahmed at Ahmednagar, Imad-ul-Mulk in Berar, the Barid king-makers at Bidar, and at last Quli Qutb-ul-Mulk at Golconda. The last Bahmani sultans lingered as puppets "with dominions confined to the capital and its vicinity."</p></div>
+    </div>
+
+    <div class="era-label reveal"><div class="badge"><span class="kicker">The Five Kingdoms</span><div class="years">1490 – 1687</div></div></div>
+
+    <div class="event reveal">
+      <div class="year">1509 – 1530</div>
+      <h4>Krishna Deva Raya</h4>
+      <p class="teaser">Vijayanagar at its zenith, from sea to sea.</p>
+      <div class="detail"><p>The greatest of the Hindu emperors ruled the whole south of India from coast to coast, retook Raichur, and reached north to Cuttack — yet the Mahomedan historians, "through jealousy" perhaps, do not so much as mention his name. His capital, wrote the Portuguese Barbosa, held "an infinite trade" where Moor, Christian and Gentile "dwelt freely and safely in what creed they chose."</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1565</div>
+      <h4>Talikota — the fall of Vijayanagar</h4>
+      <p class="teaser">Four sultans league against the City of Victory.</p>
+      <div class="detail"><p>Provoked past bearing by the regent Rama Rajah's arrogance, Bijapur, Ahmednagar, Golconda and Bidar joined a holy league sealed by royal marriages. On the field of Talikota the aged regent was captured beside his throne of heaped money and beheaded; a hundred thousand of his host were slain in the flight, and the allies spent five months plundering a city they left to the tigers. The bulwark of Hindu India was gone — and, Gribble observes, the sultans who broke it had removed the one check that had forced them to stand together.</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">c. 1591</div>
+      <h4>Hyderabad is founded</h4>
+      <p class="teaser">Bhagnagar — a garden city for Bhagmati.</p>
+      <div class="detail"><p>Muhammad Quli Qutb Shah came down from the fortress of Golconda and laid out a new city on the Musi, named for his beloved Bhagmati, with the Char Minar at the crossing of its four great streets. In the next century it would be the diamond mart of the world.</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1595 – 1600</div>
+      <h4>Chand Bibi at the breach</h4>
+      <p class="teaser">A queen in armour against the Mughal empire.</p>
+      <div class="detail"><p>When Prince Murad's army mined the wall of Ahmednagar, the dowager queen Chand Bibi — veiled, in armour, sword in hand — held the breach until it was built up overnight, and the Mughals withdrew saluting her as Chand Sultana. In 1600 her own mutinous soldiery, deceived by a traitor's cry, murdered her in her palace; within days the city fell, and with it the first of the five kingdoms.</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1600 – 1626</div>
+      <h4>Malik Ambar defies the empire</h4>
+      <p class="teaser">The Abyssinian slave who out-generalled the Mughals.</p>
+      <div class="detail"><p>For a quarter of a century the slave-turned-statesman kept the Nizam Shahi kingdom alive from his new city of Kirki, mastering the harrying warfare the Mahrattas would inherit and settling the land so justly that his revenue system outlived him by two centuries. The emperor Jahangir could only rage at "the black-faced, the cursed fellow" — and admit, when Ambar died full of honour, that history recorded no equal to his rise.</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1659</div>
+      <h4>Shivaji &amp; the tiger-claws</h4>
+      <p class="teaser">The Mahratta nation announces itself.</p>
+      <div class="detail"><p>At Pratapgad the Bijapur general Afzul Khan came to a parley and died in Shivaji's steel-clawed embrace; his army was ambushed and destroyed. Out of the hill country the "mountain rats" — as the Mughals called them — grew into the power that would harry the Deccan for a hundred and fifty years, and whose chouth blackmail would burden every kingdom in it.</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1686</div>
+      <h4>The end of Bijapur</h4>
+      <p class="teaser">Aurangzeb takes the city of the Adil Shahs.</p>
+      <div class="detail"><p>The emperor came south with a moving city of half a million souls, vowing to sweep the Deccan of "infidels and heretics." Starved past resistance, Bijapur capitulated on 15 October 1686; the boy-king Sikandar was led before Aurangzeb in silver chains, and died a pensioned prisoner within a few years.</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1687</div>
+      <h4>The fall of Golconda</h4>
+      <p class="teaser">Eight months, a golden-collared dog, a traitor's gate.</p>
+      <div class="detail"><p>Abul Hasan's fortress threw back every assault for eight months — one night's escalade was betrayed to the defenders by a barking dog, kept ever after on a golden chain — and fell only when a gate was opened for gold. The last king received his conquerors seated calmly on his throne, and his general Abdur Razzak, refusing every bribe, took seventy wounds charging alone into the imperial army. With Golconda died the last of the Deccan sultanates.</p></div>
+    </div>
+
+    <div class="era-label reveal"><div class="badge"><span class="kicker">The Empire in Ruins</span><div class="years">1687 – 1724</div></div></div>
+
+    <div class="event reveal">
+      <div class="year">1687 – 1707</div>
+      <h4>Aurangzeb's endless war</h4>
+      <p class="teaser">Twenty years chasing the Mahrattas — and a lonely grave.</p>
+      <div class="detail"><p>Having destroyed the kingdoms that had held the Mahrattas in check, the old emperor spent his last twenty years besieging hill-fort after hill-fort while Tara Bai's horsemen starved his own camp. He died at Ahmednagar in 1707, nearly ninety, haunted and unconsoled: "I brought nothing into this world, and except the infirmities of man carry nothing out." He lies in an open grave at Roza, near Aurangabad.</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1707 – 1724</div>
+      <h4>The king-makers</h4>
+      <p class="teaser">Emperors made and unmade; the Deccan adrift.</p>
+      <div class="detail"><p>In seventeen years Delhi devoured eight emperors, as Zulfikar Khan and then the Sayyid brothers of Barha set up and strangled princes at will — and each king-maker in turn met the bow-string or the dagger. Through it all one man watched, waited, and kept his hands clean: Chin Qilich Khan, Nizam-ul-Mulk, viceroy of the Deccan.</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1724</div>
+      <h4>Asaf Jah wins the Deccan</h4>
+      <p class="teaser">Shakar Kheda — a dynasty is founded.</p>
+      <div class="detail"><p>Renouncing "for ever Delhi ambition and intrigue," Nizam-ul-Mulk turned south, crushed the imperial deputy Mubariz Khan at Shakar Kheda, and made Hyderabad his seat. The emperor bowed to the fact, sent him the title Asaf Jah, and the state of Hyderabad — the modern heir of all this history — was born. "His rise is stained by no crime, domestic or public: the story of a man who bided his time, seized his opportunity, and was loyal to those who treated him loyally."</p></div>
+    </div>
+
+    <div class="era-label reveal"><div class="badge"><span class="kicker">The Asaf Jahi Age</span><div class="years">1724 – 1948</div></div></div>
+
+    <div class="event reveal">
+      <div class="year">1748 – 1761</div>
+      <h4>The French years</h4>
+      <p class="teaser">Bussy, king-maker at the Nizam's court.</p>
+      <div class="detail"><p>Asaf Jah's death loosed a war of succession in which Dupleix's Frenchmen made and unmade Nizams: Nasir Jung shot at Gingee, Muzaffar Jung slain in a pass, Salabat Jung raised and guarded by the brilliant Bussy, whose 500 Europeans scattered Mahratta armies and were paid with the revenues of the whole east coast. When Bussy was recalled in 1758, the Nizam embraced him weeping, calling him "the guardian angel of his life and fortune" — and the door swung open for the English.</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1766 – 1798</div>
+      <h4>The English alliance</h4>
+      <p class="teaser">Treaties, the Circars — and disaster at Khardla.</p>
+      <div class="detail"><p>Nizam Ali Khan bound Hyderabad to the East India Company by the treaties of 1766 and 1768, ceding the Northern Circars for a subsidiary force. But when the Mahrattas humbled him at Khardla in 1795 and the British stood neutral, he turned to the French adventurer Raymond's fourteen-thousand-strong corps — until, in 1798, Wellesley's new order compelled its dramatic disbandment in a single bloodless morning below the hill of Asmangarh.</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1799 – 1803</div>
+      <h4>Seringapatam &amp; Assaye</h4>
+      <p class="teaser">Tipu falls; the Mahrattas broken; Berar recovered.</p>
+      <div class="detail"><p>Hyderabad's contingent marched with the British against Tipu Sultan, and shared the spoils of Mysore — then ceded them again in 1800 to pay, in perpetuity, for the Subsidiary Force. In 1803 Arthur Wellesley, commanding with the Nizam's troops beside him, shattered Scindia and the Berar Rajah at Assaye and Argaum, and the ancient province of Berar returned to Hyderabad.</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1853</div>
+      <h4>Berar assigned</h4>
+      <p class="teaser">A debt, an ultimatum, a province in trust.</p>
+      <div class="detail"><p>The ruinous cost of the Hyderabad Contingent — forty lakhs a year in profound peace — drove the state into debt to the Company, and Lord Dalhousie exacted the assignment of Berar as security. Gribble, who studied the question for a decade, held the debt itself to be largely illusory; the province, leased in perpetuity in 1902 for twenty-five lakhs a year, never returned. It remained the great grievance of Hyderabad statecraft.</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1857</div>
+      <h4>"If the Nizam goes, all goes"</h4>
+      <p class="teaser">The Mutiny breaks on Hyderabad — and is turned.</p>
+      <div class="detail"><p>With northern India in flames, the green flag was raised at the Mecca Masjid and a mob stormed toward the Residency — to be met by grape-shot from its ramparts and the young minister Salar Jung's Arabs at the city gates. Hyderabad, the pivot on which the south turned, held loyal; and the British never forgot which minister had held it.</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1853 – 1883</div>
+      <h4>Salar Jung remakes the state</h4>
+      <p class="teaser">Thirty years that dragged Hyderabad into the modern age.</p>
+      <div class="detail"><p>The great minister abolished the farming of revenue, created courts, police, treasuries, schools, colleges, railways and hospitals for women behind the purdah — until a Resident could write that the new Hyderabad stood to the old "as the England of the present day is to the England of the Stuarts." He died of cholera in a single night in 1883, mourned, Gribble writes, as "not only one of the most eminent men Hyderabad has ever produced, but one of the greatest of India's sons."</p></div>
+    </div>
+
+    <div class="event reveal">
+      <div class="year">1869 – 1948</div>
+      <h4>The last Nizams</h4>
+      <p class="teaser">Mahbub Ali Khan, Osman Ali Khan — and the end of an age.</p>
+      <div class="detail"><p>Mahbub Ali Khan, enthroned at three, reigned over the settlement of the Berar question with Lord Curzon in 1902 — where Gribble's own pen closed the story. His son Mir Osman Ali Khan, styled the richest man in the world, ruled until the state of the Asaf Jahs — the last living fragment of this six-century tale — was merged into the Indian Union in 1948.</p></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ======================= KINGDOMS ======================= -->
+<section id="kingdoms">
+  <div class="section-head reveal">
+    <p class="kicker">The Dynasties</p>
+    <h2>Kingdoms</h2>
+    <p class="script"><span lang="ur">سلطنتیں</span> · <span lang="te">రాజ్యాలు</span></p>
+    <p class="sub">Six houses contended for the plateau. Choose a card to enter its capital.</p>
+    <div class="rule"></div>
+  </div>
+
+  <div class="wrap">
+    <div class="kingdom-grid">
+      <div class="kingdom-card reveal" data-place="gulbarga">
+        <img src="images/mahmud-gawan-madrasa.jpg" alt="The madrasa of Mahmud Gawan, Bidar" loading="lazy">
+        <div class="plate">
+          <p class="kicker">Gulburga · Bidar</p>
+          <h3>The Bahmanis</h3>
+          <p class="years">1347 – 1518 · eighteen sultans</p>
+          <p class="hint">Enter Gulburga ›</p>
+        </div>
+      </div>
+      <div class="kingdom-card reveal" data-place="hampi">
+        <img src="images/virupaksha.jpg" alt="Virupaksha temple, Hampi" loading="lazy">
+        <div class="plate">
+          <p class="kicker">Vijayanagar</p>
+          <h3>The Rayas</h3>
+          <p class="years">1336 – 1565 · warden of the Hindu marches</p>
+          <p class="hint">Enter Vijayanagar ›</p>
+        </div>
+      </div>
+      <div class="kingdom-card reveal" data-place="bijapur">
+        <img src="images/ibrahim-rauza.jpg" alt="Ibrahim Rauza, Bijapur" loading="lazy">
+        <div class="plate">
+          <p class="kicker">Bijapur</p>
+          <h3>The Adil Shahs</h3>
+          <p class="years">1489 – 1686 · nine kings</p>
+          <p class="hint">Enter Bijapur ›</p>
+        </div>
+      </div>
+      <div class="kingdom-card reveal" data-place="ahmednagar">
+        <img src="images/daulatabad.jpg" alt="Daulatabad fort" loading="lazy">
+        <div class="plate">
+          <p class="kicker">Ahmednagar</p>
+          <h3>The Nizam Shahs</h3>
+          <p class="years">1490 – 1636 · house of Chand Bibi</p>
+          <p class="hint">Enter Ahmednagar ›</p>
+        </div>
+      </div>
+      <div class="kingdom-card reveal" data-place="golconda">
+        <img src="images/qutb-shahi-tombs.jpg" alt="Qutb Shahi tombs, Golconda" loading="lazy">
+        <div class="plate">
+          <p class="kicker">Golconda · Hyderabad</p>
+          <h3>The Qutb Shahs</h3>
+          <p class="years">1512 – 1687 · lords of the diamond mart</p>
+          <p class="hint">Enter Golconda ›</p>
+        </div>
+      </div>
+      <div class="kingdom-card reveal" data-place="hyderabad">
+        <img src="images/chowmahalla.jpg" alt="Chowmahalla palace, Hyderabad" loading="lazy">
+        <div class="plate">
+          <p class="kicker">Hyderabad</p>
+          <h3>The Asaf Jahs</h3>
+          <p class="years">1724 – 1948 · the Nizams</p>
+          <p class="hint">Enter Hyderabad ›</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CITY ======================= -->
+<section id="city">
+  <div class="section-head reveal">
+    <p class="kicker">Where the Story Ends</p>
+    <h2>Hyderabad</h2>
+    <p class="script"><span lang="ur">حیدرآباد</span> · <span lang="te">హైదరాబాదు</span></p>
+    <p class="sub">Heir of Golconda, seat of the Asaf Jahs — the city in which all the threads of the Deccan are gathered.</p>
+    <div class="rule"></div>
+  </div>
+
+  <div class="wrap">
+    <div class="city-feature reveal">
+      <div class="media"><img src="images/mecca-masjid.jpg" alt="The Mecca Masjid, Hyderabad" loading="lazy"></div>
+      <div>
+        <p class="kicker">c. 1591</p>
+        <h3>A City on the Musi</h3>
+        <p>Muhammad Quli Qutb Shah left the gloomy granite of Golconda to build a garden city named for his beloved Bhagmati. At the crossing of its four streets rose the Char Minar; beside it the vast Mecca Masjid, begun with earth brought from the holy city itself.</p>
+        <p>Seventeenth-century travellers — Tavernier, Thevenot — found here the diamond emporium of the world, where the stones of Kurnool and the Krishna were weighed in the shadow of the fortress five miles away.</p>
+      </div>
+    </div>
+
+    <div class="city-feature flip reveal">
+      <div class="media"><img src="images/falaknuma.jpg" alt="Falaknuma palace" loading="lazy"></div>
+      <div>
+        <p class="kicker">1724 – 1948</p>
+        <h3>Court of the Nizams</h3>
+        <p>From 1763 the Asaf Jahi court made Hyderabad the greatest Mahomedan capital of India — the Chowmahalla and Falaknuma palaces, the mansions of the Paigah nobles, the British Residency across the river, and a court society that Gribble's editors called "quite different to what it is anywhere in India."</p>
+        <p>Under Salar Jung's thirty-year ministry the medieval city gained courts, railways, schools and hospitals — the reforms that carried the oldest state of the Deccan alive into the twentieth century.</p>
+      </div>
+    </div>
+
+    <p class="kicker reveal" style="text-align:center; margin-bottom:26px;">Faces of the Dynasty</p>
+    <div class="portrait-row">
+      <div class="portrait reveal">
+        <div class="frame"><img src="images/asaf-jah-1.jpg" alt="Asaf Jah I" loading="lazy"></div>
+        <h4>Asaf Jah I</h4>
+        <p class="role">Founder of the state, 1724</p>
+      </div>
+      <div class="portrait reveal">
+        <div class="frame"><img src="images/nizam-ali.jpg" alt="Nizam Ali Khan" loading="lazy"></div>
+        <h4>Nizam Ali Khan</h4>
+        <p class="role">Architect of the British alliance</p>
+      </div>
+      <div class="portrait reveal">
+        <div class="frame"><img src="images/salar-jung.jpg" alt="Sir Salar Jung I" loading="lazy"></div>
+        <h4>Sir Salar Jung I</h4>
+        <p class="role">The great reforming minister</p>
+      </div>
+      <div class="portrait reveal">
+        <div class="frame"><img src="images/osman-ali-khan.jpg" alt="Mir Osman Ali Khan" loading="lazy"></div>
+        <h4>Mir Osman Ali Khan</h4>
+        <p class="role">The last Nizam, 1911 – 1948</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="quote-band reveal" style="background-image:url('images/qutb-shahi-tombs.jpg'); margin-top:100px;">
+    <div class="inner">
+      <blockquote>"The time for the birth of a new kingdom has arrived — and when the hour has come, the man is always ready."</blockquote>
+      <cite>J. D. B. Gribble · A History of the Deccan</cite>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= GALLERY ======================= -->
+<section id="gallery">
+  <div class="section-head reveal">
+    <p class="kicker">The Stones That Remain</p>
+    <h2>Gallery</h2>
+    <p class="script"><span lang="ur">نگارخانہ</span> · <span lang="te">చిత్రశాల</span></p>
+    <p class="sub">The monuments of six centuries, as they stand to-day.</p>
+    <div class="rule"></div>
+  </div>
+
+  <div class="wrap">
+    <div class="gallery-grid reveal">
+      <figure><img src="images/charminar.jpg" alt="" loading="lazy"><figcaption>Char Minar · Hyderabad, c. 1591</figcaption></figure>
+      <figure><img src="images/golconda.jpg" alt="" loading="lazy"><figcaption>Golconda Fort · seat of the Qutb Shahs</figcaption></figure>
+      <figure><img src="images/gol-gumbaz.jpg" alt="" loading="lazy"><figcaption>Gol Gumbaz · tomb of Sultan Mahmud, Bijapur</figcaption></figure>
+      <figure><img src="images/hampi.jpg" alt="" loading="lazy"><figcaption>Ruins of Vijayanagar · Hampi</figcaption></figure>
+      <figure><img src="images/qutb-shahi-tombs.jpg" alt="" loading="lazy"><figcaption>Tombs of the Qutb Shahi kings</figcaption></figure>
+      <figure><img src="images/warangal.jpg" alt="" loading="lazy"><figcaption>Kakatiya gateway · Warangal fort</figcaption></figure>
+      <figure><img src="images/daulatabad.jpg" alt="" loading="lazy"><figcaption>Daulatabad · the impregnable rock</figcaption></figure>
+      <figure><img src="images/ibrahim-rauza.jpg" alt="" loading="lazy"><figcaption>Ibrahim Rauza · Bijapur</figcaption></figure>
+      <figure><img src="images/thousand-pillar.jpg" alt="" loading="lazy"><figcaption>Thousand-Pillar temple · Hanamkonda, 1162</figcaption></figure>
+      <figure><img src="images/virupaksha.jpg" alt="" loading="lazy"><figcaption>Virupaksha temple · Hampi</figcaption></figure>
+      <figure><img src="images/bidar.jpg" alt="" loading="lazy"><figcaption>Bidar fort · city of the later Bahmanis</figcaption></figure>
+      <figure><img src="images/mahmud-gawan-madrasa.jpg" alt="" loading="lazy"><figcaption>Madrasa of Mahmud Gawan · Bidar, 1472</figcaption></figure>
+      <figure><img src="images/gulbarga.jpg" alt="" loading="lazy"><figcaption>Gulburga fort · first Bahmani capital</figcaption></figure>
+      <figure><img src="images/mecca-masjid.jpg" alt="" loading="lazy"><figcaption>Mecca Masjid · Hyderabad</figcaption></figure>
+      <figure><img src="images/chowmahalla.jpg" alt="" loading="lazy"><figcaption>Chowmahalla palace · court of the Nizams</figcaption></figure>
+      <figure><img src="images/falaknuma.jpg" alt="" loading="lazy"><figcaption>Falaknuma palace · "mirror of the sky"</figcaption></figure>
+      <figure><img src="images/ramappa.jpg" alt="" loading="lazy"><figcaption>Ramappa temple · Kakatiya Telingana</figcaption></figure>
+      <figure><img src="images/ellora.jpg" alt="" loading="lazy"><figcaption>Ellora · the Kailasa cave-temple</figcaption></figure>
+      <figure><img src="images/ajanta.jpg" alt="" loading="lazy"><figcaption>Ajanta · painted caves of the old Deccan</figcaption></figure>
+      <figure><img src="images/hussain-sagar.jpg" alt="" loading="lazy"><figcaption>Hussain Sagar · the tank of Ibrahim Qutb Shah</figcaption></figure>
+      <figure><img src="images/paigah-tombs.jpg" alt="" loading="lazy"><figcaption>Paigah tombs · Hyderabad</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SOURCES ======================= -->
+<section id="sources">
+  <div class="section-head reveal">
+    <p class="kicker">Of Record</p>
+    <h2>Sources</h2>
+    <p class="sub">This site retells one book — and the chronicles behind it.</p>
+    <div class="rule"></div>
+  </div>
+
+  <ul class="sources-list reveal">
+    <li><span class="n">I</span><span>J. D. B. Gribble, <i>A History of the Deccan</i>, Vol. I — Luzac &amp; Co., London, 1896. Dedicated to H.H. the Nizam of Hyderabad.</span></li>
+    <li><span class="n">II</span><span>J. D. B. Gribble, <i>A History of the Deccan</i>, Vol. II — edited and completed by Mary Pendlebury, Luzac &amp; Co., 1924.</span></li>
+    <li><span class="n">III</span><span>Ferishta's history, in Jonathan Scott's translation — Gribble's principal authority for the sultanate centuries.</span></li>
+    <li><span class="n">IV</span><span>Elliot &amp; Dowson, <i>The History of India as Told by Its Own Historians</i> — Barni, Amir Khusru, Khafi Khan and the Mughal chroniclers.</span></li>
+    <li><span class="n">V</span><span>The travellers: Ibn Batuta, Nicolo Conti, Abdur Razzak, Nikitin, Varthema, Barbosa, Caesar Fredericke, Tavernier, Thevenot and Bernier.</span></li>
+    <li><span class="n">VI</span><span>The Bombay Gazetteers of Kanara, Bijapur and Ahmednagar; Wilmott &amp; Bilgrami's <i>Sketch of the Nizam's Dominions</i>.</span></li>
+    <li><span class="n">VII</span><span>Colonel Meadows Taylor, <i>A Noble Queen</i> and <i>The Story of My Life</i>; Grant Duff's Mahrattas; Orme, Wilks, Malleson and Kaye for the European century.</span></li>
+  </ul>
+
+  <p class="colophon reveal">The narrative on this site is condensed and adapted, with its quotations, from Gribble's two volumes. Photographs are the work of Wikimedia Commons contributors, gratefully used under their free licences.</p>
+</section>
+
+<footer>
+  <a class="brand" href="#top">The <span>Deccan</span></a>
+  <p>Hyderabad &amp; the Kingdoms of the South · after J. D. B. Gribble, 1896</p>
+</footer>
+
+<!-- ======================= PLACE OVERLAY ======================= -->
+<div class="overlay" id="place-overlay" role="dialog" aria-modal="true">
+  <button class="overlay-close">Close ✕</button>
+  <div class="overlay-hero">
+    <div class="inner">
+      <p class="kicker"></p>
+      <h3></h3>
+      <p class="era"></p>
+    </div>
+  </div>
+  <div class="overlay-body"></div>
+  <div class="overlay-nav">
+    <button class="ov-prev">‹ Previous</button>
+    <button class="ov-next">Next Place ›</button>
+  </div>
+</div>
+
+<!-- ======================= LIGHTBOX ======================= -->
+<div class="lightbox" id="lightbox">
+  <img src="" alt="">
+  <p class="cap"></p>
+</div>
+
+<script src="js/places.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
