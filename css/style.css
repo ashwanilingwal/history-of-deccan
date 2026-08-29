@@ -96,6 +96,9 @@ section { padding: 120px 0; position: relative; }
 .capture .hero { min-height: 900px; }
 .capture .hero-bg { animation: none; }
 .capture .overlay-hero { height: 500px; }
+.capture .overlay.open { position: static; overflow: visible; animation: none; }
+.capture body { overflow: visible !important; }
+.capture body:has(.overlay.open) > :not(.overlay) { display: none; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -219,6 +222,37 @@ section { padding: 120px 0; position: relative; }
 }
 
 .hero .cta:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201,166,107,0.25); }
+
+/* two ways in */
+.entry {
+  margin-top: 46px;
+  display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;
+}
+.entry a {
+  display: block; width: 262px; padding: 26px 22px 24px;
+  border: 1px solid rgba(201, 166, 107, 0.45);
+  background: rgba(12, 10, 8, 0.55);
+  backdrop-filter: blur(3px);
+  text-align: center;
+  transition: background 0.4s, border-color 0.4s, transform 0.4s;
+}
+.entry a:hover {
+  background: rgba(201, 166, 107, 0.14);
+  border-color: var(--gold-bright);
+  transform: translateY(-3px);
+}
+.entry a .glyph { display: block; height: 34px; margin-bottom: 12px; }
+.entry a .glyph svg { height: 100%; width: auto; margin: 0 auto; }
+.entry a .glyph svg * { stroke: var(--gold); fill: none; }
+.entry a .t {
+  font-family: var(--serif); font-size: 25px; font-weight: 500;
+  letter-spacing: 0.11em; text-transform: uppercase; color: var(--ivory);
+}
+.entry a .d {
+  font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--ivory-faint); margin-top: 9px;
+}
+.entry a:hover .t { color: var(--gold-bright); }
 
 .hero .scroll-hint {
   position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
@@ -371,7 +405,9 @@ section { padding: 120px 0; position: relative; }
 
 .overlay-body { max-width: 860px; margin: 0 auto; padding: 48px 32px 140px; }
 .overlay-body p { margin-bottom: 22px; color: var(--ivory-dim); font-size: 20px; }
-.overlay-body p:first-of-type::first-letter {
+/* direct child only — otherwise the city-map caption and the site-card hint
+   each become a :first-of-type inside their own box and grow a drop cap */
+.overlay-body > p:first-of-type::first-letter {
   font-size: 64px; line-height: 0.85; float: left;
   padding: 8px 12px 0 0; color: var(--gold);
 }
@@ -380,17 +416,176 @@ section { padding: 120px 0; position: relative; }
   border-left: 1px solid var(--gold);
   font-style: italic; font-size: 22px; color: var(--ivory);
 }
+.overlay-body h4.ov-h {
+  font-family: var(--serif); font-weight: 600;
+  font-size: 27px; letter-spacing: 0.05em;
+  color: var(--ivory); margin: 42px 0 16px;
+  padding-top: 22px; border-top: 1px solid var(--line-soft);
+}
+.overlay-body h4.ov-h:first-child { border-top: none; padding-top: 0; margin-top: 8px; }
+
+.goto-place {
+  margin-top: 14px;
+  font-family: var(--sans); font-size: 10px; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--gold);
+  background: none; border: 1px solid var(--line);
+  padding: 11px 18px; cursor: pointer; transition: all 0.3s;
+}
+.goto-place:hover { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+
 .overlay-body blockquote cite {
   display: block; margin-top: 10px;
   font-family: var(--sans); font-style: normal; font-size: 10px;
   letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold);
 }
 
+/* ---------- at-a-glance facts strip ---------- */
+
+.glance {
+  display: grid;
+  /* 230px lands on three columns at full width, so six facts fill two rows
+     exactly rather than leaving a ragged empty cell */
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1px;
+  background: var(--line-soft);
+  border: 1px solid var(--line-soft);
+  margin: 6px 0 40px;
+}
+.glance div { background: var(--ink-2); padding: 16px 18px; }
+.glance dt {
+  font-family: var(--sans); font-size: 9.5px; letter-spacing: 0.26em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 6px;
+}
+.glance dd { font-size: 18px; color: var(--ivory); line-height: 1.35; }
+
+/* ---------- collapsible detail boxes ---------- */
+
+.box {
+  border: 1px solid var(--line-soft);
+  border-left: 2px solid var(--line);
+  background: rgba(255, 255, 255, 0.014);
+  margin: 26px 0;
+}
+.box > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 15px 20px;
+  display: flex; align-items: baseline; gap: 12px;
+  font-family: var(--sans); font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--ivory-dim);
+  transition: color 0.3s, background 0.3s;
+}
+.box > summary::-webkit-details-marker { display: none; }
+.box > summary::after {
+  content: "+"; margin-left: auto;
+  font-family: var(--serif); font-size: 20px; color: var(--gold);
+  transition: transform 0.35s; line-height: 1;
+}
+.box[open] > summary::after { transform: rotate(45deg); }
+.box > summary:hover { color: var(--gold-bright); background: rgba(201, 166, 107, 0.04); }
+.box > summary .tag {
+  font-size: 9px; letter-spacing: 0.2em; padding: 3px 8px;
+  border: 1px solid var(--line); color: var(--gold);
+  white-space: nowrap; flex: none;
+}
+.box .box-body { padding: 4px 20px 20px; }
+.box .box-body p { font-size: 18px; margin-bottom: 16px; color: var(--ivory-dim); }
+.box .box-body p:last-child { margin-bottom: 0; }
+.box .box-body p:first-of-type::first-letter { font-size: inherit; float: none; padding: 0; color: inherit; }
+.box .box-body ul { margin: 0 0 16px 20px; color: var(--ivory-dim); font-size: 18px; }
+.box .box-body li { margin-bottom: 8px; }
+.box .box-body li::marker { color: var(--gold); }
+
+.box.legend { border-left-color: var(--gold); }
+.box.legend .box-body p { font-style: italic; }
+.box.legend > summary .tag { color: var(--gold-bright); border-color: var(--gold); }
+.box.numbers { border-left-color: #6d8a94; }
+.box.numbers > summary .tag { color: #9fbcc6; border-color: rgba(159, 188, 198, 0.4); }
+.box.deep { border-left-color: #8a6d94; }
+.box.deep > summary .tag { color: #b79fc6; border-color: rgba(183, 159, 198, 0.4); }
+
+/* fact table inside boxes */
+.box table { width: 100%; border-collapse: collapse; font-size: 17px; }
+.box table td { padding: 9px 0; border-bottom: 1px solid var(--line-soft); color: var(--ivory-dim); vertical-align: top; }
+.box table td:first-child { width: 42%; color: var(--ivory); padding-right: 18px; }
+.box table tr:last-child td { border-bottom: none; }
+
+/* ---------- city mini-map inside overlay ---------- */
+
+.citymap-wrap { margin: 46px 0 10px; }
+.citymap-wrap > .kicker { display: block; text-align: center; margin-bottom: 6px; }
+.citymap-wrap > .lede-sm {
+  text-align: center; font-style: italic; color: var(--ivory-faint);
+  font-size: 17px; margin-bottom: 24px;
+}
+.citymap {
+  border: 1px solid var(--line);
+  background: radial-gradient(ellipse at 50% 45%, #191410 0%, #0f0c09 72%);
+  box-shadow: inset 0 0 90px rgba(0, 0, 0, 0.6);
+}
+.citymap svg { width: 100%; height: auto; display: block; }
+.citymap .site-marker { cursor: pointer; }
+.citymap .site-marker circle.ring {
+  fill: rgba(201, 166, 107, 0.14); stroke: var(--gold); stroke-width: 0.9;
+  transition: fill 0.3s;
+}
+.citymap .site-marker:hover circle.ring,
+.citymap .site-marker.active circle.ring { fill: var(--gold); }
+.citymap .site-marker text.num {
+  font-family: var(--sans); font-size: 9px; fill: var(--gold-bright);
+  text-anchor: middle; dominant-baseline: central;
+}
+.citymap .site-marker:hover text.num,
+.citymap .site-marker.active text.num { fill: var(--ink); }
+.citymap .site-marker text.nm {
+  font-family: var(--sans); font-size: 8.5px; fill: var(--ivory-faint);
+  letter-spacing: 0.16em; text-transform: uppercase; text-anchor: middle;
+  transition: fill 0.3s;
+}
+.citymap .site-marker:hover text.nm,
+.citymap .site-marker.active text.nm { fill: var(--gold-bright); }
+.citymap .cm-feature { fill: none; stroke: rgba(201, 166, 107, 0.18); stroke-width: 1; }
+.citymap .cm-river { fill: none; stroke: rgba(120, 150, 160, 0.4); stroke-width: 2.5; }
+.citymap .cm-label {
+  font-family: var(--sans); fill: rgba(154, 143, 124, 0.5);
+  letter-spacing: 0.24em; text-transform: uppercase; font-size: 9px;
+}
+.citymap .cm-water { fill: rgba(70, 100, 115, 0.18); stroke: rgba(120, 150, 160, 0.35); }
+
+/* selected-site card */
+.site-card {
+  display: grid; grid-template-columns: 190px 1fr; gap: 22px;
+  border: 1px solid var(--line-soft); border-top: none;
+  padding: 20px; background: var(--ink-2);
+  min-height: 132px; align-items: center;
+}
+.site-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; filter: saturate(0.8) brightness(0.85); }
+.site-card .ph {
+  width: 100%; aspect-ratio: 4/3;
+  background: repeating-linear-gradient(45deg, #17120e, #17120e 8px, #1c1712 8px, #1c1712 16px);
+}
+.site-card h5 { font-size: 24px; font-weight: 600; letter-spacing: 0.03em; }
+.site-card .date { font-family: var(--sans); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin: 6px 0 10px; }
+.site-card p { font-size: 17.5px; color: var(--ivory-dim); margin: 0; }
+.site-card .hint-pick { font-style: italic; color: var(--ivory-faint); }
+
+/* monument thumb strip */
+.site-strip { display: grid; grid-template-columns: repeat(auto-fill, minmax(148px, 1fr)); gap: 12px; margin-top: 34px; }
+.site-strip figure { margin: 0; cursor: pointer; border: 1px solid var(--line-soft); overflow: hidden; }
+.site-strip img { width: 100%; aspect-ratio: 1; object-fit: cover; filter: saturate(0.7) brightness(0.75); transition: transform 0.6s, filter 0.6s; }
+.site-strip figure:hover img { transform: scale(1.07); filter: saturate(0.95) brightness(0.95); }
+.site-strip figcaption {
+  font-family: var(--sans); font-size: 9px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--ivory-faint); padding: 9px 8px; text-align: center;
+}
+
 /* ---------- chronicle / timeline ---------- */
 
 #chronicle { background: linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 50%, var(--ink) 100%); }
 
-.timeline { position: relative; max-width: 900px; margin: 0 auto; padding: 0 32px; }
+/* 1040 rather than 900 so that most event titles fit on a single line and the
+   "+" marker stays beside the last word instead of dropping below it */
+.timeline { position: relative; max-width: 1040px; margin: 0 auto; padding: 0 32px; }
 .timeline::before {
   content: ""; position: absolute; top: 0; bottom: 0; left: 50%;
   width: 1px; background: linear-gradient(180deg, transparent, var(--line) 6%, var(--line) 94%, transparent);
@@ -429,24 +624,38 @@ section { padding: 120px 0; position: relative; }
   color: var(--gold); margin-bottom: 6px;
 }
 .event h4 {
-  font-weight: 600; font-size: 25px; letter-spacing: 0.04em;
+  font-weight: 600; font-size: 23px; letter-spacing: 0.04em;
   cursor: pointer; transition: color 0.3s;
 }
 .event h4:hover { color: var(--gold-bright); }
 .event h4::after {
-  content: "+"; display: inline-block; margin-left: 10px;
+  /* the nbsp keeps the marker attached to the last word instead of
+     wrapping onto a line of its own */
+  content: "\00a0\00a0+"; display: inline-block;
   color: var(--gold); font-weight: 400;
   transition: transform 0.35s;
 }
 .event.open h4::after { transform: rotate(45deg); }
 .event .teaser { font-style: italic; color: var(--ivory-faint); font-size: 17.5px; margin-top: 4px; }
 .event .detail {
-  max-height: 0; overflow: hidden;
-  transition: max-height 0.6s ease, opacity 0.5s ease, margin 0.5s ease;
-  opacity: 0;
-  color: var(--ivory-dim); font-size: 18px;
+  display: grid; grid-template-rows: 0fr; opacity: 0;
+  transition: grid-template-rows 0.55s ease, opacity 0.45s ease, margin 0.45s ease;
+  color: var(--ivory-dim); font-size: 18px; text-align: left;
 }
-.event.open .detail { max-height: 1200px; opacity: 1; margin-top: 14px; }
+.event .detail > .inner { overflow: hidden; }
+.event.open .detail { grid-template-rows: 1fr; opacity: 1; margin-top: 16px; }
+/* half a column is too narrow for several paragraphs and a table, so an
+   opened event lets its detail break out across the full timeline width */
+.event.open .detail { width: calc(200% + 88px); }
+.event:nth-child(even of .event).open .detail { margin-left: calc(-100% - 88px); }
+/* …but keep the measure readable inside that full width */
+.event.open .detail > .inner { max-width: 800px; margin-inline: auto; }
+.event .detail p { margin-bottom: 15px; }
+.event .detail p:last-child { margin-bottom: 0; }
+.event .detail .box { margin: 18px 0; }
+.event .detail .box .box-body p { font-size: 17px; }
+/* right-aligned events keep their heading right but read left inside */
+.event:nth-child(odd of .event) .detail { text-align: left; }
 
 /* ---------- kingdoms ---------- */
 
@@ -648,9 +857,35 @@ footer p { font-family: var(--sans); font-size: 10px; letter-spacing: 0.24em; te
     width: auto; margin-left: 44px; text-align: left;
   }
   .event:nth-child(odd of .event)::before, .event:nth-child(even of .event)::before { left: -37px; right: auto; }
+  /* the events are already full width here, so cancel the desktop break-out */
+  .event.open .detail,
+  .event:nth-child(even of .event).open .detail { width: auto; margin-left: 0; }
+
+  /* scaled to a phone the city plans render their labels at about 4px, which
+     is unreadable — so keep the plan at its drawn size and scroll it instead */
+  .citymap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .citymap svg { width: 900px; max-width: none; }
+  .citymap-wrap > .lede-sm::after {
+    content: " (drag the plan sideways to follow it)";
+    color: var(--gold); font-style: normal; font-size: 13px;
+  }
 
   .kingdom-grid { grid-template-columns: 1fr; }
   .gallery-grid { columns: 1; }
   .quote-band { background-attachment: scroll; }
   .overlay-nav { width: calc(100% - 40px); justify-content: center; }
+
+  .entry { flex-direction: column; align-items: center; gap: 14px; margin-top: 34px; }
+  .entry a { width: 100%; max-width: 320px; padding: 20px 18px; }
+  .site-card { grid-template-columns: 1fr; gap: 14px; }
+  .site-card img, .site-card .ph { max-width: 240px; }
+  .glance { grid-template-columns: 1fr 1fr; }
+  .overlay-body { padding: 36px 20px 150px; }
+  .overlay-body p { font-size: 18px; }
+  .box > summary { padding: 13px 15px; font-size: 10px; letter-spacing: 0.16em; }
+  .box .box-body { padding: 2px 15px 16px; }
+  .box .box-body p, .box .box-body ul { font-size: 17px; }
+  .box table { font-size: 15.5px; }
+  .box table td:first-child { width: 46%; padding-right: 12px; }
+  .site-strip { grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 9px; }
 }
