@@ -100,6 +100,9 @@ const ERAS = [
     {
       year: "1294",
       title: "The raid that bought a throne",
+      figures: [
+        { img: "images/alauddin-khalji.jpg", name: "Ala-ud-din Khalji", note: "Governor of Kara; sultan by way of a riverbank" }
+      ],
       teaser: "A provincial governor slipped south without permission, came back with a mountain of gold — and used it to murder the uncle who had raised him.",
       detail: [
         "Ala-ud-din Khalji was governor of Kara on the Ganges, nephew and son-in-law of the Sultan of Delhi. In 1294 he marched south in secret with a few thousand horse, crossed the Vindhyas — which no northern army had done — and appeared before Devagiri while its army was away. Raja Ramachandra bought him off with a treasure so vast that Barani says nothing like it had been seen before.",
@@ -121,6 +124,9 @@ const ERAS = [
     {
       year: "1309 – 1311",
       title: "Malik Kafur rides to the southern sea",
+      figures: [
+        { img: "images/koh-i-noor.jpg", name: "The Koh-i-Nur", note: "A gem “unrivalled in the world” — the Warangal claim is late" }
+      ],
       teaser: "A slave general cut down a city's sacred groves to build a wooden wall around his own army — then marched on until India ran out.",
       detail: [
         "Ala-ud-din's campaigns of conquest were entrusted to Malik Kafur, a eunuch slave bought at Cambay who rose to command the empire's armies. In 1309 he besieged Warangal, felling the sacred groves around the city to build a timber stockade around his own camp — Amir Khusrau, who wrote the campaign up in verse, describes trees cut 'notwithstanding their groans' into a wall so solid that 'if fire had rained from heaven, their camp would have been unscathed'.",
@@ -163,6 +169,9 @@ const ERAS = [
     {
       year: "1327",
       title: "The march of a capital",
+      figures: [
+        { img: "images/muhammad-bin-tughluq.jpg", name: "Muhammad bin Tughluq", note: "He moved a capital 1,100 km, and then moved it back" }
+      ],
       teaser: "A sultan ordered an entire city — every household in Delhi — to walk 1,100 km south. It broke Delhi, it broke him, and it made the Deccan Muslim.",
       detail: [
         "Muhammad bin Tughluq's logic was not mad. Delhi sat exposed to Mongol raids and hundreds of miles from the empire's richest new provinces; Devagiri sat almost exactly at the centre of his dominions, on a rock reputed impregnable. He renamed it Daulatabad, 'the abode of fortune', and ordered the capital moved.",
@@ -197,6 +206,9 @@ const ERAS = [
     {
       year: "1336",
       title: "Vijayanagara is founded",
+      figures: [
+        { img: "images/harihara-1.png", name: "Harihara I", note: "Crowned 18 April 1336; whose service he came from is still argued" }
+      ],
       teaser: "A hare turned and chased the hounds. On that spot, the story goes, they built the city that held the south for 230 years.",
       detail: [
         "In the boulder-strewn gorge of the Tungabhadra, on ground already sacred as the Kishkindha of the <i>Ramayana</i>, the brothers Harihara and Bukka founded a city. They called it Vidyanagara, the city of learning, for the sage Vidyaranya said to have blessed it — and then Vijayanagara, the city of victory.",
@@ -434,6 +446,9 @@ const ERAS = [
     {
       year: "1490",
       title: "A sultan, or a stolen Ottoman prince?",
+      figures: [
+        { img: "images/yusuf-adil-shah.jpg", name: "Yusuf Adil Shah", note: "Founder of Bijapur, 1490" }
+      ],
       teaser: "Saved from the bowstring by a slave boy who died in his place — or so his dynasty always said.",
       detail: [
         "Yusuf Adil Shah declared independence at Bijapur in 1490 and founded the most brilliant of the Deccan courts. His origins are one of the great unresolved stories of Indian history.",
@@ -456,6 +471,9 @@ const ERAS = [
     {
       year: "1496 – 1518",
       title: "The Turkoman who came from Hamadan",
+      figures: [
+        { img: "images/sultan-quli.jpg", name: "Sultan Quli", note: "Qutb-ul-Mulk — who never called himself sultan" }
+      ],
       teaser: "His clan lost a civil war in Persia. He rode to India with a handful of kin — and founded a dynasty on a shepherd's hill.",
       detail: [
         "Sultan Quli was born near Hamadan in western Persia, of the Qara Qoyunlu — the 'Black Sheep' Turkomans, who had ruled much of Persia and Iraq until the rival Aq Qoyunlu, the 'White Sheep', destroyed them in the 1460s and 70s. His family were on the losing side of that catastrophe.",
@@ -484,6 +502,9 @@ const ERAS = [
     {
       year: "1509 – 1529",
       title: "Krishnadevaraya",
+      figures: [
+        { img: "images/krishnadevaraya.jpg", name: "Krishnadevaraya", note: "Poet in Telugu, buyer of 13,000 horses a year" }
+      ],
       teaser: "The greatest of the southern kings — who wrote poetry, imported 13,000 horses a year, and whom the Muslim chroniclers pointedly refuse to name.",
       detail: [
         "Under Krishnadevaraya the Vijayanagara empire reached its greatest extent, from the Krishna to Cape Comorin and coast to coast. He took Raichur in 1520 in a campaign that broke the Bijapur army; he subdued Orissa; and he handled the newly arrived Portuguese as a supplier rather than a threat — buying their Arabian horses, which the south could not breed, at extraordinary prices.",
@@ -508,6 +529,9 @@ const ERAS = [
     {
       year: "1565",
       title: "Talikota",
+      figures: [
+        { img: "images/ibrahim-quli.jpg", name: "Ibrahim Quli Qutb Shah", note: "One of the four sultans who finally allied" }
+      ],
       teaser: "Four sultans buried their feuds for one day — and a city of half a million was left to the tigers.",
       detail: [
         "The sultanates had spent seventy years fighting each other while the aged regent Rama Raya played them off, hiring their soldiers, humiliating their envoys and treating their kings as clients. In 1565 Bijapur, Ahmadnagar, Golconda and Bidar did the one thing he had assumed they could not: they allied, sealing it with royal marriages.",
@@ -538,6 +562,9 @@ const ERAS = [
     {
       year: "1591",
       title: "Hyderabad is founded",
+      figures: [
+        { img: "images/muhammad-quli-qutb-shah.jpg", name: "Muhammad Quli Qutb Shah", note: "Founder, and one of the first poets in Dakhni Urdu" }
+      ],
       teaser: "Plague and thirst on the rock; a new city of gardens on the river — and a name that is still argued about four centuries later.",
       detail: [
         "Golconda was full. Water was short on the granite, and epidemic disease periodically swept the crowded fort. In 1591 Muhammad Quli Qutb Shah — fifth of his line, and a considerable poet — laid out a new city on the south bank of the Musi, five miles east of the fortress: a planned grid with a great ceremonial crossing at its heart.",
@@ -568,6 +595,9 @@ const ERAS = [
     {
       year: "1595 – 1600",
       title: "Chand Bibi holds the breach",
+      figures: [
+        { img: "images/chand-bibi.jpg", name: "Chand Bibi", note: "Regent of two kingdoms; Chand Sultana after 1595" }
+      ],
       teaser: "The Mughals blew a hole in the wall of Ahmadnagar. A queen in armour stood in it, and the hole was gone by morning.",
       detail: [
         "Chand Bibi was a daughter of Ahmadnagar, queen of Bijapur by marriage, and regent of both kingdoms in turn — one of the very few figures respected across the whole quarrelsome Deccan.",
@@ -596,6 +626,10 @@ const ERAS = [
     {
       year: "1600 – 1626",
       title: "Malik Ambar defies an empire",
+      figures: [
+        { img: "images/malik-ambar.jpg", name: "Malik Ambar", note: "Sold as a child in Harar; regent for twenty-six years" },
+        { img: "images/jahangir.jpeg", name: "Jahangir", note: "Who had himself painted shooting Ambar’s severed head" }
+      ],
       teaser: "An Ethiopian sold as a slave kept a dead kingdom alive for a quarter-century — and made an emperor dream of shooting his head.",
       detail: [
         "He was born in Harar in Ethiopia, sold as a boy, carried through Baghdad to the Deccan, and freed on his master's death. After Ahmadnagar fell he did not accept that it had: he found a Nizam Shahi prince, put him on a throne, and ran the state himself for twenty-six years.",
@@ -619,6 +653,9 @@ const ERAS = [
     {
       year: "1626 – 1656",
       title: "The dome that should not stand",
+      figures: [
+        { img: "images/ibrahim-adil-shah-2.jpg", name: "Ibrahim Adil Shah II", note: "Jagat Guru — who opened his songbook with Saraswati" }
+      ],
       teaser: "Bijapur roofed a tomb with a dome wider than the Pantheon's — supported on nothing but arches leaning against each other.",
       detail: [
         "Muhammad Adil Shah's tomb at Bijapur, the Gol Gumbaz, is a single cube carrying one of the largest masonry domes in the world — roughly 44 m across, enclosing an unobstructed floor of about 1,700 m², larger than the Pantheon's.",
@@ -653,6 +690,10 @@ const ERAS = [
     {
       year: "1659",
       title: "Shivaji and the tiger claws",
+      figures: [
+        { img: "images/shivaji.jpg", name: "Shivaji", note: "Came to the embrace in mail, with hooked blades" },
+        { img: "images/afzal-khan.jpg", name: "Afzal Khan", note: "Buried by his enemy at the foot of Pratapgad" }
+      ],
       teaser: "Two men met unarmed for a peace embrace. Only one of them was actually unarmed.",
       detail: [
         "Bijapur sent Afzal Khan — a large, experienced and confident general — to finish the young Maratha chief Shivaji, who had been taking Bijapuri hill forts. Shivaji drew him deep into the Sahyadri hills, to a meeting place below Pratapgad, on terms: both to come unarmed, attended by one man each.",
@@ -666,6 +707,10 @@ const ERAS = [
     {
       year: "1686 – 1687",
       title: "Aurangzeb takes the last two kingdoms",
+      figures: [
+        { img: "images/mir-jumla.jpg", name: "Mir Jumla", note: "Golconda’s minister and diamond magnate, who defected to the Mughals" },
+        { img: "images/abul-hasan-tana-shah.jpg", name: "Abul Hasan Tana Shah", note: "Ordered breakfast as the imperial troops came in" }
+      ],
       teaser: "Bijapur starved. Golconda held for eight months, was saved once by a barking dog, and fell to an opened gate.",
       detail: [
         "Aurangzeb came south in 1681 with a moving city of an army and the settled intention of ending the Deccan sultanates — heretical Shia states, in his reading, that had been paying and arming Marathas.",
@@ -709,6 +754,9 @@ const ERAS = [
     {
       year: "1687 – 1707",
       title: "Aurangzeb's twenty-year war",
+      figures: [
+        { img: "images/aurangzeb.jpg", name: "Aurangzeb", note: "“I came a stranger into this world, and a stranger I depart”" }
+      ],
       teaser: "He destroyed the states that had kept the Marathas in check — and then spent the rest of his life chasing the Marathas.",
       detail: [
         "Having removed Bijapur and Golconda, the emperor found he had removed the buffer as well. For twenty years he besieged Maratha hill fort after hill fort while Maratha horse emptied the country behind him, and the Deccan — the richest region in India when he arrived — was reduced to a desert that could not feed his own camp.",
@@ -785,6 +833,12 @@ const ERAS = [
     {
       year: "1799 – 1803",
       title: "Seringapatam and Assaye",
+      figures: [
+        { img: "images/hyder-ali.jpg", name: "Hyder Ali", note: "Tipu’s father, and the Nizam’s enemy before him" },
+        { img: "images/assaye.jpg", name: "Assaye, 1803", note: "9,500 men against perhaps 50,000, across an unmarked ford" },
+        { img: "images/tipu-sultan.jpg", name: "Tipu Sultan", note: "Died in the breach at Seringapatam, 1799" },
+        { img: "images/wellesley.jpg", name: "Arthur Wellesley", note: "Called Assaye the best thing he ever did in the way of fighting" }
+      ],
       teaser: "Tipu falls, the Marathas are broken — and the Nizam's ally at Assaye is a colonel named Arthur Wellesley.",
       detail: [
         "Hyderabad's contingent marched with the British to Seringapatam in 1799, where Tipu Sultan died in the breach; the Nizam took a large share of Mysore. He then handed almost all of it straight back in 1800, ceding it in perpetuity to pay for the Subsidiary Force — the districts that became Bellary, Anantapur, Cuddapah and Kurnool.",
@@ -850,6 +904,9 @@ const ERAS = [
     {
       year: "1853 – 1883",
       title: "Salar Jung remakes the state",
+      figures: [
+        { img: "images/salar-jung.jpg", name: "Sir Salar Jung I", note: "Minister at twenty-four, for thirty years" }
+      ],
       teaser: "He inherited a country with no police, no courts in the districts, and tax farms sold to the highest bidder — and left a modern state.",
       detail: [
         "When Salar Jung became minister at twenty-four, Hyderabad had no district courts, no police force, and a revenue system in which talukas were auctioned to contractors who lived in the capital, sent deputies to squeeze the districts, and were replaced so often that a new deputy was said to ride facing his horse's tail, to see who was coming to displace him. Villages had emptied; land had gone out of cultivation.",
@@ -871,6 +928,10 @@ const ERAS = [
     {
       year: "28 Sept 1908",
       title: "The Musi flood",
+      figures: [
+        { img: "images/mahbub-ali-khan.png", name: "Mahbub Ali Khan", note: "The sixth Nizam, who called in the engineer" },
+        { img: "images/visvesvaraya.jpg", name: "M. Visvesvaraya", note: "Whose report produced Osman Sagar and Himayat Sagar" }
+      ],
       teaser: "In one night the river rose through the city and killed thousands. A single tamarind tree saved 150 people.",
       detail: [
         "The rain of 27–28 September 1908 was extraordinary even by monsoon standards — a reported 17 inches in a day and a half. The Musi, normally a modest stream, rose through Hyderabad in the dark and took the old city with it. Whole quarters were erased; the Afzal Gunj bridge was overwhelmed; the death toll is usually given as around 15,000.",
@@ -897,6 +958,9 @@ const ERAS = [
     {
       year: "1911 – 1948",
       title: "The richest man in the world",
+      figures: [
+        { img: "images/osman-ali-khan.jpg", name: "Mir Osman Ali Khan", note: "TIME’s richest man, 1937; socks he knitted himself" }
+      ],
       teaser: "He used a 185-carat diamond as a paperweight, wore the same clothes for years, and built the city you can still walk through.",
       detail: [
         "Mir Osman Ali Khan, seventh and last Nizam, appeared on the cover of TIME in February 1937 as the richest man in the world. The Jacob diamond — 184.75 carats, about twice the Koh-i-Nur — was found in the toe of his father's slipper and used, the story goes, as a paperweight.",
@@ -921,6 +985,9 @@ const ERAS = [
     {
       year: "13 – 18 Sept 1948",
       title: "Operation Polo",
+      figures: [
+        { img: "images/operation-polo.jpg", name: "September 1948", note: "Five days of fighting; the reckoning came afterwards" }
+      ],
       teaser: "Five days of fighting ended six centuries of Deccan sovereignty — and left a casualty figure India did not publish for fifty years.",
       detail: [
         "Hyderabad did not accede at Partition. It signed a Standstill Agreement, sought to remain independent, and its politics slid out of the Nizam's hands: the Razakar militia of Qasim Razvi terrorised the countryside, while a communist-led peasant revolt burned through Telangana against the landlords.",

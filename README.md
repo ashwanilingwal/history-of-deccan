@@ -8,7 +8,7 @@ epigraphy and archaeology.
 
 The hero offers the two ways in:
 
-- **By place** — a chart of the Deccan with 10 markers. Each opens a full-screen
+- **By place** — a real map of peninsular India with 10 markers. Each opens a full-screen
   chapter on that city: an at-a-glance fact strip, the narrative, collapsible
   boxes, a quotation, and **its own city plan** with numbered sites you can click
   for a photograph and a paragraph. Deep-linkable, e.g. `?place=golconda`.
@@ -61,18 +61,47 @@ the repo in the dashboard — no configuration needed.
 ## Structure
 
 ```
-index.html          the page shell (hero, Deccan map SVG, section headings, gallery, sources)
+index.html          the page shell (hero, map overlay, section headings, gallery, sources)
 css/style.css       dark ink / gold design system
 js/places.js        the 10 cities — facts, chapters, boxes, quotes and city plans
 js/chronicle.js     the timeline — 7 eras, 36 events, each with a teaser and boxes
 js/main.js          renders both data files; nav, markers, overlays, lightbox, reveals
 images/             photographs (see below)
 scripts/fetch_images*.py   the image fetchers, in the order they were run
+scripts/build_map.py       recolours and crops the base map
+images/map/deccan.svg      the base map itself
 ```
 
 `places.js` and `chronicle.js` are pure data; `main.js` is the only file that
 knows how to draw. Adding a city means adding an object, not touching the
 renderer.
+
+## The map
+
+The base map is Wikipedia's **India location map** (CC BY-SA 3.0), whose projection
+is documented in `Module:Location map/data/India`:
+
+```
+top = 37.5N   bottom = 5.0N   left = 67.0E   right = 99.0E   over 1500 x 1614.844 px
+```
+
+Because that is a plain equirectangular frame, a city's real latitude and longitude
+convert straight into a position on it, and `js/main.js` places every marker that
+way — no coordinates tuned by eye. `scripts/build_map.py` fetches the same file,
+repaints it layer by layer into the site's palette, trims the coordinate precision,
+and crops it to peninsular India.
+
+Two notes on that crop. It is the region the site is actually about; and it keeps
+the map clear of the northern borders, whose depiction is a legal matter in India.
+If you want the whole country instead, change `VIEW_N/S/W/E` in the script and
+re-run it — the marker projection needs no changes, only the overlay's `viewBox`
+in `index.html` has to match the new one the script prints.
+
+Some of these cities are genuinely on top of each other — Golconda and Hyderabad
+are 11 km apart, Daulatabad and Aurangabad 16 km, which is five to seven pixels
+here. Those markers carry a `pinDx`/`pinDy` offset and draw a hairline back to
+their true position, so the map stays readable without misplacing anything
+silently.
 
 ## Images
 

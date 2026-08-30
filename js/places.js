@@ -17,7 +17,7 @@ const PLACES = [
 {
   id: "daulatabad",
   n: 1,
-  x: 208, y: 160, labelDy: -17,
+  lat: 19.943, lon: 75.214, pinDy: -28, labelDy: -16,
   name: "Daulatabad",
   alt: "Devagiri — the Hill of the Gods",
   era: "Yadava capital c.1187 · raided 1296 · imperial capital 1327",
@@ -160,7 +160,7 @@ const PLACES = [
 {
   id: "warangal",
   n: 2,
-  x: 581, y: 336,
+  lat: 17.9784, lon: 79.5941, labelDy: -16,
   name: "Warangal",
   alt: "Orugallu — the one stone",
   era: "Kakatiya capital · besieged 1310 · annexed 1323",
@@ -285,7 +285,7 @@ const PLACES = [
 {
   id: "gulbarga",
   n: 3,
-  x: 355, y: 392,
+  lat: 17.3297, lon: 76.8343, pinDx: -50, pinDy: -34, labelDy: 22,
   name: "Gulbarga",
   alt: "Ahsanabad — first throne of the Bahmanis",
   era: "Bahmani capital 1347 – 1432",
@@ -408,7 +408,7 @@ const PLACES = [
 {
   id: "bidar",
   n: 4,
-  x: 405, y: 338, labelDy: -17,
+  lat: 17.9106, lon: 77.5199, labelDy: -16,
   name: "Bidar",
   alt: "Muhammadabad — the plateau capital",
   era: "Bahmani capital 1432 – 1518 · Barid Shahi to 1619",
@@ -556,7 +556,7 @@ const PLACES = [
 {
   id: "hampi",
   n: 5,
-  x: 326, y: 560,
+  lat: 15.335, lon: 76.46, labelDy: 22,
   name: "Vijayanagara",
   alt: "Hampi — the city of victory",
   era: "Founded 1336 · sacked 1565 · never reoccupied",
@@ -742,7 +742,7 @@ const PLACES = [
 {
   id: "bijapur",
   n: 6,
-  x: 263, y: 434,
+  lat: 16.8302, lon: 75.71, labelDy: 22,
   name: "Bijapur",
   alt: "Vijayapura — the Adil Shahi capital",
   era: "Independent 1490 · fell to Aurangzeb 1686",
@@ -911,7 +911,7 @@ const PLACES = [
 {
   id: "golconda",
   n: 7,
-  x: 466, y: 378,
+  lat: 17.3833, lon: 78.4011, pinDx: -42, labelDy: 22,
   name: "Golconda",
   alt: "Golla konda — the shepherd's hill",
   era: "Qutb Shahi seat from c. 1501 · fell 1687",
@@ -1078,7 +1078,7 @@ const PLACES = [
 {
   id: "hyderabad",
   n: 8,
-  x: 515, y: 420, labelDx: 12,
+  lat: 17.3616, lon: 78.4747, pinDx: 38, labelDy: 22,
   name: "Hyderabad",
   alt: "The city on the Musi",
   era: "Founded 1591 · Asaf Jahi capital 1763 – 1948",
@@ -1297,7 +1297,7 @@ const PLACES = [
 {
   id: "ahmednagar",
   n: 9,
-  x: 184, y: 244,
+  lat: 19.0948, lon: 74.748, pinDy: 28, labelDy: -16,
   name: "Ahmadnagar",
   alt: "The Nizam Shahi capital",
   era: "Independent 28 May 1490 · annexed 1636",
@@ -1429,7 +1429,7 @@ const PLACES = [
 {
   id: "aurangabad",
   n: 10,
-  x: 252, y: 196, labelDx: 14,
+  lat: 19.8762, lon: 75.3433, labelDy: 22,
   name: "Aurangabad",
   alt: "Khadki — Malik Ambar's city",
   era: "Founded c. 1610 · Mughal Deccan capital · Asaf Jahi seat to 1763",

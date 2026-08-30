@@ -76,28 +76,56 @@
 
   const markerLayer = document.getElementById("marker-layer");
 
+  /* The base map is Wikipedia's India location map, whose projection is
+     documented: 37.5°N at the top, 5.0°N at the bottom, 67°E to 99°E, over
+     1500 × 1614.844 px, linear in both axes. So a city's real coordinates
+     convert straight into a position on it — no eyeballing. See
+     scripts/build_map.py, which crops and recolours the same file. */
+  const MAP = { top: 37.5, bottom: 5.0, left: 67.0, right: 99.0, w: 1500, h: 1614.844 };
+  const projectX = (lon) => (lon - MAP.left) / (MAP.right - MAP.left) * MAP.w;
+  const projectY = (lat) => (MAP.top - lat) / (MAP.top - MAP.bottom) * MAP.h;
+
+  const mk = (tag, attrs, text) => {
+    const n = document.createElementNS(SVGNS, tag);
+    Object.entries(attrs).forEach(([k, v]) => n.setAttribute(k, v));
+    if (text !== undefined) n.textContent = text;
+    return n;
+  };
+
   PLACES.forEach((p) => {
+    // true position on the map, from the city's real coordinates
+    const tx = projectX(p.lon);
+    const ty = projectY(p.lat);
+
+    /* Some of these cities are genuinely on top of each other: Golconda and
+       Hyderabad are 11 km apart, Daulatabad and Aurangabad 16 km — five to
+       seven pixels on a map spanning two thousand. Where that happens the pin
+       is nudged aside and a hairline runs back to the true spot, so the map
+       stays readable without quietly lying about where anything is. */
+    const x = tx + (p.pinDx || 0);
+    const y = ty + (p.pinDy || 0);
+
     const g = document.createElementNS(SVGNS, "g");
     g.setAttribute("class", "marker");
     g.setAttribute("tabindex", "0");
     g.setAttribute("role", "button");
     g.setAttribute("aria-label", p.name);
 
-    const mk = (tag, attrs, text) => {
-      const n = document.createElementNS(SVGNS, tag);
-      Object.entries(attrs).forEach(([k, v]) => n.setAttribute(k, v));
-      if (text !== undefined) n.textContent = text;
-      return n;
-    };
+    if (p.pinDx || p.pinDy) {
+      g.append(
+        mk("line", { class: "leader", x1: tx, y1: ty, x2: x, y2: y }),
+        mk("circle", { class: "truespot", cx: tx, cy: ty, r: 1.6 })
+      );
+    }
 
     g.append(
-      mk("circle", { class: "pulse", cx: p.x, cy: p.y, r: 11 }),
-      mk("circle", { class: "ring", cx: p.x, cy: p.y, r: 11 }),
-      mk("text", { class: "num", x: p.x, y: p.y + 0.5 }, p.n),
+      mk("circle", { class: "pulse", cx: x, cy: y, r: 9 }),
+      mk("circle", { class: "ring", cx: x, cy: y, r: 9 }),
+      mk("text", { class: "num", x: x, y: y + 0.5 }, p.n),
       mk("text", {
         class: "place",
-        x: p.x + (p.labelDx || 0),
-        y: p.y + (p.labelDy || 26)
+        x: x + (p.labelDx || 0),
+        y: y + (p.labelDy || 22)
       }, p.name.toUpperCase())
     );
 
@@ -251,7 +279,18 @@
     era.events.forEach((ev) => {
       const d = document.createElement("div");
       d.className = "event reveal";
-      let inner = (ev.detail || []).map((p) => "<p>" + p + "</p>").join("");
+      let inner = "";
+      /* A portrait, where one survives. The chronicle is full of vividly drawn
+         people and showed you none of their faces; `figures` puts them beside
+         the text they belong to. */
+      if (ev.figures && ev.figures.length) {
+        inner += '<div class="figures">' + ev.figures.map((f) =>
+          '<figure><img src="' + f.img + '" alt="' + f.name + '" loading="lazy">' +
+          "<figcaption><b>" + f.name + "</b>" +
+          (f.note ? "<span>" + f.note + "</span>" : "") +
+          "</figcaption></figure>").join("") + "</div>";
+      }
+      inner += (ev.detail || []).map((p) => "<p>" + p + "</p>").join("");
       inner += boxesHTML(ev.boxes);
       if (ev.link) {
         const place = PLACES.find((p) => p.id === ev.link);

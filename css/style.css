@@ -277,7 +277,23 @@ section { padding: 120px 0; position: relative; }
   box-shadow: 0 30px 80px rgba(0,0,0,0.5), inset 0 0 120px rgba(0,0,0,0.55);
 }
 
-.map-frame svg { width: 100%; height: auto; display: block; }
+/* the recoloured base map sits underneath; the marker overlay shares its
+   viewBox exactly, so the two stay registered at any width */
+.map-frame .basemap { width: 100%; height: auto; display: block; }
+.map-frame svg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; display: block;
+}
+.map-frame .grat { stroke: rgba(201, 166, 107, 0.07); stroke-width: 1; }
+/* where two cities are too close to draw apart, the pin steps aside and a
+   hairline points back to where the place actually is */
+.marker .leader { stroke: rgba(201, 166, 107, 0.4); stroke-width: 0.8; }
+.marker .truespot { fill: rgba(201, 166, 107, 0.75); }
+.marker:hover .leader, .marker:focus .leader { stroke: var(--gold-bright); }
+.map-frame .grat-label {
+  font-family: var(--sans); font-size: 9px; letter-spacing: 0.16em;
+  fill: rgba(201, 166, 107, 0.3);
+}
 
 .map-caption {
   text-align: center;
@@ -865,6 +881,15 @@ footer p { font-family: var(--sans); font-size: 10px; letter-spacing: 0.24em; te
      is unreadable — so keep the plan at its drawn size and scroll it instead */
   .citymap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .citymap svg { width: 900px; max-width: none; }
+
+  /* the Deccan map has the same problem: scaled to a phone its city labels
+     render at about 4px. Keep it at a readable size and scroll it. */
+  .map-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .map-frame { width: 880px; max-width: none; }
+  .map-caption::after {
+    content: " · drag the map sideways";
+    color: var(--gold);
+  }
   .citymap-wrap > .lede-sm::after {
     content: " (drag the plan sideways to follow it)";
     color: var(--gold); font-style: normal; font-size: 13px;
@@ -888,4 +913,34 @@ footer p { font-family: var(--sans); font-size: 10px; letter-spacing: 0.24em; te
   .box table { font-size: 15.5px; }
   .box table td:first-child { width: 46%; padding-right: 12px; }
   .site-strip { grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 9px; }
+}
+
+/* ---------- portraits inside a timeline event ---------- */
+.event .figures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin: 4px 0 26px;
+}
+.event .figures figure { margin: 0; }
+.event .figures img {
+  width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top center;
+  border: 1px solid var(--line-soft);
+  filter: saturate(0.78) brightness(0.86);
+  transition: filter 0.5s;
+}
+.event .figures figure:hover img { filter: saturate(1) brightness(1); }
+.event .figures figcaption {
+  font-family: var(--sans); margin-top: 9px; line-height: 1.45;
+}
+.event .figures figcaption b {
+  display: block; font-size: 11.5px; font-weight: 500;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold);
+}
+.event .figures figcaption span {
+  display: block; font-family: var(--serif); font-style: italic;
+  font-size: 15px; color: var(--ivory-faint); margin-top: 3px;
+}
+@media (max-width: 760px) {
+  .event .figures { grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); gap: 11px; }
 }
