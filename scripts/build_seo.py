@@ -93,6 +93,8 @@ def analytics_snippet():
 
 BEGIN = "<!-- BEGIN generated timeline — scripts/build_seo.py -->"
 END = "<!-- END generated timeline -->"
+CHIPS_BEGIN = "<!-- BEGIN generated chips — scripts/build_seo.py -->"
+CHIPS_END = "<!-- END generated chips -->"
 
 
 def load(path, var):
@@ -184,6 +186,23 @@ def timeline_html(eras, places):
                 % (esc(ev["year"]), ev["title"], ev["teaser"], "\n".join(inner))
             )
     out.append("    " + END)
+    return "\n".join(out)
+
+
+def chips_html(places):
+    """The map legend, as real links.
+
+    These were built by JavaScript, which left four city pages — Daulatabad,
+    Warangal, Bidar, Aurangabad — with no HTML link anywhere on the site. They
+    were in the sitemap, but a page reachable only from a sitemap is indexed
+    slowly and ranks poorly. Now they are ordinary anchors that JavaScript
+    intercepts to open the overlay.
+    """
+    out = [CHIPS_BEGIN]
+    for p in places:
+        out.append('      <a href="city/%s.html"><b>%d</b>%s</a>'
+                   % (p["id"], p["n"], esc(p["name"])))
+    out.append("      " + CHIPS_END)
     return "\n".join(out)
 
 
@@ -357,6 +376,13 @@ def main():
         src = src.replace('<link rel="canonical"',
                           '<meta name="google-site-verification" content="%s">\n<link rel="canonical"'
                           % verify, 1)
+    chips = chips_html(places)
+    if CHIPS_BEGIN in src:
+        src = re.sub(re.escape(CHIPS_BEGIN) + r"[\s\S]*?" + re.escape(CHIPS_END), chips, src)
+    else:
+        src = src.replace('<div class="map-chips"></div>',
+                          '<div class="map-chips">\n%s\n    </div>' % chips)
+
     src = strip_analytics(src)
     if ga:
         src = src.replace("</head>", ga + "</head>", 1)

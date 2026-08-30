@@ -141,12 +141,19 @@
      crawler and by anyone without JavaScript. With JavaScript the click is
      intercepted and the overlay opens instead — same destination, no reload. */
   const chips = el(".map-chips");
-  PLACES.forEach((p) => {
-    const a = document.createElement("a");
-    a.href = "city/" + p.id + ".html";
-    a.innerHTML = "<b>" + p.n + "</b>" + p.name;
-    a.addEventListener("click", (e) => { e.preventDefault(); openPlace(p.id); });
-    chips.appendChild(a);
+  if (!chips.querySelector("a")) {
+    PLACES.forEach((p) => {
+      const a = document.createElement("a");
+      a.href = "city/" + p.id + ".html";
+      a.innerHTML = "<b>" + p.n + "</b>" + p.name;
+      chips.appendChild(a);
+    });
+  }
+  // whether the chips came from the HTML or from the loop above, the click
+  // opens the overlay rather than following the link
+  els("a", chips).forEach((a) => {
+    const id = (a.getAttribute("href") || "").replace("city/", "").replace(".html", "");
+    a.addEventListener("click", (e) => { e.preventDefault(); openPlace(id); });
   });
 
   /* ======================================================================
