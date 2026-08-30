@@ -137,12 +137,16 @@
   });
 
   // legend chips
+  /* Real links to the generated city pages, so those pages are reachable by a
+     crawler and by anyone without JavaScript. With JavaScript the click is
+     intercepted and the overlay opens instead — same destination, no reload. */
   const chips = el(".map-chips");
   PLACES.forEach((p) => {
-    const b = document.createElement("button");
-    b.innerHTML = "<b>" + p.n + "</b>" + p.name;
-    b.addEventListener("click", () => openPlace(p.id));
-    chips.appendChild(b);
+    const a = document.createElement("a");
+    a.href = "city/" + p.id + ".html";
+    a.innerHTML = "<b>" + p.n + "</b>" + p.name;
+    a.addEventListener("click", (e) => { e.preventDefault(); openPlace(p.id); });
+    chips.appendChild(a);
   });
 
   /* ======================================================================
@@ -361,6 +365,8 @@
     }
 
     html += cityMapHTML(p);
+    html += '<p class="full-chapter"><a href="city/' + p.id + '.html">' +
+            "Open the full " + p.name + " chapter as its own page ›</a></p>";
     ovBody.innerHTML = html;
 
     // wire up city-map interactions
@@ -421,7 +427,19 @@
 
   const tl = el(".timeline");
   const eraAnchors = [];        // the era headings, for the scrubber below
-  ERAS.forEach((era) => {
+
+  /* The chronicle is pre-rendered into index.html by scripts/build_seo.py, so
+     that ~12,500 words of it exist in the HTML rather than only after this
+     script runs. When it is already there we adopt it instead of building a
+     second copy; the generator and the code below emit the same markup. */
+  const prerendered = tl.querySelector(".event");
+  if (prerendered) {
+    els(".era-label", tl).forEach((node, i) => {
+      if (ERAS[i]) eraAnchors.push({ era: ERAS[i], node: node });
+    });
+  }
+
+  if (!prerendered) ERAS.forEach((era) => {
     const lab = document.createElement("div");
     lab.className = "era-label reveal";
     lab.innerHTML = '<div class="badge"><span class="kicker">' + era.label +
@@ -463,14 +481,14 @@
       }
       d.innerHTML =
         '<div class="year">' + ev.year + "</div>" +
-        "<h4>" + ev.title + "</h4>" +
+        "<h3>" + ev.title + "</h3>" +
         '<p class="teaser">' + ev.teaser + "</p>" +
         '<div class="detail"><div class="inner">' + inner + "</div></div>";
       tl.appendChild(d);
     });
   });
 
-  els(".event h4").forEach((h) => {
+  els(".event h3").forEach((h) => {
     h.addEventListener("click", () => h.closest(".event").classList.toggle("open"));
   });
 
@@ -551,7 +569,10 @@
      ====================================================================== */
 
   els(".kingdom-card[data-place]").forEach((card) => {
-    card.addEventListener("click", () => openPlace(card.dataset.place));
+    card.addEventListener("click", (e) => {
+      e.preventDefault();                 // it is a real link; open in place
+      openPlace(card.dataset.place);
+    });
   });
 
   /* ======================================================================

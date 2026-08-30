@@ -46,6 +46,35 @@ comes from chronicles written centuries after the events by interested parties.
 Those claims appear here as legends, with the scholarly objection alongside,
 rather than as facts.
 
+## Search engines
+
+About 31,000 words — the whole chronicle and every city chapter — used to live
+only inside `js/chronicle.js` and `js/places.js`. The served HTML carried about
+1,500. A crawler that does not run JavaScript saw almost nothing of it.
+
+`scripts/build_seo.py` fixes that from the same data files:
+
+- **The chronicle is pre-rendered into `index.html`** between two markers.
+  `main.js` builds the timeline only when it finds the container empty, so there
+  is exactly one copy of every event — in the HTML, and still interactive.
+- **Each city gets its own page** under `city/`, with its own title,
+  description, canonical URL, Open Graph tags and `Article` + `Place` JSON-LD
+  carrying real coordinates. One page cannot rank for "Golconda Fort",
+  "Vijayanagara empire" and "Bijapur Adil Shahi" at once; ten focused pages can
+  each go after their own subject.
+- **`robots.txt` and `sitemap.xml`** are written, and the map chips and dynasty
+  cards are real `<a href>` links, so those pages are reachable by a crawler
+  rather than orphaned behind a click handler. With JavaScript the click is
+  intercepted and the overlay opens as before.
+
+Crawlable text went from **1,507 words to about 35,500**.
+
+Re-run it after editing `chronicle.js` or `places.js`. The output is committed,
+so deploying stays a plain static upload.
+
+Note `cleanUrls` is **off** in `vercel.json` on purpose: with it on, every
+`.html` link, canonical tag and sitemap entry would point at a 308 redirect.
+
 ## Run locally
 
 No build step — plain HTML/CSS/JS. Either open `index.html`, or:
