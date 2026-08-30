@@ -70,6 +70,11 @@ def clean_token(raw):
 def analytics_snippet():
     """Google Analytics 4, or nothing at all if no measurement ID is set."""
     gid = clean_token(CFG.get("gaId", ""))
+    # Accept the whole snippet Google hands you, not just the bare ID — pasting
+    # the block is the natural thing to do with what it puts on your clipboard.
+    m = re.search(r"\bG-[A-Z0-9]{6,}\b", gid)
+    if m:
+        gid = m.group(0)
     if not gid:
         return ""
     if not re.fullmatch(r"G-[A-Z0-9]{6,}", gid):
