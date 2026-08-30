@@ -274,7 +274,15 @@ def main():
     eras = load("js/chronicle.js", "ERAS")
     places = load("js/places.js", "PLACES")
 
+    # Accept whatever Search Console put on the clipboard: the bare token, or
+    # the whole <meta> tag, or just the content="..." part. Pasting the full tag
+    # is the obvious mistake and would otherwise nest one tag inside another and
+    # fail verification silently.
     verify = os.environ.get("GSC_TOKEN", "").strip()
+    m = re.search(r'content=["\']([^"\']+)["\']', verify)
+    if m:
+        verify = m.group(1)
+    verify = verify.strip().strip('"\'')
 
     index_path = os.path.join(ROOT, "index.html")
     src = open(index_path).read()
