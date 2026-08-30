@@ -14,7 +14,10 @@ The hero offers the two ways in:
   for a photograph and a paragraph. Deep-linkable, e.g. `?place=golconda`.
 - **By time** — a chronicle of 36 events across 7 ages, from the rock-cut
   centuries to Operation Polo in 1948. Each event shows only a short hook until
-  you open it; the detail inside folds further into boxes you can leave shut.
+  you open it; the detail inside folds further into boxes you can leave shut,
+  and twenty of them carry portraits of the people they are about. A scrubber
+  along the bottom shows the seven ages, which one you are reading and how far
+  through the whole arc you have come; clicking an age jumps to it.
 
 ## The four kinds of box
 
@@ -109,7 +112,11 @@ images/map/deccan.svg      the base map itself
 knows how to draw. Adding a city means adding an object, not touching the
 renderer.
 
-## The map
+## The maps
+
+Two, and every marker on both is placed from real coordinates rather than by eye.
+
+### The chart of the Deccan
 
 The base map is Wikipedia's **India location map** (CC BY-SA 3.0), whose projection
 is documented in `Module:Location map/data/India`:
@@ -135,6 +142,32 @@ are 11 km apart, Daulatabad and Aurangabad 16 km, which is five to seven pixels
 here. Those markers carry a `pinDx`/`pinDy` offset and draw a hairline back to
 their true position, so the map stays readable without misplacing anything
 silently.
+
+### The city plans
+
+Each city's plan is a grid of **OpenStreetMap** tiles, inverted and tinted to the
+site's palette, with its monuments pinned onto it. Two scripts build them:
+
+1. `fetch_site_coords.py` asks Wikipedia for each monument's coordinates in
+   batches of 40, and falls back to OpenStreetMap's Nominatim search for the
+   ones whose articles carry no coordinate template. 105 of the 112 sites are
+   located this way; the rest are listed on the plan but not pinned, because
+   things like "the durbar halls" or "Chand Bibi's breach" have no single point.
+2. `build_city_maps.py` frames each city on its core cluster of sites — several
+   plans deliberately include somewhere far off, and framing to fit Ajanta
+   would squash Aurangabad into a few pixels — then fetches the tiles that frame
+   needs. Tiles are laid out by the browser as a CSS grid rather than stitched,
+   which avoids a build dependency and keeps each one cacheable.
+
+Monuments cluster far more tightly than cities do: the Charminar, the Mecca
+Masjid and the Char Kaman are within 150 m of each other. `declutter()` in
+`main.js` measures what actually overlaps once the plan is in the DOM and fans
+those pins out along a spiral, each keeping a hairline back to its true spot;
+labels that still collide are held back until you hover or select the pin.
+
+Tiles are fetched once and committed. The OSM tile usage policy discourages
+automated downloading, so the script caches on disk, sleeps between requests and
+is never run by a visitor — and the ODbL credit is on the page.
 
 ## Images
 

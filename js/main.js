@@ -157,29 +157,173 @@
   const ovBody = el(".overlay-body", overlay);
   let current = 0;
 
+  /* Web Mercator, matching the OpenStreetMap tiles behind each city plan.
+     CITY_MAPS (js/citymaps.js, generated) gives the tile grid and the bounds it
+     covers; every monument is placed on it from its own real coordinates. */
+  function cityProjector(M) {
+    const n = Math.pow(2, M.zoom);
+    const mercX = (lon) => (lon + 180) / 360 * n;
+    const mercY = (lat) => {
+      const r = lat * Math.PI / 180;
+      return (1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2 * n;
+    };
+    const x0 = mercX(M.west), y0 = mercY(M.north);
+    return (lat, lon) => ({
+      // as a percentage of the grid, so the plan stays registered at any width
+      xPct: (mercX(lon) - x0) / M.cols * 100,
+      yPct: (mercY(lat) - y0) / M.rows * 100
+    });
+  }
+
+  /* Real geography puts monuments on top of each other: the Charminar, the
+     Mecca Masjid and the Char Kaman are within 150 m, which on a frame 28 km
+     across is about four pixels. So after the plan is in the DOM, measure what
+     actually overlaps and fan those pins out, each keeping a hairline back to
+     where it really is. Labels that still collide are hidden until you hover
+     or select the pin — the standard cartographic answer to a crowded sheet. */
+  function declutter(root, tries) {
+    const map = el(".citymap", root);
+    if (!map) return;
+    const pinLayer = el(".pins", map);
+    if (!pinLayer) return;
+    const W = pinLayer.clientWidth, H = pinLayer.clientHeight;
+    // the layer can measure zero until the tile grid has been laid out, so
+    // wait for a frame that actually has geometry rather than giving up
+    if (!W || !H) {
+      if ((tries || 0) < 20) setTimeout(() => declutter(root, (tries || 0) + 1), 30);
+      return;
+    }
+    if (pinLayer.dataset.decluttered === String(W)) return;
+    pinLayer.dataset.decluttered = String(W);
+
+    // the initial placement must not animate — it is layout, not a gesture
+    pinLayer.classList.add("placing");
+    const pins = els(".site-pin", pinLayer);
+    const R = 13;                                  // pin radius plus breathing room
+    const placed = [];
+
+    // spiral of candidate offsets, in pixels
+    const ring = [];
+    for (let r = 28; r <= 190; r += 22) {
+      const step = r < 60 ? 30 : 18;
+      for (let a = 0; a < 360; a += step) {
+        ring.push([Math.cos(a * Math.PI / 180) * r, Math.sin(a * Math.PI / 180) * r]);
+      }
+    }
+
+    pins.forEach((pin) => {
+      const tx = parseFloat(pin.style.left) / 100 * W;
+      const ty = parseFloat(pin.style.top) / 100 * H;
+      let dx = 0, dy = 0;
+      const clash = (ox, oy) => placed.some((q) =>
+        Math.hypot(q.x - (tx + ox), q.y - (ty + oy)) < R * 2);
+
+      if (clash(0, 0)) {
+        // take the first clear spot on the spiral; if the sheet is so crowded
+        // that none is clear, take whichever leaves the most room rather than
+        // giving up and stacking
+        let best = null;
+        for (const [ox, oy] of ring) {
+          const nx = tx + ox, ny = ty + oy;
+          if (nx < R || nx > W - R || ny < R || ny > H - R) continue;
+          if (!clash(ox, oy)) { best = [ox, oy]; break; }
+          const room = Math.min.apply(null, placed.map((q) =>
+            Math.hypot(q.x - nx, q.y - ny)));
+          if (!best || room > best[2]) best = [ox, oy, room];
+        }
+        if (best) { dx = best[0]; dy = best[1]; }
+      }
+      // never let a pin hang off the sheet
+      const fx = Math.min(Math.max(tx + dx, R), W - R);
+      const fy = Math.min(Math.max(ty + dy, R), H - R);
+      dx = fx - tx; dy = fy - ty;
+      placed.push({ x: fx, y: fy });
+
+      if (dx || dy) {
+        pin.style.transform = "translate(-50%,-50%) translate(" + dx + "px," + dy + "px)";
+        pin.classList.add("moved");
+        const lead = document.createElement("span");
+        lead.className = "pin-leader";
+        lead.style.left = pin.style.left;
+        lead.style.top = pin.style.top;
+        lead.style.width = Math.hypot(dx, dy) + "px";
+        lead.style.transform = "rotate(" + Math.atan2(dy, dx) + "rad)";
+        pinLayer.insertBefore(lead, pinLayer.firstChild);
+        const lbl = el('.pin-label[data-site="' + pin.dataset.site + '"]', pinLayer);
+        if (lbl) lbl.style.transform =
+          "translate(-50%,14px) translate(" + dx + "px," + dy + "px)";
+      }
+    });
+
+    // hide labels that still overlap; they come back on hover or selection
+    const boxes = [];
+    els(".pin-label", pinLayer).forEach((lbl) => {
+      const b = lbl.getBoundingClientRect();
+      const hit = boxes.some((o) =>
+        b.left < o.right && o.left < b.right && b.top < o.bottom && o.top < b.bottom);
+      if (hit) lbl.classList.add("crowded");
+      else boxes.push(b);
+    });
+
+    void pinLayer.offsetWidth;                 // settle the layout, then
+    pinLayer.classList.remove("placing");      // let hover transitions back in
+  }
+
   function cityMapHTML(p) {
     const cm = p.cityMap;
+    const M = typeof CITY_MAPS !== "undefined" ? CITY_MAPS[p.id] : null;
     if (!cm) return "";
-    const markers = cm.sites.map((s, i) =>
-      '<g class="site-marker" data-site="' + i + '" tabindex="0" role="button" aria-label="' + s.name + '">' +
-      '<circle class="ring" cx="' + s.x + '" cy="' + s.y + '" r="9.5"/>' +
-      '<text class="num" x="' + s.x + '" y="' + (s.y + 0.5) + '">' + (i + 1) + "</text>" +
-      '<text class="nm" x="' + (s.x + (s.labelDx || 0)) + '" y="' + (s.y + (s.labelDy || 23)) + '">' +
-      s.name.toUpperCase() + "</text></g>"
-    ).join("");
+
+    let pins = "", tiles = "";
+    const onMap = [];
+
+    if (M) {
+      const project = cityProjector(M);
+      cm.sites.forEach((s, i) => {
+        if (s.offMap || s.lat === undefined) return;
+        const q = project(s.lat, s.lon);
+        // a site can have real coordinates and still sit outside the frame —
+        // Ajanta is a hundred kilometres from Aurangabad
+        if (q.xPct < 0 || q.xPct > 100 || q.yPct < 0 || q.yPct > 100) return;
+        onMap.push(i);
+        const pos = 'left:' + q.xPct.toFixed(3) + '%;top:' + q.yPct.toFixed(3) + '%';
+        pins +=
+          '<button class="site-pin" data-site="' + i + '" style="' + pos + '" ' +
+          'aria-label="' + s.name + '"><span>' + (i + 1) + "</span></button>" +
+          '<span class="pin-label' + (s.labelDy && s.labelDy < 0 ? " above" : "") +
+          '" data-site="' + i + '" style="' + pos + '">' + s.name + "</span>";
+      });
+
+      M.tiles.forEach((row) => row.forEach((t) => {
+        tiles += t
+          ? '<img src="images/map/tiles/' + t + '" alt="" loading="lazy">'
+          : '<span class="tile-gap"></span>';
+      }));
+    }
 
     const strip = cm.sites.map((s, i) =>
-      '<figure data-site="' + i + '">' +
+      '<figure data-site="' + i + '"' +
+      (onMap.indexOf(i) === -1 ? ' class="beyond"' : "") + ">" +
       (s.img ? '<img src="' + s.img + '" alt="" loading="lazy">' : '<div class="ph"></div>') +
       "<figcaption>" + s.name + "</figcaption></figure>"
     ).join("");
+
+    const beyond = cm.sites.length - onMap.length;
 
     return (
       '<div class="citymap-wrap">' +
       '<span class="kicker">Inside the City</span>' +
       '<p class="lede-sm">' + (cm.caption || "") + "</p>" +
-      '<div class="citymap"><svg viewBox="0 0 ' + cm.w + " " + cm.h + '" aria-label="Map of ' + p.name + '">' +
-      (cm.features || "") + markers + "</svg></div>" +
+      (M
+        ? '<div class="citymap"><div class="tiles" style="aspect-ratio:' +
+          M.width + "/" + M.height + ";grid-template-columns:repeat(" + M.cols +
+          ',1fr)">' + tiles + "</div>" +
+          '<div class="pins">' + pins + "</div></div>" +
+          '<p class="map-credit">Map data © <a href="https://www.openstreetmap.org/copyright" ' +
+          'target="_blank" rel="noopener">OpenStreetMap</a> contributors' +
+          (beyond ? " · " + beyond + " site" + (beyond > 1 ? "s" : "") +
+                    " below lie beyond this frame" : "") + "</p>"
+        : "") +
       '<div class="site-card" id="site-card">' +
       '<div class="ph"></div><div><p class="hint-pick">Choose a numbered site on the plan — or a thumbnail below — to read about it.</p></div>' +
       "</div>" +
@@ -224,7 +368,7 @@
       const card = el("#site-card", ovBody);
       const pick = (i) => {
         const s = p.cityMap.sites[i];
-        els(".site-marker", ovBody).forEach((m) =>
+        els("[data-site]", ovBody).forEach((m) =>
           m.classList.toggle("active", m.dataset.site === String(i)));
         card.innerHTML =
           (s.img ? '<img src="' + s.img + '" alt="">' : '<div class="ph"></div>') +
@@ -237,6 +381,13 @@
           if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(+n.dataset.site); }
         });
       });
+      /* Wait for the overlay to be visible — while it is display:none the
+         container measures zero and nothing can be de-collided. rAF is the
+         right trigger, but it is throttled to nothing in a background tab,
+         so a timer backs it up; the dataset guard means only one takes
+         effect. */
+      requestAnimationFrame(() => declutter(ovBody));
+      setTimeout(() => declutter(ovBody), 60);
     }
 
     overlay.scrollTop = 0;
@@ -269,12 +420,14 @@
      ====================================================================== */
 
   const tl = el(".timeline");
+  const eraAnchors = [];        // the era headings, for the scrubber below
   ERAS.forEach((era) => {
     const lab = document.createElement("div");
     lab.className = "era-label reveal";
     lab.innerHTML = '<div class="badge"><span class="kicker">' + era.label +
       '</span><div class="years">' + era.years + "</div></div>";
     tl.appendChild(lab);
+    eraAnchors.push({ era: era, node: lab });
 
     era.events.forEach((ev) => {
       const d = document.createElement("div");
@@ -311,6 +464,75 @@
   els(".event h4").forEach((h) => {
     h.addEventListener("click", () => h.closest(".event").classList.toggle("open"));
   });
+
+  /* ======================================================================
+     Era scrubber — a bar along the bottom while the chronicle is on screen,
+     showing the seven ages, which one you are reading, and how far through
+     the whole arc you have come. Clicking an age jumps to it.
+     ====================================================================== */
+
+  (function eraScrubber() {
+    const chronicle = document.getElementById("chronicle");
+    if (!chronicle || !eraAnchors.length) return;
+
+    const bar = document.createElement("div");
+    bar.className = "era-bar";
+    bar.setAttribute("aria-label", "The seven ages of this history");
+    bar.innerHTML =
+      '<div class="era-bar-inner">' +
+      '<div class="era-track"><span class="era-progress"></span></div>' +
+      '<div class="era-steps">' +
+      eraAnchors.map((a, i) =>
+        '<button class="era-step" data-era="' + i + '">' +
+        '<span class="dot"></span>' +
+        '<span class="nm">' + a.era.label.replace(/^The /, "") + "</span>" +
+        '<span class="yr">' + a.era.years + "</span></button>"
+      ).join("") +
+      "</div></div>";
+    document.body.appendChild(bar);
+
+    const steps = els(".era-step", bar);
+    const progress = el(".era-progress", bar);
+
+    // .timeline is a positioned element, so offsetTop on an era label is
+    // relative to it, not to the page — measure in document space instead
+    const docTop = (node) => node.getBoundingClientRect().top + window.scrollY;
+
+    steps.forEach((b) => b.addEventListener("click", () => {
+      const node = eraAnchors[+b.dataset.era].node;
+      window.scrollTo({ top: docTop(node) - 90, behavior: "smooth" });
+    }));
+
+    let ticking = false;
+    function update() {
+      ticking = false;
+      const top = chronicle.getBoundingClientRect().top + window.scrollY;
+      const height = chronicle.offsetHeight;
+      const y = window.scrollY + window.innerHeight * 0.5;
+
+      // only while the chronicle is the thing on screen
+      const inside = window.scrollY + window.innerHeight > top + 120 &&
+                     window.scrollY < top + height - 120;
+      bar.classList.toggle("show", inside);
+      if (!inside) return;
+
+      const pct = Math.min(1, Math.max(0, (y - top) / height));
+      progress.style.width = (pct * 100).toFixed(2) + "%";
+
+      let active = 0;
+      eraAnchors.forEach((a, i) => { if (docTop(a.node) <= y) active = i; });
+      steps.forEach((b, i) => {
+        b.classList.toggle("active", i === active);
+        b.classList.toggle("past", i < active);
+      });
+    }
+
+    window.addEventListener("scroll", () => {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    window.addEventListener("resize", update, { passive: true });
+    update();
+  })();
   els(".goto-place").forEach((b) => {
     b.addEventListener("click", (e) => { e.stopPropagation(); openPlace(b.dataset.place); });
   });

@@ -534,39 +534,88 @@ section { padding: 120px 0; position: relative; }
   text-align: center; font-style: italic; color: var(--ivory-faint);
   font-size: 17px; margin-bottom: 24px;
 }
+/* The plan is a grid of OpenStreetMap tiles with the monuments pinned onto it
+   from their real coordinates. The tiles are inverted and pushed toward the
+   site's gold so a modern street map sits in the same world as everything
+   else; pins are positioned in per-cent, so the whole thing stays registered
+   at any width. */
 .citymap {
+  position: relative;
   border: 1px solid var(--line);
-  background: radial-gradient(ellipse at 50% 45%, #191410 0%, #0f0c09 72%);
+  background: #0f0c09;
   box-shadow: inset 0 0 90px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
 }
-.citymap svg { width: 100%; height: auto; display: block; }
-.citymap .site-marker { cursor: pointer; }
-.citymap .site-marker circle.ring {
-  fill: rgba(201, 166, 107, 0.14); stroke: var(--gold); stroke-width: 0.9;
-  transition: fill 0.3s;
+.citymap .tiles {
+  display: grid;
+  width: 100%;
+  filter: invert(1) sepia(0.72) saturate(1.25) hue-rotate(352deg)
+          brightness(0.82) contrast(0.95);
 }
-.citymap .site-marker:hover circle.ring,
-.citymap .site-marker.active circle.ring { fill: var(--gold); }
-.citymap .site-marker text.num {
-  font-family: var(--sans); font-size: 9px; fill: var(--gold-bright);
-  text-anchor: middle; dominant-baseline: central;
+.citymap .tiles img,
+.citymap .tiles .tile-gap { width: 100%; height: 100%; display: block; }
+.citymap .tiles .tile-gap { background: #d8d4cc; }
+.citymap .pins { position: absolute; inset: 0; }
+.citymap .pins.placing .site-pin,
+.citymap .pins.placing .pin-label { transition: none !important; }
+
+.citymap .site-pin {
+  position: absolute; transform: translate(-50%, -50%);
+  width: 22px; height: 22px; padding: 0; border-radius: 50%;
+  border: 1px solid var(--gold);
+  background: rgba(12, 10, 8, 0.82);
+  color: var(--gold-bright);
+  font-family: var(--sans); font-size: 10px; line-height: 1;
+  cursor: pointer; z-index: 2;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
 }
-.citymap .site-marker:hover text.num,
-.citymap .site-marker.active text.num { fill: var(--ink); }
-.citymap .site-marker text.nm {
-  font-family: var(--sans); font-size: 8.5px; fill: var(--ivory-faint);
-  letter-spacing: 0.16em; text-transform: uppercase; text-anchor: middle;
-  transition: fill 0.3s;
+.citymap .site-pin span { display: block; transform: translateY(0.5px); }
+.citymap .site-pin:hover,
+.citymap .site-pin.active {
+  background: var(--gold); color: var(--ink);
+  transform: translate(-50%, -50%) scale(1.18);
 }
-.citymap .site-marker:hover text.nm,
-.citymap .site-marker.active text.nm { fill: var(--gold-bright); }
-.citymap .cm-feature { fill: none; stroke: rgba(201, 166, 107, 0.18); stroke-width: 1; }
-.citymap .cm-river { fill: none; stroke: rgba(120, 150, 160, 0.4); stroke-width: 2.5; }
-.citymap .cm-label {
-  font-family: var(--sans); fill: rgba(154, 143, 124, 0.5);
-  letter-spacing: 0.24em; text-transform: uppercase; font-size: 9px;
+.citymap .pin-label {
+  position: absolute; transform: translate(-50%, 14px);
+  font-family: var(--sans); font-size: 9.5px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--ivory-dim); white-space: nowrap;
+  text-shadow: 0 1px 5px #000, 0 0 10px #000;
+  pointer-events: none; z-index: 1;
+  transition: color 0.3s;
 }
-.citymap .cm-water { fill: rgba(70, 100, 115, 0.18); stroke: rgba(120, 150, 160, 0.35); }
+.citymap .pin-label.above { transform: translate(-50%, -24px); }
+.citymap .pin-label.active { color: var(--gold-bright); }
+
+/* a pin that had to step aside, and the hairline back to its true position */
+.citymap .site-pin.moved { border-style: dashed; }
+.citymap .pin-leader {
+  position: absolute; height: 1px; transform-origin: 0 50%;
+  background: linear-gradient(90deg, rgba(201,166,107,0.8), rgba(201,166,107,0.32));
+  pointer-events: none; z-index: 0;
+}
+.citymap .pin-leader::before {
+  content: ""; position: absolute; left: -2px; top: -2px;
+  width: 5px; height: 5px; border-radius: 50%; background: var(--gold);
+}
+/* labels that would collide are held back until the pin is hovered or picked */
+.citymap .pin-label.crowded { opacity: 0; transition: opacity 0.25s; }
+.citymap .pin-label.crowded.active { opacity: 1; }
+.citymap .site-pin:hover + .pin-label,
+.citymap .site-pin:focus + .pin-label { opacity: 1; color: var(--gold-bright); }
+
+.overlay-body p.map-credit, .map-credit {
+  font-family: var(--sans); font-size: 9.5px; letter-spacing: 0.14em;
+  color: var(--ivory-faint); text-align: right; margin: 8px 0 0;
+  line-height: 1.5;
+}
+.map-credit a { color: var(--ivory-faint); border-bottom: 1px solid var(--line-soft); }
+.map-credit a:hover { color: var(--gold); }
+
+/* a site with no place on this frame — Ajanta is 100 km from Aurangabad */
+.site-strip figure.beyond { opacity: 0.72; }
+.site-strip figure.beyond figcaption::before {
+  content: "beyond the map · "; color: var(--gold); opacity: 0.75;
+}
 
 /* selected-site card */
 .site-card {
@@ -879,8 +928,11 @@ footer p { font-family: var(--sans); font-size: 10px; letter-spacing: 0.24em; te
 
   /* scaled to a phone the city plans render their labels at about 4px, which
      is unreadable — so keep the plan at its drawn size and scroll it instead */
+  /* the plans are tiled maps now — scroll them rather than shrink the pins */
   .citymap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .citymap svg { width: 900px; max-width: none; }
+  .citymap .tiles, .citymap .pins { width: 820px; }
+  .citymap .pins { position: absolute; left: 0; right: auto; }
+  .citymap .pin-label { font-size: 9px; }
 
   /* the Deccan map has the same problem: scaled to a phone its city labels
      render at about 4px. Keep it at a readable size and scroll it. */
@@ -943,4 +995,69 @@ footer p { font-family: var(--sans); font-size: 10px; letter-spacing: 0.24em; te
 }
 @media (max-width: 760px) {
   .event .figures { grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); gap: 11px; }
+}
+
+/* ---------- era scrubber: where you are in the chronicle ---------- */
+.era-bar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 150;
+  background: linear-gradient(180deg, rgba(12,10,8,0) 0%, rgba(12,10,8,0.93) 34%, rgba(12,10,8,0.97) 100%);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid var(--line-soft);
+  padding: 16px 22px 13px;
+  opacity: 0; transform: translateY(100%);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  pointer-events: none;
+}
+.era-bar.show { opacity: 1; transform: none; pointer-events: auto; }
+
+.era-bar-inner { max-width: 1180px; margin: 0 auto; }
+
+.era-track {
+  position: relative; height: 1px; background: var(--line-soft); margin-bottom: 13px;
+}
+.era-progress {
+  position: absolute; left: 0; top: -1px; height: 3px; width: 0;
+  background: linear-gradient(90deg, rgba(201,166,107,0.25), var(--gold));
+  transition: width 0.18s linear;
+}
+
+.era-steps { display: flex; gap: 4px; }
+.era-step {
+  flex: 1 1 0; min-width: 0;
+  background: none; border: none; cursor: pointer;
+  padding: 4px 6px 2px; text-align: center;
+  font-family: var(--sans); color: var(--ivory-faint);
+  transition: color 0.3s;
+}
+.era-step .dot {
+  display: block; width: 6px; height: 6px; margin: 0 auto 8px;
+  transform: rotate(45deg);
+  border: 1px solid var(--line); background: var(--ink);
+  transition: background 0.3s, border-color 0.3s, transform 0.3s;
+}
+.era-step .nm {
+  display: block; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.era-step .yr {
+  display: block; font-family: var(--serif); font-style: italic;
+  font-size: 12.5px; margin-top: 2px; opacity: 0.75;
+}
+.era-step:hover { color: var(--ivory-dim); }
+.era-step:hover .dot { border-color: var(--gold); }
+.era-step.past { color: var(--ivory-faint); }
+.era-step.past .dot { background: rgba(201,166,107,0.45); border-color: rgba(201,166,107,0.45); }
+.era-step.active { color: var(--gold-bright); }
+.era-step.active .dot {
+  background: var(--gold); border-color: var(--gold-bright);
+  transform: rotate(45deg) scale(1.5);
+}
+
+@media (max-width: 760px) {
+  .era-bar { padding: 12px 10px 10px; }
+  .era-step { padding: 3px 2px 1px; }
+  .era-step .nm { font-size: 0; letter-spacing: 0; }
+  /* on a phone there is no room for seven names — keep the years and the dots */
+  .era-step.active .nm { font-size: 9px; letter-spacing: 0.12em; }
+  .era-step .yr { font-size: 10.5px; }
 }

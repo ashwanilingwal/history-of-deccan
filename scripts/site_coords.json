@@ -1,0 +1,694 @@
+{
+  "daulatabad": [
+    {
+      "name": "The citadel",
+      "lat": 19.942724,
+      "lon": 75.213164,
+      "source": "Daulatabad Fort"
+    },
+    {
+      "name": "The Andheri",
+      "lat": 19.942724,
+      "lon": 75.213164,
+      "source": "Daulatabad Fort"
+    },
+    {
+      "name": "Chand Minar",
+      "lat": 19.944416,
+      "lon": 75.217429,
+      "source": "Chand Minar"
+    },
+    {
+      "name": "Chini Mahal",
+      "lat": 19.942724,
+      "lon": 75.213164,
+      "source": "Daulatabad Fort"
+    },
+    {
+      "name": "Jami Masjid",
+      "lat": null,
+      "lon": null,
+      "source": null
+    },
+    {
+      "name": "Khuldabad",
+      "lat": 20.009524,
+      "lon": 75.188799,
+      "source": "Khuldabad"
+    },
+    {
+      "name": "Ellora",
+      "lat": 20.0268,
+      "lon": 75.1771,
+      "source": "Ellora Caves"
+    },
+    {
+      "name": "Grishneshwar",
+      "lat": 20.02497222,
+      "lon": 75.16991667,
+      "source": "Grishneshwar Temple"
+    },
+    {
+      "name": "Ajanta",
+      "lat": 20.55333333,
+      "lon": 75.70027778,
+      "source": "Ajanta Caves"
+    },
+    {
+      "name": "Bibi ka Maqbara",
+      "lat": 19.90151,
+      "lon": 75.320195,
+      "source": "Bibi Ka Maqbara"
+    },
+    {
+      "name": "Panchakki",
+      "lat": 19.88944444,
+      "lon": 75.31555556,
+      "source": "Panchakki"
+    }
+  ],
+  "warangal": [
+    {
+      "name": "Kala Thoranam",
+      "lat": null,
+      "lon": null,
+      "source": null
+    },
+    {
+      "name": "The stone fort",
+      "lat": 17.9564947,
+      "lon": 79.6154251,
+      "source": "OpenStreetMap: Warangal Fort, Telangana"
+    },
+    {
+      "name": "Swayambhu temple",
+      "lat": null,
+      "lon": null,
+      "source": null
+    },
+    {
+      "name": "Thousand Pillars",
+      "lat": 18.00372222,
+      "lon": 79.57475,
+      "source": "Thousand Pillar Temple"
+    },
+    {
+      "name": "Hanamkonda hill",
+      "lat": 18.0167,
+      "lon": 79.6333,
+      "source": "Hanamkonda"
+    },
+    {
+      "name": "Bhadrakali temple",
+      "lat": 17.9949,
+      "lon": 79.5828,
+      "source": "Bhadrakali Temple, Warangal"
+    },
+    {
+      "name": "Pakhal lake",
+      "lat": 17.95277778,
+      "lon": 80.00138889,
+      "source": "Pakhal Lake"
+    },
+    {
+      "name": "Ramappa temple",
+      "lat": 18.25916667,
+      "lon": 79.94333333,
+      "source": "Ramappa Temple"
+    },
+    {
+      "name": "Bhadrachalam",
+      "lat": 17.66692222,
+      "lon": 80.88276111,
+      "source": "Bhadrachalam Temple"
+    }
+  ],
+  "gulbarga": [
+    {
+      "name": "Gulbarga Fort",
+      "lat": 17.3405,
+      "lon": 76.8311,
+      "source": "Gulbarga Fort"
+    },
+    {
+      "name": "Jama Masjid",
+      "lat": 17.34055556,
+      "lon": 76.83111111,
+      "source": "Jama Mosque, Kalaburagi"
+    },
+    {
+      "name": "The citadel",
+      "lat": 17.3405,
+      "lon": 76.8311,
+      "source": "Gulbarga Fort"
+    },
+    {
+      "name": "Dargah of Gisu Daraz",
+      "lat": 17.344002,
+      "lon": 76.8508979,
+      "source": "OpenStreetMap: Bande Nawaz Dargah Kalaburagi"
+    },
+    {
+      "name": "Haft Gumbaz",
+      "lat": 17.34194444,
+      "lon": 76.84527778,
+      "source": "Haft Gumbaz"
+    },
+    {
+      "name": "Shah Bazaar Masjid",
+      "lat": 17.329,
+      "lon": 76.825,
+      "source": "Kalaburagi"
+    },
+    {
+      "name": "Langar ki Masjid",
+      "lat": 17.329,
+      "lon": 76.825,
+      "source": "Kalaburagi"
+    },
+    {
+      "name": "Chor Gumbad",
+      "lat": 17.329,
+      "lon": 76.825,
+      "source": "Kalaburagi"
+    },
+    {
+      "name": "Firuzabad",
+      "lat": 17.0838201,
+      "lon": 76.7898612,
+      "source": "OpenStreetMap: Firozabad, Kalaburagi district, Karnataka"
+    }
+  ],
+  "bidar": [
+    {
+      "name": "Bidar Fort",
+      "lat": 17.92444444,
+      "lon": 77.52666667,
+      "source": "Bidar Fort"
+    },
+    {
+      "name": "Rangin Mahal",
+      "lat": 17.92444444,
+      "lon": 77.52666667,
+      "source": "Bidar Fort"
+    },
+    {
+      "name": "Solah Khamba Masjid",
+      "lat": 17.9208,
+      "lon": 77.5281,
+      "source": "Solah Khamba Mosque"
+    },
+    {
+      "name": "Takht Mahal",
+      "lat": 17.92444444,
+      "lon": 77.52666667,
+      "source": "Bidar Fort"
+    },
+    {
+      "name": "Gawan's madrasa",
+      "lat": 17.91476,
+      "lon": 77.5301,
+      "source": "Mahmud Gawan Madrasa"
+    },
+    {
+      "name": "Chaubara",
+      "lat": 17.9116622,
+      "lon": 77.530128,
+      "source": "OpenStreetMap: Chaubara, Bidar, Karnataka"
+    },
+    {
+      "name": "Bahmani tombs, Ashtur",
+      "lat": 17.915,
+      "lon": 77.561,
+      "source": "Bahmani Tombs"
+    },
+    {
+      "name": "Chaukhandi",
+      "lat": 17.912,
+      "lon": 77.52,
+      "source": "Bidar"
+    },
+    {
+      "name": "Barid Shahi tombs",
+      "lat": 17.9244862,
+      "lon": 77.5044477,
+      "source": "OpenStreetMap: Barid Shahi Park, Bidar"
+    },
+    {
+      "name": "Naubad karez",
+      "lat": 17.912,
+      "lon": 77.52,
+      "source": "Bidar"
+    }
+  ],
+  "hampi": [
+    {
+      "name": "Virupaksha temple",
+      "lat": 15.335167,
+      "lon": 76.458722,
+      "source": "Virupaksha Temple, Hampi"
+    },
+    {
+      "name": "Hampi bazaar",
+      "lat": 15.33444444,
+      "lon": 76.46222222,
+      "source": "Hampi"
+    },
+    {
+      "name": "Hemakuta hill",
+      "lat": 15.3343378,
+      "lon": 76.4599707,
+      "source": "OpenStreetMap: Hemakuta Hill, Hampi"
+    },
+    {
+      "name": "Ugra Narasimha",
+      "lat": 15.3291204,
+      "lon": 76.4589477,
+      "source": "OpenStreetMap: Ugra Narasimha Hampi"
+    },
+    {
+      "name": "Krishna temple",
+      "lat": 15.3302268,
+      "lon": 76.4603843,
+      "source": "OpenStreetMap: Krishna Temple Hampi"
+    },
+    {
+      "name": "Achyutaraya temple",
+      "lat": 15.3319603,
+      "lon": 76.4700879,
+      "source": "OpenStreetMap: Achyutaraya Temple, Hampi"
+    },
+    {
+      "name": "Vittala temple",
+      "lat": 15.3422907,
+      "lon": 76.4754669,
+      "source": "OpenStreetMap: Vittala Temple, Hampi"
+    },
+    {
+      "name": "The stone chariot",
+      "lat": 15.342256,
+      "lon": 76.4758983,
+      "source": "OpenStreetMap: Stone Chariot, Hampi"
+    },
+    {
+      "name": "Hazara Rama temple",
+      "lat": 15.3177968,
+      "lon": 76.4688676,
+      "source": "OpenStreetMap: Hazara Rama Temple, Hampi"
+    },
+    {
+      "name": "Mahanavami Dibba",
+      "lat": 15.33444444,
+      "lon": 76.46222222,
+      "source": "Hampi"
+    },
+    {
+      "name": "Lotus Mahal",
+      "lat": 15.3203,
+      "lon": 76.4713,
+      "source": "Lotus Mahal"
+    },
+    {
+      "name": "Elephant stables",
+      "lat": 15.3211086,
+      "lon": 76.4727815,
+      "source": "OpenStreetMap: Elephant Stables, Hampi"
+    },
+    {
+      "name": "Queen's Bath",
+      "lat": 15.313416,
+      "lon": 76.4727776,
+      "source": "OpenStreetMap: Queen's Bath Hampi"
+    }
+  ],
+  "bijapur": [
+    {
+      "name": "Gol Gumbaz",
+      "lat": 16.83003056,
+      "lon": 75.73609722,
+      "source": "Gol Gumbaz"
+    },
+    {
+      "name": "Ibrahim Rauza",
+      "lat": 16.82694444,
+      "lon": 75.70194444,
+      "source": "Ibrahim Rauza"
+    },
+    {
+      "name": "Jama Masjid",
+      "lat": 16.82194444,
+      "lon": 75.72888889,
+      "source": "Jama Mosque, Bijapur"
+    },
+    {
+      "name": "Gagan Mahal",
+      "lat": 16.8265621,
+      "lon": 75.7184678,
+      "source": "OpenStreetMap: Gagan Mahal, Vijayapura, Karnataka"
+    },
+    {
+      "name": "Sat Manzil",
+      "lat": 16.83,
+      "lon": 75.71,
+      "source": "Vijayapura, Karnataka"
+    },
+    {
+      "name": "Asar Mahal",
+      "lat": 16.825928,
+      "lon": 75.722341,
+      "source": "OpenStreetMap: Asar Mahal, Vijayapura"
+    },
+    {
+      "name": "Bara Kaman",
+      "lat": 16.82972222,
+      "lon": 75.71805556,
+      "source": "Bara Kaman"
+    },
+    {
+      "name": "Malik-e-Maidan",
+      "lat": 16.83175,
+      "lon": 75.70894,
+      "source": "Malik-E-Maidan"
+    },
+    {
+      "name": "Upli Buruj",
+      "lat": 16.832653,
+      "lon": 75.7117405,
+      "source": "OpenStreetMap: Upli Buruj, Vijayapura"
+    },
+    {
+      "name": "Taj Bawadi",
+      "lat": 16.83,
+      "lon": 75.71,
+      "source": "Vijayapura, Karnataka"
+    },
+    {
+      "name": "Begum Talab",
+      "lat": 16.83,
+      "lon": 75.71,
+      "source": "Vijayapura, Karnataka"
+    },
+    {
+      "name": "Nauraspur",
+      "lat": 16.83,
+      "lon": 75.71,
+      "source": "Vijayapura, Karnataka"
+    }
+  ],
+  "golconda": [
+    {
+      "name": "Bala Hisar",
+      "lat": 17.38305556,
+      "lon": 78.40111111,
+      "source": "Golconda Fort"
+    },
+    {
+      "name": "Fateh Darwaza",
+      "lat": 17.38305556,
+      "lon": 78.40111111,
+      "source": "Golconda Fort"
+    },
+    {
+      "name": "Bala Hisar Darwaza",
+      "lat": 17.38305556,
+      "lon": 78.40111111,
+      "source": "Golconda Fort"
+    },
+    {
+      "name": "Jama Masjid",
+      "lat": 17.38305556,
+      "lon": 78.40111111,
+      "source": "Golconda Fort"
+    },
+    {
+      "name": "The durbar halls",
+      "lat": null,
+      "lon": null,
+      "source": "no single point"
+    },
+    {
+      "name": "The water system",
+      "lat": null,
+      "lon": null,
+      "source": "no single point"
+    },
+    {
+      "name": "Qutb Shahi tombs",
+      "lat": 17.395,
+      "lon": 78.396,
+      "source": "Qutb Shahi tombs"
+    },
+    {
+      "name": "The mortuary bath",
+      "lat": 17.395,
+      "lon": 78.396,
+      "source": "Qutb Shahi tombs"
+    },
+    {
+      "name": "Hayat Bakshi Begum's mosque",
+      "lat": 17.32615,
+      "lon": 78.59901,
+      "source": "Hayat Bakshi Mosque"
+    },
+    {
+      "name": "Taramati Baradari",
+      "lat": 17.3761241,
+      "lon": 78.3781632,
+      "source": "OpenStreetMap: Taramati Baradari, Hyderabad"
+    },
+    {
+      "name": "Purana Pul",
+      "lat": 17.3666789,
+      "lon": 78.4592941,
+      "source": "OpenStreetMap: Purana Pul, Hyderabad"
+    }
+  ],
+  "hyderabad": [
+    {
+      "name": "Charminar",
+      "lat": 17.36163,
+      "lon": 78.47467,
+      "source": "Charminar"
+    },
+    {
+      "name": "Mecca Masjid",
+      "lat": 17.3606,
+      "lon": 78.4733,
+      "source": "Makkah Masjid, Hyderabad"
+    },
+    {
+      "name": "Char Kaman",
+      "lat": 17.36222222,
+      "lon": 78.47472222,
+      "source": "Char Kaman"
+    },
+    {
+      "name": "Badshahi Ashurkhana",
+      "lat": 17.36909,
+      "lon": 78.475726,
+      "source": "Badshahi Ashurkhana"
+    },
+    {
+      "name": "Laad Bazaar",
+      "lat": 17.361923,
+      "lon": 78.472842,
+      "source": "Laad Bazaar"
+    },
+    {
+      "name": "Chowmahalla Palace",
+      "lat": 17.358247,
+      "lon": 78.471701,
+      "source": "Chowmahalla Palace"
+    },
+    {
+      "name": "Purani Haveli",
+      "lat": 17.365507,
+      "lon": 78.482675,
+      "source": "Purani Haveli"
+    },
+    {
+      "name": "Paigah Tombs",
+      "lat": 17.3439,
+      "lon": 78.5041,
+      "source": "Paigah Tombs"
+    },
+    {
+      "name": "Falaknuma Palace",
+      "lat": 17.330955,
+      "lon": 78.467504,
+      "source": "Falaknuma Palace"
+    },
+    {
+      "name": "Salar Jung Museum",
+      "lat": 17.371426,
+      "lon": 78.480347,
+      "source": "Salar Jung Museum"
+    },
+    {
+      "name": "High Court",
+      "lat": 17.369181,
+      "lon": 78.472039,
+      "source": "Telangana High Court"
+    },
+    {
+      "name": "Osmania Hospital",
+      "lat": 17.372,
+      "lon": 78.474,
+      "source": "Osmania General Hospital"
+    },
+    {
+      "name": "State Central Library",
+      "lat": 17.3742,
+      "lon": 78.4783,
+      "source": "State Central Library, Hyderabad"
+    },
+    {
+      "name": "Osmania University",
+      "lat": 17.411,
+      "lon": 78.529,
+      "source": "Osmania University"
+    },
+    {
+      "name": "British Residency",
+      "lat": 17.3837248,
+      "lon": 78.4847522,
+      "source": "British Residency, Hyderabad"
+    },
+    {
+      "name": "Purana Pul",
+      "lat": 17.3666789,
+      "lon": 78.4592941,
+      "source": "OpenStreetMap: Purana Pul, Hyderabad"
+    },
+    {
+      "name": "Osman Sagar",
+      "lat": 17.38333333,
+      "lon": 78.3,
+      "source": "Osman Sagar"
+    },
+    {
+      "name": "Kachiguda station",
+      "lat": 17.38956,
+      "lon": 78.49976,
+      "source": "Kacheguda railway station"
+    }
+  ],
+  "ahmednagar": [
+    {
+      "name": "Ahmadnagar Fort",
+      "lat": 19.09480556,
+      "lon": 74.75547222,
+      "source": "Ahmednagar Fort"
+    },
+    {
+      "name": "Chand Bibi's breach",
+      "lat": null,
+      "lon": null,
+      "source": "no single point"
+    },
+    {
+      "name": "Kille Ark",
+      "lat": 19.09480556,
+      "lon": 74.75547222,
+      "source": "Ahmednagar Fort"
+    },
+    {
+      "name": "Bagh Rauza",
+      "lat": 19.08,
+      "lon": 74.73,
+      "source": "Ahmednagar"
+    },
+    {
+      "name": "Damdi Masjid",
+      "lat": 19.08,
+      "lon": 74.73,
+      "source": "Ahmednagar"
+    },
+    {
+      "name": "Farah Bagh",
+      "lat": 19.068279,
+      "lon": 74.752016,
+      "source": "Farah Bagh"
+    },
+    {
+      "name": "The tombs of favourites",
+      "lat": null,
+      "lon": null,
+      "source": "no single point"
+    },
+    {
+      "name": "Tomb of Salabat Khan II",
+      "lat": 19.094,
+      "lon": 74.84,
+      "source": "Tomb of Salabat Khan II"
+    },
+    {
+      "name": "Malik Ambar",
+      "lat": 20.009524,
+      "lon": 75.188799,
+      "source": "Khuldabad"
+    }
+  ],
+  "aurangabad": [
+    {
+      "name": "Khadki / the old city",
+      "lat": 19.88,
+      "lon": 75.32,
+      "source": "Chhatrapati Sambhajinagar"
+    },
+    {
+      "name": "Bibi ka Maqbara",
+      "lat": 19.90151,
+      "lon": 75.320195,
+      "source": "Bibi Ka Maqbara"
+    },
+    {
+      "name": "Panchakki",
+      "lat": 19.88944444,
+      "lon": 75.31555556,
+      "source": "Panchakki"
+    },
+    {
+      "name": "Nehr-e-Ambari",
+      "lat": 19.88,
+      "lon": 75.32,
+      "source": "Chhatrapati Sambhajinagar"
+    },
+    {
+      "name": "Daulatabad Fort",
+      "lat": 19.942724,
+      "lon": 75.213164,
+      "source": "Daulatabad Fort"
+    },
+    {
+      "name": "Chand Minar",
+      "lat": 19.944416,
+      "lon": 75.217429,
+      "source": "Chand Minar"
+    },
+    {
+      "name": "Khuldabad",
+      "lat": 20.009524,
+      "lon": 75.188799,
+      "source": "Khuldabad"
+    },
+    {
+      "name": "Ellora",
+      "lat": 20.0268,
+      "lon": 75.1771,
+      "source": "Ellora Caves"
+    },
+    {
+      "name": "Grishneshwar",
+      "lat": 20.02497222,
+      "lon": 75.16991667,
+      "source": "Grishneshwar Temple"
+    },
+    {
+      "name": "Ajanta",
+      "lat": 20.55333333,
+      "lon": 75.70027778,
+      "source": "Ajanta Caves"
+    }
+  ]
+}

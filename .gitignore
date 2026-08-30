@@ -1,2 +1,5 @@
 # scripts/build_map.py caches the upstream India location map here on first run
 images/map/_source_india.svg
+
+# scripts/build_city_maps.py caches raw tiles here before they are indexed
+.tilecache/

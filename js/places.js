@@ -118,39 +118,29 @@ const PLACES = [
   },
 
   cityMap: {
-    w: 900, h: 520,
     caption: "Almost everything here lies on one north-west axis out of Aurangabad: the fort at 16 km, Khuldabad at 24, Ellora at 30. Ajanta is the outlier, a hundred kilometres north.",
-    features:
-      '<path class="cm-feature" d="M120 300 C260 250 380 210 520 150 C610 112 700 90 800 78" stroke-dasharray="5 7"/>' +
-      '<text class="cm-label" x="300" y="330">THE ROAD NORTH-WEST</text>' +
-      '<circle class="cm-feature" cx="470" cy="200" r="70"/>' +
-      '<circle class="cm-feature" cx="470" cy="200" r="48"/>' +
-      '<circle class="cm-feature" cx="470" cy="200" r="26"/>' +
-      '<text class="cm-label" x="470" y="112" text-anchor="middle">THE THREE ENCLOSURES</text>' +
-      '<rect class="cm-feature" x="60" y="352" width="230" height="120"/>' +
-      '<text class="cm-label" x="175" y="344" text-anchor="middle">AURANGABAD CITY</text>',
     sites: [
-      { x: 470, y: 200, name: "The citadel", date: "c. 1187, Yadava", img: "images/daulatabad.jpg",
+      { lat: 19.94272, lon: 75.21316, name: "The citadel", date: "c. 1187, Yadava", img: "images/daulatabad.jpg",
         blurb: "The Kalakot summit, reached only through the Andheri. The rock below it was cut away to leave fifty metres of sheer basalt — a wall that could not be scaled, mined or breached." },
-      { x: 424, y: 236, labelDx: -34, name: "The Andheri", date: "Yadava, rock-cut",
+      { lat: 19.94272, lon: 75.21316, labelDx: -34, name: "The Andheri", date: "Yadava, rock-cut",
         blurb: "The dark passage: one curving tunnel of blind turns and false branches, with an iron grating overhead where the garrison lit its fire. The only route to the top." },
-      { x: 522, y: 232, labelDx: 30, name: "Chand Minar", date: "1445 (disputed)", img: "images/chand-minar.jpg",
+      { lat: 19.94442, lon: 75.21743, labelDx: 30, name: "Chand Minar", date: "1445 (disputed)", img: "images/chand-minar.jpg",
         blurb: "A victory tower of 63 m and four storeys, holding 24 chambers, with a small mosque at its foot faced in Persian blue tile. Built to celebrate a Bahmani victory over Vijayanagara — and, recent scholarship notes, built by a slave." },
-      { x: 470, y: 262, labelDy: 24, name: "Chini Mahal", date: "prison under the Mughals",
+      { lat: 19.94272, lon: 75.21316, labelDy: 24, name: "Chini Mahal", date: "prison under the Mughals",
         blurb: "Abul Hasan Tana Shah, last sultan of Golconda, held out for eight months in 1687 and then spent twelve years here. He died in this building in 1699." },
-      { x: 418, y: 176, labelDy: -16, name: "Jami Masjid", date: "1318 · temple since 1948",
+      { offMap: true, labelDy: -16, name: "Jami Masjid", date: "1318 · temple since 1948",
         blurb: "A Khalji mosque standing on 106 pillars plainly taken from a Jain temple. In 1948 it was converted into the Bharat Mata temple — a contested site with two complete histories inside one building." },
-      { x: 300, y: 150, name: "Khuldabad", date: "khanqah from c. 1327", img: "images/aurangzeb-tomb.jpg",
+      { lat: 20.00952, lon: 75.18880, name: "Khuldabad", date: "khanqah from c. 1327", img: "images/aurangzeb-tomb.jpg",
         blurb: "The Chishti saint Burhanuddin Gharib came south with the 1327 migration and founded the Deccan's first Sufi institution here. Aurangzeb chose to be buried in its precinct." },
-      { x: 196, y: 118, name: "Ellora", date: "6th–10th c.", img: "images/kailasa-temple.png",
+      { lat: 20.02680, lon: 75.17710, name: "Ellora", date: "6th–10th c.", img: "images/kailasa-temple.png",
         blurb: "Thirty-four caves, Buddhist, Hindu and Jain side by side. The Kailasa temple was cut downward out of one hillside, removing an estimated 200,000 tonnes of rock to leave a free-standing building behind." },
-      { x: 128, y: 96, labelDx: 8, name: "Grishneshwar", date: "16th c. rebuild", img: "images/grishneshwar.jpg",
+      { lat: 20.02497, lon: 75.16992, labelDx: 8, name: "Grishneshwar", date: "16th c. rebuild", img: "images/grishneshwar.jpg",
         blurb: "The smallest and the last of the twelve Jyotirlingas, beside Ellora; rebuilt by Maloji Bhosale and given its present form by Ahilyabai Holkar." },
-      { x: 726, y: 88, name: "Ajanta", date: "2nd c. BCE – 6th c. CE", img: "images/ajanta.jpg",
+      { lat: 20.55333, lon: 75.70028, name: "Ajanta", date: "2nd c. BCE – 6th c. CE", img: "images/ajanta.jpg",
         blurb: "Thirty caves in a horseshoe gorge, holding the largest surviving body of early Indian painting — abandoned, forgotten and swallowed by jungle until a British hunting party stumbled on them in 1819." },
-      { x: 150, y: 410, name: "Bibi ka Maqbara", date: "1668–69", img: "images/bibi-ka-maqbara.jpg",
+      { lat: 19.90151, lon: 75.32019, name: "Bibi ka Maqbara", date: "1668–69", img: "images/bibi-ka-maqbara.jpg",
         blurb: "The 'Taj of the Deccan', raised by Prince Azam Shah for his mother Dilras Banu Begum and designed by Ata-ullah, son of the Taj Mahal's architect — at a fraction of the budget, and it shows." },
-      { x: 232, y: 434, labelDx: 22, name: "Panchakki", date: "c. 1695", img: "images/panchakki.jpg",
+      { lat: 19.88944, lon: 75.31556, labelDx: 22, name: "Panchakki", date: "c. 1695", img: "images/panchakki.jpg",
         blurb: "A water mill driven by a siphoned underground channel from the hills, built beside the dargah of Baba Shah Musafir — the same hydraulic thinking as Malik Ambar's aqueduct, put to work grinding grain for pilgrims." }
     ]
   }
@@ -248,34 +238,25 @@ const PLACES = [
   },
 
   cityMap: {
-    w: 900, h: 520,
     caption: "Two concentric rings — an earthen rampart seven miles round and a stone fort inside it — with Hanamkonda to the north-west and the great temples scattered east across the tank country.",
-    features:
-      '<circle class="cm-feature" cx="450" cy="270" r="185" stroke-dasharray="6 8"/>' +
-      '<circle class="cm-feature" cx="450" cy="270" r="105"/>' +
-      '<circle class="cm-feature" cx="450" cy="270" r="62"/>' +
-      '<text class="cm-label" x="450" y="70" text-anchor="middle">THE OUTER EARTHEN RAMPART</text>' +
-      '<ellipse class="cm-water" cx="760" cy="200" rx="72" ry="40"/>' +
-      '<text class="cm-label" x="760" y="152" text-anchor="middle">THE TANK COUNTRY</text>' +
-      '<ellipse class="cm-water" cx="700" cy="386" rx="50" ry="28"/>',
     sites: [
-      { x: 450, y: 270, name: "Kala Thoranam", date: "13th c.", img: "images/kakatiya-thoranam.jpg",
+      { offMap: true, name: "Kala Thoranam", date: "13th c.", img: "images/kakatiya-thoranam.jpg",
         blurb: "Four carved gateways at the dead centre of the stone fort, still standing in an empty field. Everything they once framed is gone; they are now the emblem of Telangana." },
-      { x: 392, y: 232, labelDx: -30, name: "The stone fort", date: "13th c.", img: "images/warangal.jpg",
+      { lat: 17.95649, lon: 79.61543, labelDx: -30, name: "The stone fort", date: "13th c.", img: "images/warangal.jpg",
         blurb: "A circular enceinte with its own ditch inside the earthen city — the part Malik Kafur never took. Prataparudra negotiated rather than let it be stormed." },
-      { x: 512, y: 316, labelDx: 24, name: "Swayambhu temple", date: "13th c.",
+      { offMap: true, labelDx: 24, name: "Swayambhu temple", date: "13th c.",
         blurb: "The great Shiva temple at the fort's heart, wrecked after the conquest. Its carved members were reused across the site, which is why fragments of it turn up everywhere." },
-      { x: 286, y: 152, name: "Thousand Pillars", date: "1163", img: "images/thousand-pillar.jpg",
+      { lat: 18.00372, lon: 79.57475, name: "Thousand Pillars", date: "1163", img: "images/thousand-pillar.jpg",
         blurb: "Rudradeva's star-shaped triple shrine at Hanamkonda, in black basalt polished until it reads as marble, with a monolithic Nandi in the forecourt. Gribble called it one of the most perfect specimens of Chalukyan work in southern India." },
-      { x: 356, y: 116, labelDx: 18, name: "Hanamkonda hill", date: "the siege of 1310",
+      { lat: 18.01670, lon: 79.63330, labelDx: 18, name: "Hanamkonda hill", date: "the siege of 1310",
         blurb: "Malik Kafur took position on this hill on 19 January 1310 and divided the perimeter among his divisions. The sacred groves below it became the timber of his stockade." },
-      { x: 560, y: 176, name: "Bhadrakali temple", date: "6th c., rebuilt", img: "images/bhadrakali-temple.jpg",
+      { lat: 17.99490, lon: 79.58280, name: "Bhadrakali temple", date: "6th c., rebuilt", img: "images/bhadrakali-temple.jpg",
         blurb: "An older shrine on a rock between Warangal and Hanamkonda, beside its own lake — one of the few sacred sites here with continuous life through the conquest." },
-      { x: 762, y: 200, labelDy: -14, name: "Pakhal lake", date: "13th c.", img: "images/pakhal-lake.jpg",
+      { lat: 17.95278, lon: 80.00139, labelDy: -14, name: "Pakhal lake", date: "13th c.", img: "images/pakhal-lake.jpg",
         blurb: "One of the great Kakatiya tanks, built by chaining reservoirs so that each overflow fed the next. It still irrigates, eight hundred years after the dynasty that dug it ended." },
-      { x: 704, y: 388, labelDy: 24, name: "Ramappa temple", date: "1213", img: "images/ramappa.jpg",
+      { lat: 18.25917, lon: 79.94333, labelDy: 24, name: "Ramappa temple", date: "1213", img: "images/ramappa.jpg",
         blurb: "Named for its sculptor, built on a sandbox foundation with bricks light enough to float, and carved with bracket figures that are the finest sculpture the Deccan produced. UNESCO World Heritage since 2021." },
-      { x: 236, y: 400, name: "Bhadrachalam", date: "17th c. rebuild", img: "images/bhadrachalam.jpg",
+      { lat: 17.66692, lon: 80.88276, name: "Bhadrachalam", date: "17th c. rebuild", img: "images/bhadrachalam.jpg",
         blurb: "Far to the south-east on the Godavari: the temple that Kancherla Gopanna rebuilt with state revenue while serving as a Qutb Shahi tahsildar, and went to prison in Golconda for." }
     ]
   }
@@ -372,33 +353,25 @@ const PLACES = [
   },
 
   cityMap: {
-    w: 900, h: 520,
     caption: "A double-walled fort on the west of the old town, with the tombs strung out east and the saint's dargah to the north-east — and Firoz Shah's abandoned pleasure-capital thirty kilometres south, off the edge of this plan.",
-    features:
-      '<ellipse class="cm-feature" cx="290" cy="270" rx="160" ry="128"/>' +
-      '<ellipse class="cm-feature" cx="290" cy="270" rx="136" ry="106" stroke-dasharray="4 6"/>' +
-      '<text class="cm-label" x="290" y="122" text-anchor="middle">THE FORT AND ITS MOAT</text>' +
-      '<path class="cm-feature" d="M450 262 L820 240" stroke-dasharray="5 7"/>' +
-      '<rect class="cm-feature" x="470" y="150" width="360" height="250" stroke-dasharray="3 8"/>' +
-      '<text class="cm-label" x="650" y="424" text-anchor="middle">THE OLD CITY</text>',
     sites: [
-      { x: 290, y: 270, name: "Gulbarga Fort", date: "1347 onward", img: "images/gulbarga-fort.jpg",
+      { lat: 17.34050, lon: 76.83110, name: "Gulbarga Fort", date: "1347 onward", img: "images/gulbarga-fort.jpg",
         blurb: "Fifty-seven acres inside a double wall and a moat nine metres wide, with fifteen towers and twenty-six guns — the largest of them a welded-bar cannon some eight metres long." },
-      { x: 300, y: 320, labelDy: 24, name: "Jama Masjid", date: "1367", img: "images/jama-masjid-gulbarga.jpg",
+      { lat: 17.34056, lon: 76.83111, labelDy: 24, name: "Jama Masjid", date: "1367", img: "images/jama-masjid-gulbarga.jpg",
         blurb: "The mosque with no courtyard: sixty-three small domes and 250 arches roofing the entire prayer space. Attributed to a Persian architect, Rafi of Qazvin, and on the UNESCO tentative list." },
-      { x: 236, y: 222, labelDx: -28, name: "The citadel", date: "15th c.",
+      { lat: 17.34050, lon: 76.83110, labelDx: -28, name: "The citadel", date: "15th c.", img: "images/gulbarga-citadel.jpg",
         blurb: "The inner works, with the great gun mounted on the rampart and the palace ranges behind — the seat of the Deccan's first independent Muslim state for eighty-five years." },
-      { x: 560, y: 176, name: "Dargah of Gisu Daraz", date: "from 1422", img: "images/gisu-daraz-dargah.jpg",
+      { lat: 17.34400, lon: 76.85090, name: "Dargah of Gisu Daraz", date: "from 1422", img: "images/gisu-daraz-dargah.jpg",
         blurb: "The tomb of the Chishti saint who came south at nearly eighty, wrote in Persian, Arabic and early Dakhni, unmade one sultan and made another. Its urs still draws hundreds of thousands." },
-      { x: 690, y: 240, name: "Haft Gumbaz", date: "14th–15th c.", img: "images/haft-gumbaz.jpg",
+      { lat: 17.34194, lon: 76.84528, name: "Haft Gumbaz", date: "14th–15th c.", img: "images/haft-gumbaz.jpg",
         blurb: "Seven tombs in a row east of the fort, four of them royal. Firoz Shah's is the largest and the finest — double-chambered, and the last word of Gulbarga's century." },
-      { x: 466, y: 366, labelDy: 24, name: "Shah Bazaar Masjid", date: "14th c.",
+      { lat: 17.32900, lon: 76.82500, labelDy: 24, name: "Shah Bazaar Masjid", date: "14th c.",
         blurb: "The Friday mosque outside the walls, on the market street — where the city's ordinary religious life happened, as opposed to the court's." },
-      { x: 620, y: 386, name: "Langar ki Masjid", date: "15th c.",
+      { lat: 17.32900, lon: 76.82500, name: "Langar ki Masjid", date: "15th c.", img: "images/langar-ki-masjid.png",
         blurb: "A Sufi hospice-mosque south-east of the fort, fully domed inside: the free kitchen and the prayer hall built as one institution." },
-      { x: 128, y: 372, labelDx: 14, name: "Chor Gumbad", date: "15th c.", img: "images/chor-gumbad.jpg",
+      { lat: 17.32900, lon: 76.82500, labelDx: 14, name: "Chor Gumbad", date: "15th c.", img: "images/chor-gumbad.jpg",
         blurb: "A single vast anonymous dome on a bare hillock west of the fort, famous for its echo and for the fact that nobody knows for certain who is buried in it." },
-      { x: 700, y: 466, labelDy: -14, name: "Firuzabad", date: "1399",
+      { lat: 17.08382, lon: 76.78986, labelDy: -14, name: "Firuzabad", date: "1399",
         blurb: "Thirty kilometres south on the Bhima — Firoz Shah's planned pleasure-capital, its walls and Jami Masjid still standing in open country, its grid still legible from the air." }
     ]
   }
@@ -518,35 +491,27 @@ const PLACES = [
   },
 
   cityMap: {
-    w: 900, h: 520,
     caption: "The fort holds the north-west lip of the plateau; the walled town runs south-east of it with the Chaubara at its crossroads; the royal dead lie out at Ashtur to the east and the Barid Shahis to the west.",
-    features:
-      '<path class="cm-feature" d="M120 300 L120 150 L420 120 L470 250 L330 380 L150 360 Z"/>' +
-      '<path class="cm-feature" d="M150 320 L150 175 L400 150" stroke-dasharray="4 5"/>' +
-      '<text class="cm-label" x="260" y="104" text-anchor="middle">THE FORT ON THE ESCARPMENT</text>' +
-      '<path class="cm-feature" d="M330 380 L600 430 L700 330 L470 250" stroke-dasharray="6 8"/>' +
-      '<text class="cm-label" x="530" y="460" text-anchor="middle">THE WALLED TOWN</text>' +
-      '<path class="cm-feature" d="M110 250 C60 260 50 300 90 330" stroke-dasharray="2 4"/>',
     sites: [
-      { x: 250, y: 220, name: "Bidar Fort", date: "1429–32", img: "images/bidar.jpg",
+      { lat: 17.92444, lon: 77.52667, name: "Bidar Fort", date: "1429–32", img: "images/bidar.jpg",
         blurb: "Thirty-seven bastions on two and a half kilometres of wall, behind a triple moat cut into solid laterite with causeways of untouched rock left standing between the channels." },
-      { x: 316, y: 268, labelDx: 22, name: "Rangin Mahal", date: "remodelled 1542–80", img: "images/rangin-mahal.jpg",
+      { lat: 17.92444, lon: 77.52667, labelDx: 22, name: "Rangin Mahal", date: "remodelled 1542–80", img: "images/rangin-mahal.jpg",
         blurb: "Mother-of-pearl flowers set into jet-black basalt, under carved teak ceilings and coloured tile. The most concentrated piece of interior decoration in the Deccan." },
-      { x: 200, y: 268, labelDx: -30, name: "Solah Khamba Masjid", date: "1423–24", img: "images/solah-khamba.jpg",
+      { lat: 17.92080, lon: 77.52810, labelDx: -30, name: "Solah Khamba Masjid", date: "1423–24", img: "images/solah-khamba.jpg",
         blurb: "Nineteen uniform arches across the façade of the oldest large mosque in southern India — built before the capital had even formally moved here." },
-      { x: 268, y: 172, labelDy: -14, name: "Takht Mahal", date: "15th c.",
+      { lat: 17.92444, lon: 77.52667, labelDy: -14, name: "Takht Mahal", date: "15th c.",
         blurb: "The throne hall, where the turquoise-blue throne of ebony and gold stood — the one taken from Warangal in 1364, to which every Bahmani sultan added a jewel." },
-      { x: 380, y: 322, name: "Gawan's madrasa", date: "1460–72", img: "images/mahmud-gawan-madrasa.jpg",
+      { lat: 17.91476, lon: 77.53010, name: "Gawan's madrasa", date: "1460–72", img: "images/mahmud-gawan-madrasa.jpg",
         blurb: "Three storeys of Timurid blue tile around a court, with three thousand manuscripts and free lodging for students. A powder store inside it was struck by lightning in 1696 and took away half the building." },
-      { x: 500, y: 356, labelDy: 24, name: "Chaubara", date: "early 15th c.", img: "images/chaubara.jpg",
+      { lat: 17.91166, lon: 77.53013, labelDy: 24, name: "Chaubara", date: "early 15th c.", img: "images/chaubara.jpg",
         blurb: "A cylindrical watchtower twenty-two metres high with eighty winding steps, standing at the crossing of the old town's two main streets — the exact centre of Bidar." },
-      { x: 728, y: 254, name: "Bahmani tombs, Ashtur", date: "1436–1535", img: "images/bahmani-tombs.jpg",
+      { lat: 17.91500, lon: 77.56100, name: "Bahmani tombs, Ashtur", date: "1436–1535", img: "images/bahmani-tombs.jpg",
         blurb: "Twelve great domes in an open field, eight of them sultans'. Ahmad Shah Wali's is the only Bahmani interior with its painting intact — gold, lapis and vermilion, with Kufic bands, said to be by Persian painters." },
-      { x: 800, y: 320, labelDx: -10, name: "Chaukhandi", date: "mid-15th c.",
+      { lat: 17.91200, lon: 77.52000, labelDx: -10, name: "Chaukhandi", date: "mid-15th c.", img: "images/chaukhandi-bidar.jpg",
         blurb: "The octagonal tomb of Khalilullah, the sultan's spiritual master, on a rise a kilometre west of Ashtur — the saint placed between the king and his ancestors." },
-      { x: 96, y: 402, labelDx: 26, name: "Barid Shahi tombs", date: "16th c.",
+      { lat: 17.92449, lon: 77.50445, labelDx: 26, name: "Barid Shahi tombs", date: "16th c.", img: "images/barid-shahi-tombs.jpg",
         blurb: "Ali Barid Shah's tomb has no walls at all: a twenty-five-metre dome floating on four open arches at the centre of a formal charbagh — the earliest fully realised garden tomb in the Deccan." },
-      { x: 92, y: 348, labelDx: 26, labelDy: 24, name: "Naubad karez", date: "15th c.",
+      { lat: 17.91200, lon: 77.52000, labelDx: 26, labelDy: 24, name: "Naubad karez", date: "15th c.",
         blurb: "Two kilometres of gently graded tunnel with twenty-one shafts, bringing water through the laterite by gravity alone. Restored between 2016 and 2018, and flowing again in the 2017 drought." }
     ]
   }
@@ -696,43 +661,33 @@ const PLACES = [
   },
 
   cityMap: {
-    w: 900, h: 520,
     caption: "The Tungabhadra runs along the north. The Sacred Centre lies on the river bank around Virupaksha; the Royal Centre, with its palaces and platforms, sits two to three kilometres south-east, connected by colonnaded bazaar streets.",
-    features:
-      '<path class="cm-river" d="M40 128 C180 88 300 150 430 118 C560 86 690 132 860 96"/>' +
-      '<text class="cm-label" x="120" y="112">TUNGABHADRA</text>' +
-      '<path class="cm-feature" d="M150 210 L470 210" stroke-dasharray="4 4"/>' +
-      '<path class="cm-feature" d="M520 176 L700 176" stroke-dasharray="4 4"/>' +
-      '<path class="cm-feature" d="M470 210 C520 280 560 340 600 380" stroke-dasharray="6 8"/>' +
-      '<ellipse class="cm-feature" cx="640" cy="400" rx="180" ry="98"/>' +
-      '<text class="cm-label" x="640" y="288" text-anchor="middle">THE ROYAL CENTRE</text>' +
-      '<text class="cm-label" x="240" y="180" text-anchor="middle">THE SACRED CENTRE</text>',
     sites: [
-      { x: 150, y: 210, name: "Virupaksha temple", date: "11th c., extended 1509", img: "images/virupaksha.jpg",
+      { lat: 15.33517, lon: 76.45872, name: "Virupaksha temple", date: "11th c., extended 1509", img: "images/virupaksha.jpg",
         blurb: "The anchor of the whole site and the only temple here never to have fallen out of worship — its fifty-metre gopura rebuilt by Krishnadevaraya, its goddess Pampa older than the empire by centuries." },
-      { x: 330, y: 210, labelDy: 24, name: "Hampi bazaar", date: "15th–16th c.", img: "images/hampi-bazaar.jpg",
+      { lat: 15.33444, lon: 76.46222, labelDy: 24, name: "Hampi bazaar", date: "15th–16th c.", img: "images/hampi-bazaar.jpg",
         blurb: "Seven hundred and fifty metres of colonnaded street running due east from the temple, ending at a monolithic Nandi. Abdur Razzaq found it stocked with fresh flowers every day of the year." },
-      { x: 216, y: 268, labelDx: -20, name: "Hemakuta hill", date: "pre-imperial", img: "images/hemakuta.jpg",
+      { lat: 15.33434, lon: 76.45997, labelDx: -20, name: "Hemakuta hill", date: "pre-imperial", img: "images/hemakuta.jpg",
         blurb: "A low granite dome south of Virupaksha carrying more than thirty small shrines with stepped pyramidal roofs — most of them older than the empire, from the Kampili period the Tughluqs destroyed." },
-      { x: 300, y: 340, name: "Ugra Narasimha", date: "1528", img: "images/ugra-narasimha.jpg",
+      { lat: 15.32912, lon: 76.45895, name: "Ugra Narasimha", date: "1528", img: "images/ugra-narasimha.jpg",
         blurb: "Six and a half metres of Vishnu's man-lion seated on the coils of Adishesha under a seven-hooded canopy, carved from one boulder. The Lakshmi who sat on his knee has broken away; her hand is still on his back." },
-      { x: 250, y: 396, labelDx: -12, name: "Krishna temple", date: "1515", img: "images/krishna-temple-hampi.jpg",
+      { lat: 15.33023, lon: 76.46038, labelDx: -12, name: "Krishna temple", date: "1515", img: "images/krishna-temple-hampi.jpg",
         blurb: "Built by Krishnadevaraya to mark the taking of Udayagiri, with its own bazaar street and ceremonial plaza in front of it. The image it was built for is now in a museum in Chennai." },
-      { x: 520, y: 176, labelDy: -14, name: "Achyutaraya temple", date: "1534", img: "images/achyutaraya.jpg",
+      { lat: 15.33196, lon: 76.47009, labelDy: -14, name: "Achyutaraya temple", date: "1534", img: "images/achyutaraya.jpg",
         blurb: "A north-facing Vishnu temple with a hundred-column hall, set in the saddle between two hills — and in front of it the Courtesans' Street, five hundred metres long and fifty wide." },
-      { x: 700, y: 176, name: "Vittala temple", date: "15th–16th c.", img: "images/vittala.jpg",
+      { lat: 15.34229, lon: 76.47547, name: "Vittala temple", date: "15th–16th c.", img: "images/vittala.jpg",
         blurb: "The high point of the style: a kilometre of colonnaded market outside, and inside, piers ringed with slender colonnettes that ring at different pitches when struck." },
-      { x: 806, y: 242, labelDx: -26, labelDy: 24, name: "The stone chariot", date: "16th c.",
+      { lat: 15.34226, lon: 76.47590, labelDx: -26, labelDy: 24, name: "The stone chariot", date: "16th c.",
         blurb: "A shrine to Garuda cut as a processional car, its wheels carved to turn. It is on the fifty-rupee note, and it is the single most reproduced image in Indian archaeology." },
-      { x: 600, y: 380, name: "Hazara Rama temple", date: "early 15th c.", img: "images/hazara-rama.jpg",
+      { lat: 15.31780, lon: 76.46887, name: "Hazara Rama temple", date: "early 15th c.", img: "images/hazara-rama.jpg",
         blurb: "The royal family's private chapel. Its outer walls carry processional friezes of elephants, horses, soldiers and dancers — the Mahanavami parade in stone — and its inner walls a continuous Ramayana." },
-      { x: 660, y: 432, labelDy: 24, name: "Mahanavami Dibba", date: "early 16th c.", img: "images/mahanavami-dibba.jpg",
+      { lat: 15.33444, lon: 76.46222, labelDy: 24, name: "Mahanavami Dibba", date: "early 16th c.", img: "images/mahanavami-dibba.jpg",
         blurb: "Three ascending granite stages some eight metres high, the highest point of the Royal Enclosure, carved with marching elephants, camels, musicians and dancers. The king watched the nine-day state festival from a wooden pavilion on top, which burned in 1565." },
-      { x: 542, y: 452, labelDy: 24, name: "Lotus Mahal", date: "16th c.", img: "images/lotus-mahal.jpg",
+      { lat: 15.32030, lon: 76.47130, labelDy: 24, name: "Lotus Mahal", date: "16th c.", img: "images/lotus-mahal.jpg",
         blurb: "A two-storey pavilion on a Hindu mandala plan wrapped in Islamic cusped arches and vaults. Nobody knows what it was for — and its very existence is the argument against reading this empire as a wall against Islam." },
-      { x: 790, y: 452, labelDy: 24, name: "Elephant stables", date: "16th c.", img: "images/elephant-stables.jpg",
+      { lat: 15.32111, lon: 76.47278, labelDy: 24, name: "Elephant stables", date: "16th c.", img: "images/elephant-stables.jpg",
         blurb: "Eleven domed chambers in a row, alternating fluted and plain domes, the central one most ornate. Barbosa counted nine hundred elephants in the city; these housed the state's ceremonial ones." },
-      { x: 822, y: 352, labelDx: -18, name: "Queen's Bath", date: "16th c.",
+      { lat: 15.31342, lon: 76.47278, labelDx: -18, name: "Queen's Bath", date: "16th c.",
         blurb: "Thirty metres square, with a sunken pool fifteen metres across and nearly two deep, ringed by an arcaded Indo-Islamic verandah and once fed by aqueduct — probably a public bath rather than a royal one." }
     ]
   }
@@ -869,39 +824,31 @@ const PLACES = [
   },
 
   cityMap: {
-    w: 900, h: 520,
     caption: "An oval of walls about ten kilometres round with ninety-six bastions, an inner citadel at the centre, and the two great tombs facing each other across the whole city — Gol Gumbaz outside the east wall, Ibrahim Rauza outside the west.",
-    features:
-      '<ellipse class="cm-feature" cx="450" cy="270" rx="300" ry="180"/>' +
-      '<ellipse class="cm-feature" cx="450" cy="270" rx="286" ry="167" stroke-dasharray="3 6"/>' +
-      '<ellipse class="cm-feature" cx="440" cy="272" rx="96" ry="72"/>' +
-      '<text class="cm-label" x="450" y="72" text-anchor="middle">THE CITY WALL · 96 BASTIONS</text>' +
-      '<text class="cm-label" x="440" y="200" text-anchor="middle">THE CITADEL</text>' +
-      '<ellipse class="cm-water" cx="470" cy="486" rx="66" ry="20"/>',
     sites: [
-      { x: 786, y: 262, labelDx: -30, name: "Gol Gumbaz", date: "1626–1656", img: "images/gol-gumbaz.jpg",
+      { lat: 16.83003, lon: 75.73610, labelDx: -30, name: "Gol Gumbaz", date: "1626–1656", img: "images/gol-gumbaz.jpg",
         blurb: "The largest single chamber in the world when it was finished, roofed by a dome forty-four metres across that is held up by eight arches leaning against each other. Whisper at the gallery and the dome answers." },
-      { x: 118, y: 270, labelDx: 30, name: "Ibrahim Rauza", date: "completed 1626–27", img: "images/ibrahim-rauza.jpg",
+      { lat: 16.82694, lon: 75.70194, labelDx: 30, name: "Ibrahim Rauza", date: "completed 1626–27", img: "images/ibrahim-rauza.jpg",
         blurb: "A tomb and a mosque facing each other on one plinth, commissioned by Taj Sultana for her husband. Carved jali screens like textile, and a stone lotus hanging from a stone chain, each cut from a single block." },
-      { x: 556, y: 348, labelDy: 24, name: "Jama Masjid", date: "begun 1576", img: "images/jama-masjid-bijapur.jpg",
+      { lat: 16.82194, lon: 75.72889, labelDy: 24, name: "Jama Masjid", date: "begun 1576", img: "images/jama-masjid-bijapur.jpg",
         blurb: "Never finished — the twin minarets stop at the buttresses. Its gilded mihrab is compared to Córdoba's, and Aurangzeb had the floor ruled into 2,250 rectangles, one for each worshipper." },
-      { x: 412, y: 258, labelDx: -22, name: "Gagan Mahal", date: "c. 1561", img: "images/gagan-mahal.jpg",
+      { lat: 16.82656, lon: 75.71847, labelDx: -22, name: "Gagan Mahal", date: "c. 1561", img: "images/gagan-mahal.jpg",
         blurb: "The Sky Palace: a durbar hall whose central arch spans over sixty feet, now open to the weather. Traditionally the room where Sikandar Adil Shah was brought before Aurangzeb in silver chains." },
-      { x: 470, y: 300, labelDy: 22, name: "Sat Manzil", date: "mid-17th c.",
+      { lat: 16.83000, lon: 75.71000, labelDy: 22, name: "Sat Manzil", date: "mid-17th c.",
         blurb: "The stump of Muhammad Adil Shah's seven-storey pleasure tower inside the citadel — the vertical counterpart to his horizontal masterpiece across town." },
-      { x: 596, y: 240, labelDy: -14, name: "Asar Mahal", date: "1646", img: "images/asar-mahal.jpg",
+      { lat: 16.82593, lon: 75.72234, labelDy: -14, name: "Asar Mahal", date: "1646", img: "images/asar-mahal.jpg",
         blurb: "Built as a hall of justice and turned into a reliquary when two hairs from the Prophet's beard were installed in it, with a water tank in front and painted panels inside." },
-      { x: 476, y: 176, labelDy: -14, name: "Bara Kaman", date: "begun 1672", img: "images/bara-kaman.jpg",
+      { lat: 16.82972, lon: 75.71806, labelDy: -14, name: "Bara Kaman", date: "begun 1672", img: "images/bara-kaman.jpg",
         blurb: "Two arches of a planned twelve, standing over open graves. The most affecting thing in Bijapur, and the only one that owes its power entirely to being unfinished." },
-      { x: 168, y: 356, name: "Malik-e-Maidan", date: "gun cast 1549", img: "images/malik-e-maidan.jpg",
+      { lat: 16.83175, lon: 75.70894, name: "Malik-e-Maidan", date: "gun cast 1549", img: "images/malik-e-maidan.jpg",
         blurb: "Fifty-five tons of bell metal on the western wall, its muzzle a lion swallowing an elephant. Cast for Ahmadnagar, captured by Bijapur, inscribed by Aurangzeb." },
-      { x: 202, y: 190, labelDx: 22, name: "Upli Buruj", date: "16th c.",
+      { lat: 16.83265, lon: 75.71174, labelDx: 22, name: "Upli Buruj", date: "16th c.",
         blurb: "A round watchtower twenty-four metres high, climbed by steps that spiral up the outside of it, with two heavy guns on the platform at the top." },
-      { x: 760, y: 380, name: "Taj Bawadi", date: "1620",
+      { lat: 16.83000, lon: 75.71000, name: "Taj Bawadi", date: "1620",
         blurb: "The largest stepwell of the sultanate, fifty-two feet deep, built by Ibrahim II for his wife — with octagonal towers alongside holding rooms where travellers could sleep." },
-      { x: 470, y: 486, labelDy: 22, name: "Begum Talab", date: "1651",
+      { lat: 16.83000, lon: 75.71000, labelDy: 22, name: "Begum Talab", date: "1651",
         blurb: "The reservoir two miles south that fed the city through nearly five kilometres of terracotta pipe, its pressure regulated by masonry water towers along the line." },
-      { x: 156, y: 122, labelDx: 24, name: "Nauraspur", date: "c. 1599",
+      { lat: 16.83000, lon: 75.71000, labelDx: 24, name: "Nauraspur", date: "c. 1599",
         blurb: "Ibrahim II's township of music, founded to give the <i>Kitab-i Nauras</i> somewhere to live. Left unfinished, sacked in the Mughal incursions, and now a field with a palace temple in it." }
     ]
   }
@@ -1038,37 +985,29 @@ const PLACES = [
   },
 
   cityMap: {
-    w: 900, h: 520,
     caption: "The granite hill with its ring of walls, the necropolis in its garden a kilometre north-west outside the Banjara gate, and the diamond country far to the south-east — off this plan, two hundred kilometres away on the Krishna.",
-    features:
-      '<ellipse class="cm-feature" cx="420" cy="280" rx="250" ry="170"/>' +
-      '<ellipse class="cm-feature" cx="420" cy="280" rx="160" ry="112"/>' +
-      '<ellipse class="cm-feature" cx="420" cy="270" rx="72" ry="52"/>' +
-      '<text class="cm-label" x="420" y="86" text-anchor="middle">THE OUTER WALL · 87 BASTIONS</text>' +
-      '<path class="cm-feature" d="M560 400 C660 420 720 430 830 424" stroke-dasharray="5 7"/>' +
-      '<text class="cm-label" x="740" y="452">TO THE CITY, 11 KM</text>',
     sites: [
-      { x: 420, y: 270, name: "Bala Hisar", date: "16th c.", img: "images/golconda.jpg",
+      { lat: 17.38306, lon: 78.40111, name: "Bala Hisar", date: "16th c.", img: "images/golconda.jpg",
         blurb: "The summit pavilion, a hundred and twenty metres up — the acoustic terminus of the clap at the Fateh gate, and the highest point of the kingdom's authority." },
-      { x: 542, y: 358, labelDx: 20, name: "Fateh Darwaza", date: "16th c.", img: "images/fateh-darwaza.jpg",
+      { lat: 17.38306, lon: 78.40111, labelDx: 20, name: "Fateh Darwaza", date: "16th c.", img: "images/fateh-darwaza.jpg",
         blurb: "The Victory Gate on the south-east, studded with iron spikes at elephant-head height. Clap under its dome and the sound reaches the summit almost a kilometre away." },
-      { x: 300, y: 340, labelDx: -24, name: "Bala Hisar Darwaza", date: "16th c.",
+      { lat: 17.38306, lon: 78.40111, labelDx: -24, name: "Bala Hisar Darwaza", date: "16th c.", img: "images/bala-hisar-darwaza.jpg",
         blurb: "The main eastern entrance, its arch carved with lions and griffins — Kakatiya iconography left standing inside a Qutb Shahi fort." },
-      { x: 384, y: 214, labelDy: -14, name: "Jama Masjid", date: "1518",
+      { lat: 17.38306, lon: 78.40111, labelDy: -14, name: "Jama Masjid", date: "1518", img: "images/golconda-jama-masjid.jpg",
         blurb: "Sultan Quli's mosque on the ascent — by tradition the place where he was cut down at prayer in 1543, on the orders of his own son." },
-      { x: 466, y: 216, labelDx: 24, labelDy: -14, name: "The durbar halls", date: "16th–17th c.",
+      { offMap: true, labelDx: 24, labelDy: -14, name: "The durbar halls", date: "16th–17th c.",
         blurb: "Where the diamond trade was regulated: two per cent of every sale to the crown, and every stone over ten carats surrendered to it." },
-      { x: 356, y: 300, labelDx: -18, name: "The water system", date: "16th c.",
+      { offMap: true, labelDx: -18, name: "The water system", date: "16th c.",
         blurb: "Rock-cut cisterns, clay pipes set into the masonry, and a chain of Persian wheels lifting water to overhead tanks — which is how there were fountains and roof gardens on top of a bare granite hill." },
-      { x: 190, y: 176, name: "Qutb Shahi tombs", date: "1543–1672", img: "images/qutb-shahi-tombs.jpg",
+      { lat: 17.39500, lon: 78.39600, name: "Qutb Shahi tombs", date: "1543–1672", img: "images/qutb-shahi-tombs.jpg",
         blurb: "Seven royal domes on black basalt in a walled garden of the dead, outside the Banjara gate. They were once faced in blue and green tile; a few pieces remain." },
-      { x: 104, y: 258, labelDx: 22, labelDy: 22, name: "The mortuary bath", date: "16th c.",
+      { lat: 17.39500, lon: 78.39600, labelDx: 22, labelDy: 22, name: "The mortuary bath", date: "16th c.", img: "images/mortuary-bath.jpg",
         blurb: "Inside the necropolis: the hammam where the kings were washed before burial, called one of the finest surviving specimens of its kind anywhere." },
-      { x: 292, y: 258, labelDy: 22, name: "Hayat Bakshi Begum's mosque", date: "1666", img: "images/hayat-bakshi-mosque.jpg",
+      { lat: 17.32615, lon: 78.59901, labelDy: 22, name: "Hayat Bakshi Begum's mosque", date: "1666", img: "images/hayat-bakshi-mosque.jpg",
         blurb: "Fifteen cupolas and twin minarets, built for the dynasty's great dowager — daughter, wife and mother of sultans, and effectively its regent." },
-      { x: 640, y: 172, name: "Taramati Baradari", date: "17th c.", img: "images/taramati-baradari.jpg",
+      { lat: 17.37612, lon: 78.37816, name: "Taramati Baradari", date: "17th c.", img: "images/taramati-baradari.jpg",
         blurb: "A twelve-arched pavilion on a hillock west of the city. Legend says the courtesan Taramati sang here and Abdullah Qutb Shah heard her two kilometres away at the fort; she is at least genuinely buried in the royal necropolis." },
-      { x: 748, y: 268, labelDx: -14, name: "Purana Pul", date: "1578", img: "images/purana-pul.jpg",
+      { lat: 17.36668, lon: 78.45929, labelDx: -14, name: "Purana Pul", date: "1578", img: "images/purana-pul.jpg",
         blurb: "Twenty-two granite arches across the Musi, six hundred feet long — the first bridge, built before the new city existed, and in 1908 the only one left standing." }
     ]
   }
@@ -1242,52 +1181,43 @@ const PLACES = [
   },
 
   cityMap: {
-    w: 900, h: 520,
     caption: "The Musi runs west to east across the middle. The Qutb Shahi city is south of it around the Charminar; the Asaf Jahi palaces spread south and west; and the great public buildings of the last Nizam line the north bank at Afzalgunj.",
-    features:
-      '<path class="cm-river" d="M20 250 C160 230 300 268 450 254 C600 240 740 272 880 250"/>' +
-      '<text class="cm-label" x="60" y="236">THE MUSI</text>' +
-      '<path class="cm-feature" d="M450 300 L450 470" stroke-dasharray="4 6"/>' +
-      '<path class="cm-feature" d="M300 330 L640 330" stroke-dasharray="4 6"/>' +
-      '<text class="cm-label" x="640" y="360">THE GRID OF 1591</text>' +
-      '<ellipse class="cm-water" cx="620" cy="96" rx="86" ry="34"/>' +
-      '<text class="cm-label" x="620" y="52" text-anchor="middle">HUSSAIN SAGAR</text>',
     sites: [
-      { x: 450, y: 330, name: "Charminar", date: "1589–1591", img: "images/charminar.jpg",
+      { lat: 17.36163, lon: 78.47467, name: "Charminar", date: "1589–1591", img: "images/charminar.jpg",
         blurb: "Four arches and four minarets of 48.7 m at the crossing of the new city's two main axes, with a mosque on the top floor. Fourteen thousand tonnes of granite, limestone and pulverised marble, on foundations at least thirty feet deep." },
-      { x: 390, y: 372, labelDx: -22, name: "Mecca Masjid", date: "1614–1694", img: "images/mecca-masjid.jpg",
+      { lat: 17.36060, lon: 78.47330, labelDx: -22, name: "Mecca Masjid", date: "1614–1694", img: "images/mecca-masjid.jpg",
         blurb: "Seventy-seven years in the building and finished under Aurangzeb: ten thousand worshippers under fifteen arches, its central arch made of bricks fired from earth brought from Mecca. The Asaf Jahi tombs line its courtyard." },
-      { x: 450, y: 288, labelDy: -14, name: "Char Kaman", date: "c. 1592", img: "images/char-kaman.jpg",
+      { lat: 17.36222, lon: 78.47472, labelDy: -14, name: "Char Kaman", date: "c. 1592", img: "images/char-kaman.jpg",
         blurb: "Four ceremonial arches on the cardinal axes north of the Charminar, with the Gulzar Houz fountain at their crossing — the formal approach to the royal quarter." },
-      { x: 540, y: 300, labelDx: 22, name: "Badshahi Ashurkhana", date: "1592; tiles 1611", img: "images/badshahi-ashurkhana.jpg",
+      { lat: 17.36909, lon: 78.47573, labelDx: 22, name: "Badshahi Ashurkhana", date: "1592; tiles 1611", img: "images/badshahi-ashurkhana.jpg",
         blurb: "The royal Shia mourning hall, and the best Persian tile mosaic in the city — completed under Abdullah Qutb Shah two decades after the building itself." },
-      { x: 336, y: 296, labelDx: -20, labelDy: -12, name: "Laad Bazaar", date: "16th c.", img: "images/laad-bazaar.jpg",
+      { lat: 17.36192, lon: 78.47284, labelDx: -20, labelDy: -12, name: "Laad Bazaar", date: "16th c.", img: "images/laad-bazaar.jpg",
         blurb: "The lacquer-and-glass bangle lane running west off the Charminar, and still doing exactly what it was laid out to do four hundred years ago." },
-      { x: 386, y: 424, labelDy: 24, name: "Chowmahalla Palace", date: "1750–1880s", img: "images/chowmahalla.jpg",
+      { lat: 17.35825, lon: 78.47170, labelDy: 24, name: "Chowmahalla Palace", date: "1750–1880s", img: "images/chowmahalla.jpg",
         blurb: "Four palaces around formal courts, nineteen Belgian crystal chandeliers in the durbar hall, and a clock in the tower that has been ticking since 1750, wound weekly by one family of horologists." },
-      { x: 520, y: 424, labelDy: 24, name: "Purani Haveli", date: "refurbished 1777", img: "images/purani-haveli.jpg",
+      { lat: 17.36551, lon: 78.48268, labelDy: 24, name: "Purani Haveli", date: "refurbished 1777", img: "images/purani-haveli.jpg",
         blurb: "Holds the longest wardrobe in the world: 240 feet on two levels, 124 almirahs, served by a hand-cranked wooden lift." },
-      { x: 620, y: 470, name: "Paigah Tombs", date: "from 1787", img: "images/paigah-tombs.jpg",
+      { lat: 17.34390, lon: 78.50410, name: "Paigah Tombs", date: "from 1787", img: "images/paigah-tombs.jpg",
         blurb: "Marble smothered in polished stucco jali — screens perforated as family trees, mixing Rajasthani, Mughal and Persian geometry. The Paigahs were the only nobles allowed their own army, courts and palaces." },
-      { x: 300, y: 470, labelDx: 16, name: "Falaknuma Palace", date: "1884–1893", img: "images/falaknuma.jpg",
+      { lat: 17.33095, lon: 78.46750, labelDx: 16, name: "Falaknuma Palace", date: "1884–1893", img: "images/falaknuma.jpg",
         blurb: "Built in the shape of a scorpion, two stings spread as wings, in Italian marble on a hill. Its dining hall seats a hundred and one. The sixth Nizam visited in 1897 and simply stayed; its owner had to give it to him." },
-      { x: 356, y: 200, labelDy: -14, name: "Salar Jung Museum", date: "opened 1951", img: "images/salar-jung-museum.jpg",
+      { lat: 17.37143, lon: 78.48035, labelDy: -14, name: "Salar Jung Museum", date: "opened 1951", img: "images/salar-jung-museum.jpg",
         blurb: "One man's collection, claimed as the largest in the world: the Veiled Rebecca, whose marble veil reads as translucent; a double statue of Mephistopheles and Margaretta carved from one block, one figure on each side of a mirror; and a musical clock whose small figure still strikes the hour to a crowd." },
-      { x: 452, y: 186, labelDy: -14, name: "High Court", date: "1915–1919", img: "images/hyderabad-high-court.jpg",
+      { lat: 17.36918, lon: 78.47204, labelDy: -14, name: "High Court", date: "1915–1919", img: "images/hyderabad-high-court.jpg",
         blurb: "Vincent Esch's finest: local pink granite with carved red sandstone panels, on the north bank at Afzalgunj, for about twenty lakh rupees." },
-      { x: 556, y: 216, labelDy: 24, name: "Osmania Hospital", date: "1918–1921", img: "images/osmania-hospital.jpg",
+      { lat: 17.37200, lon: 78.47400, labelDy: 24, name: "Osmania Hospital", date: "1918–1921", img: "images/osmania-hospital.jpg",
         blurb: "Facing the High Court across the river. In its grounds stands the tamarind tree that held a hundred and fifty people through the night of the 1908 flood." },
-      { x: 660, y: 186, labelDy: -14, name: "State Central Library", date: "1932–1936", img: "images/state-central-library.jpg",
+      { lat: 17.37420, lon: 78.47830, labelDy: -14, name: "State Central Library", date: "1932–1936", img: "images/state-central-library.jpg",
         blurb: "Begun as the Asafia Library in 1891 from one nobleman's collection, and given this building for the Nizam's silver jubilee." },
-      { x: 806, y: 122, labelDy: -16, name: "Osmania University", date: "firman 1917",
+      { lat: 17.41100, lon: 78.52900, labelDy: -16, name: "Osmania University", date: "firman 1917",
         blurb: "The first Indian university to teach in an Indian language. Its Arts College, on sixteen hundred acres at Amberpet, is modelled on the mosque-college of Sultan Hassan in Cairo." },
-      { x: 232, y: 196, labelDy: -14, name: "British Residency", date: "1803–1806", img: "images/british-residency.jpg",
+      { lat: 17.38372, lon: 78.48475, labelDy: -14, name: "British Residency", date: "1803–1806", img: "images/british-residency.jpg",
         blurb: "A Palladian villa by a Madras Engineers lieutenant, near-contemporary with the White House and strikingly like it. Behind it stood the Rang Mahal, where Khair-un-Nissa lived — the Hyderabad marriage that scandalised Calcutta. It is a women's college now." },
-      { x: 150, y: 300, labelDx: 24, name: "Purana Pul", date: "1578", img: "images/purana-pul.jpg",
+      { lat: 17.36668, lon: 78.45929, labelDx: 24, name: "Purana Pul", date: "1578", img: "images/purana-pul.jpg",
         blurb: "Twenty-two arches, six hundred feet long, fifty-four feet above the bed. Built before the city it leads to, and the only bridge left standing in September 1908." },
-      { x: 62, y: 232, labelDx: 30, labelDy: -14, name: "Osman Sagar", date: "1920", img: "images/osman-sagar.jpg",
+      { lat: 17.38333, lon: 78.30000, labelDx: 30, labelDy: -14, name: "Osman Sagar", date: "1920", img: "images/osman-sagar.jpg",
         blurb: "The answer to 1908: a dam ten miles upstream, built on Visvesvaraya's advice so that the city's safety would come from storage above it. Himayat Sagar followed on the tributary in 1927, and between them they supplied Hyderabad's drinking water for generations." },
-      { x: 700, y: 300, labelDy: 24, name: "Kachiguda station", date: "1914", img: "images/kachiguda-station.jpg",
+      { lat: 17.38956, lon: 78.49976, labelDy: 24, name: "Kachiguda station", date: "1914", img: "images/kachiguda-station.jpg",
         blurb: "Vincent Esch's first Hyderabad commission and the first building here built entirely of concrete — domes and chajjas in a material that had never carried them before." }
     ]
   }
@@ -1393,33 +1323,25 @@ const PLACES = [
   },
 
   cityMap: {
-    w: 900, h: 520,
     caption: "The fort sits east of the town in its flooded ditch; the royal gardens and the necropolis of favourites run south; and the tomb everyone miscalls Chand Bibi's stands on a hill thirteen kilometres out.",
-    features:
-      '<ellipse class="cm-feature" cx="520" cy="250" rx="150" ry="118"/>' +
-      '<ellipse class="cm-feature" cx="520" cy="250" rx="132" ry="100" stroke-dasharray="3 5"/>' +
-      '<text class="cm-label" x="520" y="104" text-anchor="middle">THE FORT AND ITS WATER DITCH</text>' +
-      '<rect class="cm-feature" x="150" y="180" width="220" height="160" stroke-dasharray="4 7"/>' +
-      '<text class="cm-label" x="260" y="168" text-anchor="middle">THE OLD TOWN</text>' +
-      '<path class="cm-feature" d="M300 350 C340 420 400 450 470 460" stroke-dasharray="5 7"/>',
     sites: [
-      { x: 520, y: 250, name: "Ahmadnagar Fort", date: "stone 1559–63", img: "images/ahmednagar-fort.jpg",
+      { lat: 19.09481, lon: 74.75547, name: "Ahmadnagar Fort", date: "stone 1559–63", img: "images/ahmednagar-fort.jpg",
         blurb: "An oval of twenty-four bastions, 1.7 km round, walls rising thirty feet from the bottom of a ditch that held nine feet of water. Four years in the building, and it took the Mughals two campaigns and a murder to get in." },
-      { x: 466, y: 296, labelDx: -22, name: "Chand Bibi's breach", date: "1595",
+      { offMap: true, labelDx: -22, name: "Chand Bibi's breach", date: "1595",
         blurb: "Where five Mughal mines were driven under the wall, two were dug out by the garrison, and a queen in armour with her veil wound round her waist stood in the gap that the rest blew open." },
-      { x: 574, y: 300, labelDx: 24, name: "Kille Ark", date: "16th c., reused",
+      { lat: 19.09481, lon: 74.75547, labelDx: 24, name: "Kille Ark", date: "16th c., reused",
         blurb: "The inner palace block. The last Nizam Shah was held here; so, four centuries later, were Nehru, Azad and Patel for nearly three years — <i>The Discovery of India</i> was written inside it." },
-      { x: 250, y: 240, name: "Bagh Rauza", date: "early 16th c.",
+      { lat: 19.08000, lon: 74.73000, name: "Bagh Rauza", date: "early 16th c.", img: "images/bagh-rauza.jpg",
         blurb: "A black stone dome over the founder Ahmad Nizam Shah, with gold Quranic script glittering in the dark interior — the dynasty's first monument and its most restrained." },
-      { x: 322, y: 306, labelDy: 24, name: "Damdi Masjid", date: "16th c.", img: "images/damdi-masjid.jpg",
+      { lat: 19.08000, lon: 74.73000, labelDy: 24, name: "Damdi Masjid", date: "16th c.", img: "images/damdi-masjid.jpg",
         blurb: "A tiny mosque that is nothing but carving, whose patron is disputed between a court noble and Chand Bibi herself. Small enough to miss and worth more than most of what surrounds it." },
-      { x: 470, y: 462, labelDy: 24, name: "Farah Bagh", date: "c. 1576–83", img: "images/farah-bagh.jpg",
+      { lat: 19.06828, lon: 74.75202, labelDy: 24, name: "Farah Bagh", date: "c. 1576–83", img: "images/farah-bagh.jpg",
         blurb: "An octagonal pleasure palace in the middle of a lake that has since vanished, where a sultan retired to play chess with a singer he titled Fateh Shah." },
-      { x: 380, y: 420, labelDx: -26, name: "The tombs of favourites", date: "16th c.",
+      { offMap: true, labelDx: -26, name: "The tombs of favourites", date: "16th c.",
         blurb: "Seventy domes and forty mosques, by tradition, strung along the road between the city and Farah Bagh — a necropolis of courtiers rather than kings." },
-      { x: 800, y: 152, labelDx: -12, name: "Tomb of Salabat Khan II", date: "late 16th c.", img: "images/salabat-khan-tomb.jpg",
+      { lat: 19.09400, lon: 74.84000, labelDx: -12, name: "Tomb of Salabat Khan II", date: "late 16th c.", img: "images/salabat-khan-tomb.jpg",
         blurb: "Three octagonal storeys, twenty-three metres high, on a bare hilltop thirteen kilometres out. Universally called Chand Bibi's palace, and neither her palace nor her tomb." },
-      { x: 764, y: 400, name: "Malik Ambar", date: "d. 13 May 1626", img: "images/malik-ambar.jpg",
+      { lat: 20.00952, lon: 75.18880, name: "Malik Ambar", date: "d. 13 May 1626", img: "images/malik-ambar.jpg",
         blurb: "The Ethiopian who was sold as a child, freed on his master's death, and then held this kingdom together for twenty-six years after its capital had fallen. He is buried at Khuldabad, off to the north-west near Aurangabad — the city he founded — rather than at the capital he refused to let die." }
     ]
   }
@@ -1506,35 +1428,27 @@ const PLACES = [
   },
 
   cityMap: {
-    w: 900, h: 520,
     caption: "The city sits at the bottom right; everything else runs north-west along one road — the fort at sixteen kilometres, Khuldabad at twenty-four, Ellora at thirty. Ajanta lies a hundred kilometres due north.",
-    features:
-      '<path class="cm-feature" d="M700 420 C560 380 440 320 320 240 C250 192 190 160 130 140" stroke-dasharray="5 7"/>' +
-      '<text class="cm-label" x="430" y="330">THE NORTH-WEST ROAD</text>' +
-      '<rect class="cm-feature" x="600" y="360" width="250" height="130"/>' +
-      '<text class="cm-label" x="725" y="350" text-anchor="middle">AURANGABAD</text>' +
-      '<path class="cm-feature" d="M120 200 C90 240 100 290 140 320" stroke-dasharray="2 5"/>' +
-      '<text class="cm-label" x="120" y="350" text-anchor="middle">THE AQUEDUCT</text>',
     sites: [
-      { x: 706, y: 412, labelDy: 22, name: "Khadki / the old city", date: "c. 1610",
+      { lat: 19.88000, lon: 75.32000, labelDy: 22, name: "Khadki / the old city", date: "c. 1610",
         blurb: "Malik Ambar laid it out with streets, palaces, a wall and a water supply, in that order of priority. Aurangzeb expanded it and gave it his own name." },
-      { x: 648, y: 372, labelDy: -16, name: "Bibi ka Maqbara", date: "1668–69", img: "images/bibi-ka-maqbara.jpg",
+      { lat: 19.90151, lon: 75.32019, labelDy: -16, name: "Bibi ka Maqbara", date: "1668–69", img: "images/bibi-ka-maqbara.jpg",
         blurb: "The Taj of the Deccan, built by a prince for his mother at a fraction of the original's budget — marble below, plaster above, and the largest Mughal building south of the Vindhyas." },
-      { x: 790, y: 462, labelDy: 24, name: "Panchakki", date: "c. 1695", img: "images/panchakki.jpg",
+      { lat: 19.88944, lon: 75.31556, labelDy: 24, name: "Panchakki", date: "c. 1695", img: "images/panchakki.jpg",
         blurb: "A water mill driven by a siphoned underground channel from the hills, grinding grain for pilgrims at the dargah of Baba Shah Musafir — Ambar's hydraulics turned to charity." },
-      { x: 130, y: 258, labelDx: 26, name: "Nehr-e-Ambari", date: "from 1612",
+      { lat: 19.88000, lon: 75.32000, labelDx: 26, name: "Nehr-e-Ambari", date: "from 1612", img: "images/nehr-e-ambari.jpg",
         blurb: "Seven feet deep with a hundred and forty manholes, dismissed by the wazir as preposterous, finished in fifteen months at half cost, and still supplying the city three centuries later." },
-      { x: 470, y: 268, name: "Daulatabad Fort", date: "c. 1187", img: "images/daulatabad.jpg",
+      { lat: 19.94272, lon: 75.21316, name: "Daulatabad Fort", date: "c. 1187", img: "images/daulatabad.jpg",
         blurb: "Sixteen kilometres out: the basalt cone whose lower slopes were sheared into fifty metres of vertical rock. Every ruler in this history wanted it; none of them stormed it." },
-      { x: 424, y: 224, labelDy: -14, name: "Chand Minar", date: "1445", img: "images/chand-minar.jpg",
+      { lat: 19.94442, lon: 75.21743, labelDy: -14, name: "Chand Minar", date: "1445", img: "images/chand-minar.jpg",
         blurb: "Sixty-three metres of victory tower inside the fort, faced with Persian blue tile — raised over a Bahmani win against Vijayanagara, by a builder who was a slave." },
-      { x: 300, y: 190, name: "Khuldabad", date: "khanqah c. 1327", img: "images/aurangzeb-tomb.jpg",
+      { lat: 20.00952, lon: 75.18880, name: "Khuldabad", date: "khanqah c. 1327", img: "images/aurangzeb-tomb.jpg",
         blurb: "The Chishti settlement founded by saints who came south in the 1327 migration — and the ground Aurangzeb chose, with an open grave, no dome, and herbs growing on the earth." },
-      { x: 196, y: 152, name: "Ellora", date: "6th–10th c.", img: "images/kailasa-temple.png",
+      { lat: 20.02680, lon: 75.17710, name: "Ellora", date: "6th–10th c.", img: "images/kailasa-temple.png",
         blurb: "Thirty-four caves cut side by side by Buddhists, Hindus and Jains. The Kailasa temple was excavated downward from the hilltop — two hundred thousand tonnes removed to leave a building standing." },
-      { x: 120, y: 106, labelDy: -16, name: "Grishneshwar", date: "16th c. rebuild", img: "images/grishneshwar.jpg",
+      { lat: 20.02497, lon: 75.16992, labelDy: -16, name: "Grishneshwar", date: "16th c. rebuild", img: "images/grishneshwar.jpg",
         blurb: "The last and smallest of the twelve Jyotirlingas, beside Ellora — rebuilt by Shivaji's grandfather and given its present form by Ahilyabai Holkar." },
-      { x: 640, y: 96, name: "Ajanta", date: "2nd c. BCE – 6th c. CE", img: "images/ajanta.jpg",
+      { lat: 20.55333, lon: 75.70028, name: "Ajanta", date: "2nd c. BCE – 6th c. CE", img: "images/ajanta.jpg",
         blurb: "A hundred kilometres north in a horseshoe gorge: thirty caves holding the largest surviving body of early Indian painting, saved by a thousand years of being forgotten." }
     ]
   }
