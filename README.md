@@ -46,6 +46,29 @@ comes from chronicles written centuries after the events by interested parties.
 Those claims appear here as legends, with the scholarly objection alongside,
 rather than as facts.
 
+## Settings
+
+`site.config.json` holds the few values that depend on where the site lives.
+Edit it and re-run `scripts/build_seo.py`; the values are written into
+`index.html` and every page under `city/`.
+
+| Key | What it does |
+|---|---|
+| `siteUrl` | The address the site is served on. Every canonical tag, Open Graph URL and sitemap entry is built from it — a canonical pointing elsewhere tells Google to index that address instead of yours. |
+| `gscToken` | Google Search Console HTML-tag verification. Paste the bare token, the whole `<meta>` tag, or the `content="..."` part; all three work. |
+| `gaId` | Google Analytics 4 measurement ID (`G-XXXXXXXXXX`). **Leave it empty and no analytics code is emitted at all** — no script, no cookies. |
+| `gaAnonymiseIp` | Truncate visitor IPs. On by default. |
+
+Any of them can be overridden for one run by the environment variable of the
+same name in capitals:
+
+```bash
+SITE_URL=https://staging.example.com python3 scripts/build_seo.py
+```
+
+The generator is idempotent: re-running never stacks duplicate snippets, and
+clearing a value removes what it previously wrote.
+
 ## Search engines
 
 About 31,000 words — the whole chronicle and every city chapter — used to live

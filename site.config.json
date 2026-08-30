@@ -1,0 +1,23 @@
+{
+  "_comment": [
+    "Site settings, read by scripts/build_seo.py. Edit here once and re-run the",
+    "script; the values are written into index.html and every page under city/.",
+    "",
+    "An environment variable of the same name in capitals overrides any of these",
+    "for a single run, e.g.  SITE_URL=https://staging.example.com python3 scripts/build_seo.py",
+    "",
+    "siteUrl   the address the site is actually served on. Every canonical tag,",
+    "          Open Graph URL and sitemap entry is built from it, so it must",
+    "          match reality \u2014 a canonical pointing elsewhere tells Google to",
+    "          index that other address instead of yours.",
+    "gscToken  Google Search Console's HTML-tag verification value. Paste the",
+    "          bare token, the whole <meta> tag, or the content=\"...\" part.",
+    "gaId      Google Analytics 4 measurement ID, the G-XXXXXXXXXX one. Leave",
+    "          empty and no analytics code is emitted at all.",
+    "gaAnonymiseIp  send IP addresses truncated. On by default."
+  ],
+  "siteUrl": "https://the-deccan.vercel.app",
+  "gscToken": "",
+  "gaId": "",
+  "gaAnonymiseIp": true
+}

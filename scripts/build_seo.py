@@ -41,7 +41,50 @@ ROOT = os.path.join(HERE, "..")
 #
 #     SITE_URL=https://your-site.vercel.app python3 scripts/build_seo.py
 #
-SITE = os.environ.get("SITE_URL", "https://the-deccan.vercel.app").rstrip("/")
+def settings():
+    """site.config.json, with an environment variable of the same name winning."""
+    cfg = {}
+    path = os.path.join(ROOT, "site.config.json")
+    if os.path.exists(path):
+        with open(path) as f:
+            cfg = {k: v for k, v in json.load(f).items() if not k.startswith("_")}
+    for key, env in (("siteUrl", "SITE_URL"), ("gscToken", "GSC_TOKEN"), ("gaId", "GA_ID")):
+        if os.environ.get(env):
+            cfg[key] = os.environ[env]
+    return cfg
+
+
+CFG = settings()
+SITE = str(CFG.get("siteUrl", "")).rstrip("/")
+
+
+def clean_token(raw):
+    """Take the bare token, the whole <meta> tag, or the content="..." part."""
+    raw = (raw or "").strip()
+    m = re.search(r'content=["\']([^"\']+)["\']', raw)
+    if m:
+        raw = m.group(1)
+    return raw.strip().strip('"\'')
+
+
+def analytics_snippet():
+    """Google Analytics 4, or nothing at all if no measurement ID is set."""
+    gid = clean_token(CFG.get("gaId", ""))
+    if not gid:
+        return ""
+    if not re.fullmatch(r"G-[A-Z0-9]{6,}", gid):
+        print("  WARNING: gaId %r is not of the form G-XXXXXXXXXX — skipping analytics" % gid)
+        return ""
+    anon = "true" if CFG.get("gaAnonymiseIp", True) else "false"
+    return (
+        '<script async src="https://www.googletagmanager.com/gtag/js?id=%s"></script>\n'
+        "<script>\n"
+        "  window.dataLayer = window.dataLayer || [];\n"
+        "  function gtag(){dataLayer.push(arguments);}\n"
+        "  gtag('js', new Date());\n"
+        "  gtag('config', '%s', { anonymize_ip: %s });\n"
+        "</script>\n" % (gid, gid, anon)
+    )
 
 BEGIN = "<!-- BEGIN generated timeline — scripts/build_seo.py -->"
 END = "<!-- END generated timeline -->"
@@ -165,7 +208,7 @@ PAGE = """<!DOCTYPE html>
 <link rel="stylesheet" href="../css/style.css?v={v}">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🕌</text></svg>">
 <script type="application/ld+json">{ld}</script>
-</head>
+{ga}</head>
 <body class="city-page">
 
 <nav class="nav scrolled">
@@ -204,6 +247,17 @@ PAGE = """<!DOCTYPE html>
 </body>
 </html>
 """
+
+
+ANALYTICS_MARK = "googletagmanager.com/gtag/js"
+
+
+def strip_analytics(doc):
+    """Remove any previously injected snippet, so re-runs never stack them."""
+    doc = re.sub(r'<script async src="https://www\.googletagmanager\.com/gtag/js[^>]*></script>\n?',
+                 "", doc)
+    doc = re.sub(r"<script>\n  window\.dataLayer[\s\S]*?</script>\n?", "", doc)
+    return doc
 
 
 def city_body(p):
@@ -278,11 +332,8 @@ def main():
     # the whole <meta> tag, or just the content="..." part. Pasting the full tag
     # is the obvious mistake and would otherwise nest one tag inside another and
     # fail verification silently.
-    verify = os.environ.get("GSC_TOKEN", "").strip()
-    m = re.search(r'content=["\']([^"\']+)["\']', verify)
-    if m:
-        verify = m.group(1)
-    verify = verify.strip().strip('"\'')
+    verify = clean_token(CFG.get("gscToken", ""))
+    ga = analytics_snippet()
 
     index_path = os.path.join(ROOT, "index.html")
     src = open(index_path).read()
@@ -301,6 +352,9 @@ def main():
         src = src.replace('<link rel="canonical"',
                           '<meta name="google-site-verification" content="%s">\n<link rel="canonical"'
                           % verify, 1)
+    src = strip_analytics(src)
+    if ga:
+        src = src.replace("</head>", ga + "</head>", 1)
     open(index_path, "w").write(src)
     words = len(strip_tags(block).split())
     print("  chronicle pre-rendered into index.html — %d words now in the HTML" % words)
@@ -316,7 +370,7 @@ def main():
         page = PAGE.format(
             title=esc(title), desc=esc(desc), url=url, site=SITE, img=p["img"],
             v=v, n=p["n"], alt=esc(p["alt"]), name=esc(p["name"]), era=esc(p["era"]),
-            ld=city_ld(p, url), body=city_body(p))
+            ld=city_ld(p, url), body=city_body(p), ga=ga)
         open(os.path.join(outdir, p["id"] + ".html"), "w").write(page)
         urls.append((url, "0.8"))
         print("  city/%-12s %6d words" % (p["id"] + ".html", len(strip_tags(city_body(p)).split())))
