@@ -34,7 +34,14 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, "..")
-SITE = "https://the-deccan.vercel.app"        # edit if the domain changes
+# The live URL. Every canonical tag, Open Graph URL and sitemap entry is built
+# from this, so it has to match what the site is actually served on — a
+# canonical pointing at a different host tells Google to index that host
+# instead. Set it once, here or as an environment variable, and re-run:
+#
+#     SITE_URL=https://your-site.vercel.app python3 scripts/build_seo.py
+#
+SITE = os.environ.get("SITE_URL", "https://the-deccan.vercel.app").rstrip("/")
 
 BEGIN = "<!-- BEGIN generated timeline — scripts/build_seo.py -->"
 END = "<!-- END generated timeline -->"
@@ -267,6 +274,8 @@ def main():
     eras = load("js/chronicle.js", "ERAS")
     places = load("js/places.js", "PLACES")
 
+    verify = os.environ.get("GSC_TOKEN", "").strip()
+
     index_path = os.path.join(ROOT, "index.html")
     src = open(index_path).read()
     v = re.search(r"style\.css\?v=(\d+)", src).group(1)
@@ -278,6 +287,12 @@ def main():
     else:
         src = src.replace('<div class="timeline"></div>',
                           '<div class="timeline">\n%s\n  </div>' % block)
+    # Search Console's HTML-tag verification, if a token was supplied
+    src = re.sub(r'\n<meta name="google-site-verification"[^>]*>', "", src)
+    if verify:
+        src = src.replace('<link rel="canonical"',
+                          '<meta name="google-site-verification" content="%s">\n<link rel="canonical"'
+                          % verify, 1)
     open(index_path, "w").write(src)
     words = len(strip_tags(block).split())
     print("  chronicle pre-rendered into index.html — %d words now in the HTML" % words)
