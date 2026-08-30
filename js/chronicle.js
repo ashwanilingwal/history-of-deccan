@@ -81,7 +81,7 @@ const ERAS = [
         {
           kind: "legend", title: "The floating bricks",
           body: [
-            "Local tradition holds that Ramappa temple's tower is built of bricks so light they float on water — and that this is why it has survived earthquakes for eight centuries.",
+            "Local tradition holds that Ramappa temple's tower is built of bricks so light they float on water, and that this is why it has survived earthquakes for eight centuries.",
             "Unusually for a legend, this one is roughly true. The tower's bricks are highly porous and of very low density; tests have found samples that do float. The foundation is also a genuine piece of engineering — a 'sandbox' raft of packed sand that damps seismic shock, a technique modern engineers recognise as base isolation."
           ]
         }
@@ -99,9 +99,9 @@ const ERAS = [
       ],
       teaser: "Gold, diamonds and elephants, in a country the north had never seen. The rumours travelled to Delhi. So did the armies.",
       detail: [
-        "On the eve of the invasions the Deccan held two great powers: the Yadavas at Devagiri, whose reach ran to the western coast and south towards Mysore, and the Kakatiyas at Warangal, holding Telangana and the Krishna–Godavari delta. Both were old, wealthy and — as the chroniclers of Delhi kept noting — almost unknown in the north.",
+        "On the eve of the invasions the Deccan held two great powers: the Yadavas at Devagiri, whose reach ran to the western coast and south towards Mysore, and the Kakatiyas at Warangal, holding Telangana and the Krishna–Godavari delta. Both were old, wealthy and, as the chroniclers of Delhi kept noting, almost unknown in the north.",
         "The wealth was real and it was local. Gold was washed and mined across the plateau; the Krishna valley held the only diamond mines then known to the world; the forests held elephants. Zia-ud-din Barani wrote that Devagiri 'was exceedingly rich in gold and silver, jewels and pearls, and other valuables', and that 'the people of that country had never heard of the Mussulmans'.",
-        "That combination — enormous portable wealth and no experience of the enemy — is the whole explanation for what happened next."
+        "That combination, enormous portable wealth and no experience of the enemy, is the whole explanation for what happened next."
       ],
       boxes: [
         {
@@ -146,7 +146,7 @@ const ERAS = [
       ],
       teaser: "A provincial governor slipped south without permission, came back with a mountain of gold — and used it to murder the uncle who had raised him.",
       detail: [
-        "Ala-ud-din Khalji was governor of Kara on the Ganges, nephew and son-in-law of the Sultan of Delhi. In 1294 he marched south in secret with a few thousand horse, crossed the Vindhyas — which no northern army had done — and appeared before Devagiri while its army was away. Raja Ramachandra bought him off with a treasure so vast that Barani says nothing like it had been seen before.",
+        "Ala-ud-din Khalji was governor of Kara on the Ganges, nephew and son-in-law of the Sultan of Delhi. In 1294 he marched south in secret with a few thousand horse, crossed the Vindhyas, which no northern army had done, and appeared before Devagiri while its army was away. Raja Ramachandra bought him off with a treasure so vast that Barani says nothing like it had been seen before.",
         "Ala-ud-din did not take it to Delhi. He took it to Kara and used it to buy men. When his uncle Sultan Jalal-ud-din came downriver to congratulate him — unarmed, in a small boat, persuaded by Ala-ud-din's brother to leave his guard behind — he was embraced, kissed on both cheeks, and beheaded on the riverbank. 'Ah! thou villain, Ala-ud-din, what hast thou done?' were, by Barani's account, his last words.",
         "The new sultan then bought his capital outright: every day, five maunds of golden stars were fired from an engine into the crowds outside the royal tent. Gribble treats the whole sequence as the opening of a curse — a run of Deccan gold that destroyed nearly every hand that closed on it."
       ],
@@ -155,7 +155,7 @@ const ERAS = [
           kind: "deep", title: "Why this raid mattered more than its loot",
           body: [
             "Militarily 1294 was a raid, not a conquest — Ramachandra kept his throne and Devagiri kept its walls. Its importance is that it proved three things to Delhi at once: that the Vindhyas could be crossed, that the Deccan could not coordinate a defence, and that a single successful southern raid could finance a coup.",
-            "For the next thirty years the Deccan functioned as Delhi's treasury. Every serious political crisis in the north was paid for out of southern plunder — which is precisely why the raids kept coming back."
+            "For the next thirty years the Deccan functioned as Delhi's treasury. Every serious political crisis in the north was paid for out of southern plunder, which is precisely why the raids kept coming back."
           ]
         }
       ],
@@ -211,8 +211,8 @@ const ERAS = [
       ],
       teaser: "The city was annexed, its name erased — and among the refugees riding south were two brothers who would build the greatest Hindu city India had seen.",
       detail: [
-        "After a failed first attempt wrecked by a false rumour of the sultan's death, Ulugh Khan — the future Muhammad bin Tughluq — returned and took Warangal. Prataparudra and his family were sent north; he is said to have died on the road to Delhi. The city's very name was changed to Sultanpur, and Telangana became a province of the Delhi Sultanate.",
-        "The dispersal mattered more than the conquest. Warangal's officers, treasurers and soldiers scattered across the plateau. Some — the Musunuri Nayakas — would federate the Telugu chiefs and take Warangal back within thirteen years. Others rode south-west to the gorge of the Tungabhadra.",
+        "After a failed first attempt wrecked by a false rumour of the sultan's death, Ulugh Khan, the future Muhammad bin Tughluq, returned and took Warangal. Prataparudra and his family were sent north; he is said to have died on the road to Delhi. The city's very name was changed to Sultanpur, and Telangana became a province of the Delhi Sultanate.",
+        "The dispersal mattered more than the conquest. Warangal's officers, treasurers and soldiers scattered across the plateau. Some, the Musunuri Nayakas, would federate the Telugu chiefs and take Warangal back within thirteen years. Others rode south-west to the gorge of the Tungabhadra.",
         "Among them, in the traditional account, were two brothers of the Kakatiya service: Harihara and Bukka."
       ],
       boxes: [
@@ -250,9 +250,9 @@ const ERAS = [
       teaser: "A sultan ordered an entire city — every household in Delhi — to walk 1,100 km south. It broke Delhi, it broke him, and it made the Deccan Muslim.",
       detail: [
         "Muhammad bin Tughluq's logic was not mad. Delhi sat exposed to Mongol raids and hundreds of miles from the empire's richest new provinces; Devagiri sat almost exactly at the centre of his dominions, on a rock reputed impregnable. He renamed it Daulatabad, 'the abode of fortune', and ordered the capital moved.",
-        "The execution was the catastrophe. Barani — a hostile witness — writes that the order fell on the whole population, that 'not a cat or dog was left', and that the road south filled with the dying: 'many from the toils of the long journey perished on the road, and those who arrived at Deogiri could not endure the pain of exile. In despondency they pined to death.' Ibn Battuta, arriving later, was told of a blind man dragged the whole way until only a leg reached Daulatabad, and a cripple flung there by catapult.",
+        "The execution was the catastrophe. Barani, a hostile witness, writes that the order fell on the whole population, that 'not a cat or dog was left', and that the road south filled with the dying: 'many from the toils of the long journey perished on the road, and those who arrived at Deogiri could not endure the pain of exile. In despondency they pined to death.' Ibn Battuta, arriving later, was told of a blind man dragged the whole way until only a leg reached Daulatabad, and a cripple flung there by catapult.",
         "By 1335 it was over. The sultan let those who wished return to a ruined Delhi. Within a decade his token copper currency had collapsed, famine had emptied the Doab, and his provinces were in revolt from Bengal to Ma'bar.",
-        "But the migration did not reverse itself. Scholars, Sufis, soldiers, poets, masons and administrators stayed in the south. That transplanted population is the raw material of everything that follows: the Bahmani sultanate, the Deccani sultanates after it, and the language — Dakhni — that grew out of their speech."
+        "But the migration did not reverse itself. Scholars, Sufis, soldiers, poets, masons and administrators stayed in the south. That transplanted population is the raw material of everything that follows: the Bahmani sultanate, the Deccani sultanates after it, and the language, Dakhni, that grew out of their speech."
       ],
       boxes: [
         {
@@ -292,7 +292,7 @@ const ERAS = [
       ],
       teaser: "A hare turned and chased the hounds. On that spot, the story goes, they built the city that held the south for 230 years.",
       detail: [
-        "In the boulder-strewn gorge of the Tungabhadra, on ground already sacred as the Kishkindha of the <i>Ramayana</i>, the brothers Harihara and Bukka founded a city. They called it Vidyanagara, the city of learning, for the sage Vidyaranya said to have blessed it — and then Vijayanagara, the city of victory.",
+        "In the boulder-strewn gorge of the Tungabhadra, on ground already sacred as the Kishkindha of the <i>Ramayana</i>, the brothers Harihara and Bukka founded a city. They called it Vidyanagara, the city of learning, for the sage Vidyaranya said to have blessed it, and then Vijayanagara, the city of victory.",
         "It was founded facing north, against the Sultanate. For the next two and a half centuries Vijayanagara was, in Gribble's phrase, 'the warden of the Hindu marches': the power that absorbed the shock of every invasion from the plateau, and the one southern state the Deccan sultans never managed to hold.",
         "By the time it was destroyed it was, by the reckoning of the travellers who saw it, one of the largest cities on earth."
       ],
@@ -307,9 +307,9 @@ const ERAS = [
         {
           kind: "deep", title: "Who were Harihara and Bukka? — an unsettled question",
           body: [
-            "The most widely repeated account makes them treasury officers of Kakatiya Warangal (or of Kampili), captured and taken to Delhi, converted to Islam, sent back south as governors — and then reconverted by Vidyaranya and declaring independence.",
+            "The most widely repeated account makes them treasury officers of Kakatiya Warangal (or of Kampili), captured and taken to Delhi, converted to Islam, sent back south as governors, and then reconverted by Vidyaranya and declaring independence.",
             "This is disputed at almost every point. There is a long-running scholarly argument over whether the brothers were Telugu (Kakatiya service) or Kannada (Hoysala/Kampili service); the conversion-and-reconversion episode rests on late sources and is doubted by many historians; and Vidyaranya's role may have been retrospectively enlarged by the Sringeri monastery's own tradition.",
-            "What is solid: the empire was founded in the 1330s in the wake of the Sultanate's collapse in the south, by men who had been inside the Sultanate's system — which is exactly why they knew how to fight it."
+            "What is solid: the empire was founded in the 1330s in the wake of the Sultanate's collapse in the south, by men who had been inside the Sultanate's system, which is exactly why they knew how to fight it."
           ]
         }
       ],
@@ -333,7 +333,7 @@ const ERAS = [
         {
           kind: "legend", title: "Hasan Gangu, the ploughman king",
           body: [
-            "Ferishta tells it beautifully. Hasan was a labourer in Delhi working land for a Brahmin astrologer named Gangu. His plough struck a buried pot of antique gold coins — and he carried the whole of it, untouched, to his master.",
+            "Ferishta tells it beautifully. Hasan was a labourer in Delhi working land for a Brahmin astrologer named Gangu. His plough struck a buried pot of antique gold coins, and he carried the whole of it, untouched, to his master.",
             "Gangu, astonished, reported the honesty to the sultan (who made Hasan an officer of a hundred horse) and cast the young man's horoscope — in which he read a crown. He asked only two things: that Hasan take his name, and that when the crown came, he be made minister of finance. Hasan agreed, became Hasan Gangu, and kept both promises.",
             "Asked in old age how he had won a kingdom with neither treasure nor army, the sultan answered: 'By affability to friends and enemies, and by showing liberality to all to the utmost of my power.'"
           ]
@@ -343,7 +343,7 @@ const ERAS = [
           body: [
             "The dynasty's own name points somewhere else. 'Bahman' is the Persian hero Bahman son of Isfandiyar, and the Bahmanis claimed descent from him — a standard Persianate royal genealogy, and a far more likely origin for the name than a Brahmin master called Gangu.",
             "Ferishta wrote some 250 years after the event, and the rags-to-throne story has the shape of court romance: honesty rewarded, prophecy fulfilled, a Hindu astrologer legitimising a Muslim king. Several historians read it as a founding myth designed to bind the new sultanate to its overwhelmingly Hindu population.",
-            "Both readings survive because both are useful — and neither can be proved."
+            "Both readings survive because both are useful, and neither can be proved."
           ]
         }
       ],
@@ -369,9 +369,9 @@ const ERAS = [
       ],
       teaser: "A drunken order to pay three hundred singers out of the enemy's treasury started a war that killed half a million people.",
       detail: [
-        "Muhammad Shah I organised what his father had improvised: a standing army with a corps of archers, a body-guard of four thousand, and — decisively — artillery, worked by Turkish and European gunners. The Bahmanis had cannon in the Deccan roughly a century before the Mughals brought them to the north, and it is the single largest reason a smaller army kept beating a larger one.",
+        "Muhammad Shah I organised what his father had improvised: a standing army with a corps of archers, a body-guard of four thousand, and, decisively, artillery, worked by Turkish and European gunners. The Bahmanis had cannon in the Deccan roughly a century before the Mughals brought them to the north, and it is the single largest reason a smaller army kept beating a larger one.",
         "He took Golconda from Warangal by treaty in 1364, along with a turquoise-blue throne of ebony plated with gold that every Bahmani king afterwards added a jewel to. At its inauguration, flushed with wine, he rewarded three hundred singers from Delhi with a draft drawn on the treasury of Vijayanagara. His minister quietly did not send it; the sultan insisted next morning that 'I did not give the order in intoxication, but in serious design'.",
-        "The Raya paraded the messenger through his city on an ass. The war that followed ran for years, and the chroniclers' arithmetic — however inflated — is grim: Ferishta reckons some 500,000 dead across Muhammad Shah's campaigns. It ended with the sultan swearing never again to kill the unarmed after a victory: 'from that time', Ferishta wrote, 'it has been the general custom in the Deccan to spare the lives of prisoners in war.'"
+        "The Raya paraded the messenger through his city on an ass. The war that followed ran for years, and the chroniclers' arithmetic, however inflated, is grim: Ferishta reckons some 500,000 dead across Muhammad Shah's campaigns. It ended with the sultan swearing never again to kill the unarmed after a victory: 'from that time', Ferishta wrote, 'it has been the general custom in the Deccan to spare the lives of prisoners in war.'"
       ],
       boxes: [
         {
@@ -405,13 +405,13 @@ const ERAS = [
           body: [
             "The most romantic of the Deccan's border wars began, Ferishta says, with a farmer's daughter at Mudgal called Pertal, so beautiful that a Brahmin returning from Benares stayed eighteen months in her father's house to teach her music and dancing.",
             "He reported her to the Raya of Vijayanagara, who sent for her with jewels. She refused — she had always known, she told her parents, that she would marry a great prince of Islam. The Raya crossed the frontier to take her by force; the town emptied before he arrived and she escaped.",
-            "The war that followed ended with a Vijayanagara princess married to Firoz Shah — and Pertal, brought at last to Gulbarga, married to the sultan's son, because Firoz judged himself too old for her. 'Would that there were a Meadows Taylor still alive to give it to us,' sighs Gribble, who plainly wanted to write the novel."
+            "The war that followed ended with a Vijayanagara princess married to Firoz Shah, and Pertal, brought at last to Gulbarga, married to the sultan's son, because Firoz judged himself too old for her. 'Would that there were a Meadows Taylor still alive to give it to us,' sighs Gribble, who plainly wanted to write the novel."
           ]
         },
         {
           kind: "know", title: "Gisu Daraz — the saint who outlasted the sultans",
           body: [
-            "Khwaja Bandanawaz Gisu Daraz, a Chishti Sufi of Delhi, came south to Gulbarga about 1400 at over eighty years old, and became the most influential religious figure in the Deccan. He wrote in Persian, Arabic — and in early Dakhni, making him one of the first authors of the language that became Deccani Urdu.",
+            "Khwaja Bandanawaz Gisu Daraz, a Chishti Sufi of Delhi, came south to Gulbarga about 1400 at over eighty years old, and became the most influential religious figure in the Deccan. He wrote in Persian, Arabic, and in early Dakhni, making him one of the first authors of the language that became Deccani Urdu.",
             "He fell out with Firoz Shah and backed his brother Ahmad. His dargah at Gulbarga still draws enormous crowds at his urs, six centuries later, Hindu as well as Muslim — one of the very few institutions in this history with continuous life from the 15th century to today."
           ]
         }
@@ -429,7 +429,7 @@ const ERAS = [
       ],
       teaser: "Ahmad Shah found a better hill, with better water — and raised, as if by magic, one of the most splendid cities in the world.",
       detail: [
-        "Marching back from a campaign, Ahmad Shah Wali halted at the old town of Bidar, liked its height, its air and its water, and decided to move his kingdom there. The new city — Ahmadabad Bidar — was finished in 1431–32, and the court left Gulbarga for good.",
+        "Marching back from a campaign, Ahmad Shah Wali halted at the old town of Bidar, liked its height, its air and its water, and decided to move his kingdom there. The new city, Ahmadabad Bidar, was finished in 1431–32, and the court left Gulbarga for good.",
         "Bidar sits on a laterite plateau, and its builders exploited the stone: a triple moat hewn out of solid rock, and a <i>karez</i> system of underground aqueducts, sunk with vertical shafts in the Persian manner, that brought water into the city from miles away and still runs in places.",
         "The Russian merchant Athanasius Nikitin, who spent time here in the 1470s, found roads safe, villages at every stage, and a king with an army he numbered in the hundreds of thousands — with war elephants in steel armour, scythes bound to their trunks."
       ],
@@ -514,7 +514,7 @@ const ERAS = [
           kind: "know", title: "Deccanis against Afaqis — the fault line",
           body: [
             "The Bahmani state was split by an argument about who counted as a native. On one side the <i>Deccanis</i> — Deccan-born Muslims, together with the Habshis, Africans of the military households. On the other the <i>Afaqis</i> or 'foreigners' — Persians, Turks and Arabs who kept arriving by sea and were given the best commands.",
-            "They differed in language, in sect (the newcomers were often Shia), and in patronage. The rivalry produced repeated massacres — most infamously at Chakan in 1446 — and it is the reason a wealthy, well-armed sultanate came apart in a single generation.",
+            "They differed in language, in sect (the newcomers were often Shia), and in patronage. The rivalry produced repeated massacres, most infamously at Chakan in 1446, and it is the reason a wealthy, well-armed sultanate came apart in a single generation.",
             "Mahmud Gawan was an Afaqi. His murder was a Deccani victory, and it destroyed them both."
           ]
         }
@@ -534,7 +534,7 @@ const ERAS = [
         "His enemies could not beat him, so they forged him. An Abyssinian slave with charge of the minister's seals was made drunk and induced to stamp a blank sheet; above the seal his rivals wrote a letter to the Raja of Orissa inviting an invasion and promising to join it.",
         "Sultan Muhammad Shah III, drunk himself, read it and sent for the old man. Warned, and offered ten thousand horse to escape with, Mahmud Gawan refused: 'This beard has grown white in the auspicious service of the father, and it will be honourable should it be dyed with my blood by the fortunes of the son.'",
         "Shown the letter, he said the seal was his and the letter was not. The sultan rose and ordered him killed on the spot. His last words to the king were a prophecy: 'The death of an old man like me is of little moment to myself, but to you it will prove the ruin of an Empire, and of your own glory.' He was seventy-eight.",
-        "The sultan learned the truth too late, drank himself into fits in which he cried that Mahmud Gawan was tearing him to pieces, and died within the year. Ferishta gives the chronogram for his death — the letters of the phrase adding to the year — as <i>the ruin of the Deccan</i>."
+        "The sultan learned the truth too late, drank himself into fits in which he cried that Mahmud Gawan was tearing him to pieces, and died within the year. Ferishta gives the chronogram for his death, the letters of the phrase adding to the year, as <i>the ruin of the Deccan</i>."
       ],
       boxes: [
         {
@@ -572,7 +572,7 @@ const ERAS = [
       teaser: "Saved from the bowstring by a slave boy who died in his place — or so his dynasty always said.",
       detail: [
         "Yusuf Adil Shah declared independence at Bijapur in 1490 and founded the most brilliant of the Deccan courts. His origins are one of the great unresolved stories of Indian history.",
-        "The dynasty's own account: he was a son of the Ottoman Sultan Murad II. When his brother Mehmed took the throne and ordered the customary strangling of rivals, his mother bought a Circassian slave boy of the same age, gave him to the executioners, and smuggled the seven-year-old prince to Persia. Educated at Ardabil and Sava, he sailed for India at sixteen, entered Bahmani service — and rose to govern Bijapur.",
+        "The dynasty's own account: he was a son of the Ottoman Sultan Murad II. When his brother Mehmed took the throne and ordered the customary strangling of rivals, his mother bought a Circassian slave boy of the same age, gave him to the executioners, and smuggled the seven-year-old prince to Persia. Educated at Ardabil and Sava, he sailed for India at sixteen, entered Bahmani service, and rose to govern Bijapur.",
         "In 1502 he did something no other Indian ruler had done: he declared Shi'ism the state religion, with the Persian rite read in the mosques. His restraint about it is more striking than the act — 'my faith for myself and your faith for yourselves' — and though it provoked a brief 'holy war of the four brothers' against him, he survived it and reverted the public rites rather than fight over doctrine."
       ],
       boxes: [
@@ -580,7 +580,7 @@ const ERAS = [
           kind: "deep", title: "Prince or slave? — what historians think",
           body: [
             "The Ottoman-prince story comes to us through Ferishta, who wrote at the Bijapur court and had every reason to record the dynasty's preferred genealogy. Ottoman sources know nothing of a surviving son of Murad II sold into slavery.",
-            "The likelier reconstruction is that Yusuf was a Turkoman or Georgian slave brought into the Bahmani household — which is not a lesser origin in this world so much as a different one. The Deccan sultanates were repeatedly founded by men who arrived as slaves or converts: Malik Ahmad's father was a Brahmin captive; Malik Ambar was an Ethiopian slave; the Bahmanis' own founder was, in legend, a ploughman.",
+            "The likelier reconstruction is that Yusuf was a Turkoman or Georgian slave brought into the Bahmani household, which is not a lesser origin in this world so much as a different one. The Deccan sultanates were repeatedly founded by men who arrived as slaves or converts: Malik Ahmad's father was a Brahmin captive; Malik Ambar was an Ethiopian slave; the Bahmanis' own founder was, in legend, a ploughman.",
             "The claim, true or not, tells you what a Deccan sultan wanted to be: Persianate, royal, and connected to the great Islamic world beyond India."
           ]
         }
@@ -617,7 +617,7 @@ const ERAS = [
           kind: "legend", title: "Golla-konda, the shepherd's hill",
           body: [
             "The name is usually explained by a story: a shepherd boy grazing on the granite hill found an idol there, the news reached the Kakatiya king, and a mud fort was raised around the sacred spot. <i>Golla konda</i> — shepherd's hill.",
-            "Whatever the truth of the boy, the geology is why the fort exists. The hill is a single granite mass rising about 120 m over a flat plain, visible for miles and defensible on every side — and the Qutb Shahs spent decades wrapping it in walls."
+            "Whatever the truth of the boy, the geology is why the fort exists. The hill is a single granite mass rising about 120 m over a flat plain, visible for miles and defensible on every side, and the Qutb Shahs spent decades wrapping it in walls."
           ]
         }
       ],
@@ -640,7 +640,7 @@ const ERAS = [
       detail: [
         "Under Krishnadevaraya the Vijayanagara empire reached its greatest extent, from the Krishna to Cape Comorin and coast to coast. He took Raichur in 1520 in a campaign that broke the Bijapur army; he subdued Orissa; and he handled the newly arrived Portuguese as a supplier rather than a threat — buying their Arabian horses, which the south could not breed, at extraordinary prices.",
         "He was also a poet in Telugu. His <i>Amuktamalyada</i> is both a devotional poem and a manual of statecraft: a king, he wrote, should tax lightly, protect merchants, and keep the forest peoples on his side.",
-        "The strangest fact about his reign is silence. Gribble notes that the Muslim historians — otherwise obsessive about Vijayanagara — barely mention him, and never by name, though inscriptions and Portuguese accounts show him ruling the whole south for twenty years."
+        "The strangest fact about his reign is silence. Gribble notes that the Muslim historians, otherwise obsessive about Vijayanagara, barely mention him, and never by name, though inscriptions and Portuguese accounts show him ruling the whole south for twenty years."
       ],
       boxes: [
         {
@@ -672,9 +672,9 @@ const ERAS = [
       teaser: "Four sultans buried their feuds for one day — and a city of half a million was left to the tigers.",
       detail: [
         "The sultanates had spent seventy years fighting each other while the aged regent Rama Raya played them off, hiring their soldiers, humiliating their envoys and treating their kings as clients. In 1565 Bijapur, Ahmadnagar, Golconda and Bidar did the one thing he had assumed they could not: they allied, sealing it with royal marriages.",
-        "The armies met on 26 January 1565 near Talikota, on the Krishna. Rama Raya — well past eighty — directed the battle from a jewelled throne with heaps of coin around him to reward his men. Then his litter went down, he was captured, and he was beheaded on the field. His head raised on a spear broke the army; the rout became a slaughter.",
+        "The armies met on 26 January 1565 near Talikota, on the Krishna. Rama Raya, well past eighty, directed the battle from a jewelled throne with heaps of coin around him to reward his men. Then his litter went down, he was captured, and he was beheaded on the field. His head raised on a spear broke the army; the rout became a slaughter.",
         "The city was not defended. Its treasury was carried off, the sultans' armies stayed months plundering, and what could not be carried was smashed. Two years later a Venetian traveller found the houses standing and the streets empty but for wild animals. Vijayanagara was never reoccupied.",
-        "The victory destroyed the victors' own security. The one power that had forced the sultanates to cooperate was gone — and within twenty-five years the Mughals were at their northern gate."
+        "The victory destroyed the victors' own security. The one power that had forced the sultanates to cooperate was gone, and within twenty-five years the Mughals were at their northern gate."
       ],
       boxes: [
         {
@@ -689,7 +689,7 @@ const ERAS = [
           kind: "know", title: "What the plunder tells us",
           body: [
             "The Portuguese historian Faria y Sousa reports that even after the inhabitants had carried away 1,550 elephant-loads of money and jewels, the sack ran for five months.",
-            "Ali Adil Shah's personal share is said to have included a diamond the size of a hen's egg. Whether or not the stone is real, the claim only makes sense in a world where Golconda's mines were feeding the region — and it is the same wealth that will bring the Mughals south."
+            "Ali Adil Shah's personal share is said to have included a diamond the size of a hen's egg. Whether or not the stone is real, the claim only makes sense in a world where Golconda's mines were feeding the region, and it is the same wealth that will bring the Mughals south."
           ]
         }
       ],
@@ -711,7 +711,7 @@ const ERAS = [
       teaser: "Plague and thirst on the rock; a new city of gardens on the river — and a name that is still argued about four centuries later.",
       detail: [
         "Golconda was full. Water was short on the granite, and epidemic disease periodically swept the crowded fort. In 1591 Muhammad Quli Qutb Shah — fifth of his line, and a considerable poet — laid out a new city on the south bank of the Musi, five miles east of the fortress: a planned grid with a great ceremonial crossing at its heart.",
-        "At that crossing he raised the Charminar, four arches and four minarets, with a mosque on its top storey. North of it he built the Char Kaman, four gateways; nearby the Badshahi Ashurkhana with its tilework, and later the enormous Mecca Masjid, built with bricks made — tradition says — from earth carried from Mecca.",
+        "At that crossing he raised the Charminar, four arches and four minarets, with a mosque on its top storey. North of it he built the Char Kaman, four gateways; nearby the Badshahi Ashurkhana with its tilework, and later the enormous Mecca Masjid, built with bricks made, tradition says, from earth carried from Mecca.",
         "He wrote in Persian, Telugu and Dakhni Urdu, and his collected verse is one of the earliest substantial <i>divans</i> in the language that became Urdu. The city he built is the one this whole history has been travelling towards."
       ],
       boxes: [
@@ -749,7 +749,7 @@ const ERAS = [
       teaser: "The Mughals blew a hole in the wall of Ahmadnagar. A queen in armour stood in it, and the hole was gone by morning.",
       detail: [
         "Chand Bibi was a daughter of Ahmadnagar, queen of Bijapur by marriage, and regent of both kingdoms in turn — one of the very few figures respected across the whole quarrelsome Deccan.",
-        "In 1595 Prince Murad's Mughal army mined the walls of Ahmadnagar. When the mines went and a breach opened, most of the officers prepared to run. Chand Bibi came to the breach in armour, veiled, with a drawn sword, and held it — and through the night the wall was rebuilt behind her while she stood there. The assaults failed; the Mughals withdrew, saluting her as Chand Sultana.",
+        "In 1595 Prince Murad's Mughal army mined the walls of Ahmadnagar. When the mines went and a breach opened, most of the officers prepared to run. Chand Bibi came to the breach in armour, veiled, with a drawn sword, and held it, and through the night the wall was rebuilt behind her while she stood there. The assaults failed; the Mughals withdrew, saluting her as Chand Sultana.",
         "Five years later a second Mughal army came. Her own mutinous soldiery, told by a traitor that she meant to sell the city, broke into the palace and killed her. Ahmadnagar fell within days — the first of the five kingdoms to go."
       ],
       boxes: [
@@ -763,7 +763,7 @@ const ERAS = [
         {
           kind: "deep", title: "Meadows Taylor's verdict",
           body: [
-            "Colonel Meadows Taylor, the 19th-century soldier-novelist who knew the Deccan better than almost any Englishman, put her beside Elizabeth I — a contemporary — and thought the comparison flattered neither.",
+            "Colonel Meadows Taylor, the 19th-century soldier-novelist who knew the Deccan better than almost any Englishman, put her beside Elizabeth I, a contemporary, and thought the comparison flattered neither.",
             "'Few in England know that the contemporary of our Queen Elizabeth in the Deccan was a woman of equal ability, of equal political talent… who, among all the women of India, stands out as a jewel without flaw and beyond price.'"
           ]
         }
@@ -821,7 +821,7 @@ const ERAS = [
         "Muhammad Adil Shah's tomb at Bijapur, the Gol Gumbaz, is a single cube carrying one of the largest masonry domes in the world — roughly 44 m across, enclosing an unobstructed floor of about 1,700 m², larger than the Pantheon's.",
         "The engineering is the interest. The dome is not held up by piers or a drum in the usual way: eight intersecting arches spring from the walls and cross each other, and the mass of masonry they throw inward acts as a counterweight to the dome's outward thrust. The builders solved a structural problem by inventing a bracket out of the building's own weight.",
         "Around the base of the dome runs the Whispering Gallery, where a low sound carries clean around the circumference and a clap returns as a string of echoes. It is the most-visited acoustic accident in India.",
-        "The same generation built the Ibrahim Rauza — the tomb and mosque of Ibrahim Adil Shah II — a jewel of carved stone with chains cut from single blocks and jali screens like textile, and a persistent local claim that it inspired the Taj Mahal."
+        "The same generation built the Ibrahim Rauza, the tomb and mosque of Ibrahim Adil Shah II, a jewel of carved stone with chains cut from single blocks and jali screens like textile, and a persistent local claim that it inspired the Taj Mahal."
       ],
       boxes: [
         {
@@ -911,7 +911,7 @@ const ERAS = [
         {
           kind: "know", title: "Abdul Razzaq Lari — the loyalty Aurangzeb admired",
           body: [
-            "Golconda's general refused every bribe the Mughals offered — tearing up the emperor's letter in front of his men — and when the gate was opened he charged alone into the victorious army.",
+            "Golconda's general refused every bribe the Mughals offered — tearing up the emperor's letter in front of his men, and when the gate was opened he charged alone into the victorious army.",
             "He was found the next morning under a coconut tree with some seventy wounds, one eye destroyed, the skin of his forehead hanging over his face. Aurangzeb sent his own surgeons, and reportedly said that if Abul Hasan had possessed one more servant like him, the fortress would have taken far longer.",
             "Offered rank and pardon on recovery, he refused while his master lived a prisoner: no one who had eaten Abul Hasan's salt, he said, could enter the service of the man who had destroyed him. He took service only a year later."
           ]
@@ -953,7 +953,7 @@ const ERAS = [
       ],
       teaser: "He destroyed the states that had kept the Marathas in check — and then spent the rest of his life chasing the Marathas.",
       detail: [
-        "Having removed Bijapur and Golconda, the emperor found he had removed the buffer as well. For twenty years he besieged Maratha hill fort after hill fort while Maratha horse emptied the country behind him, and the Deccan — the richest region in India when he arrived — was reduced to a desert that could not feed his own camp.",
+        "Having removed Bijapur and Golconda, the emperor found he had removed the buffer as well. For twenty years he besieged Maratha hill fort after hill fort while Maratha horse emptied the country behind him, and the Deccan, the richest region in India when he arrived, was reduced to a desert that could not feed his own camp.",
         "He died at Ahmadnagar in February 1707, near ninety, and was buried at Khuldabad in an open grave paid for by money he had earned copying the Quran — no dome, no marble.",
         "His last letters are the strangest documents in this history: 'I came a stranger into this world, and a stranger I depart… My valuable time has been passed vainly… I have committed numerous crimes, and know not with what punishment I may be seized.'"
       ],
@@ -979,7 +979,7 @@ const ERAS = [
       ],
       teaser: "Delhi devoured eight emperors in seventeen years. One man in the south watched, waited, and kept his hands clean.",
       detail: [
-        "The Mughal succession collapsed into a factory of puppets. Zulfiqar Khan, then the Sayyid brothers of Barha, raised and unmade emperors at will — blinding one, strangling another — and each king-maker in his turn met the dagger or the bowstring.",
+        "The Mughal succession collapsed into a factory of puppets. Zulfiqar Khan, then the Sayyid brothers of Barha, raised and unmade emperors at will — blinding one, strangling another, and each king-maker in his turn met the dagger or the bowstring.",
         "Through all of it Chin Qilich Khan, Nizam-ul-Mulk, viceroy of the Deccan, refused to play. He accepted the office of Vizier when it was pressed on him, found it unworkable, and left Delhi for the south — deciding, as Gribble puts it, to renounce 'for ever Delhi ambition and intrigue'.",
         "In 1724 the emperor's court sent an army to remove him. He met it at Shakar Kheda, destroyed it, and made himself the master of the Deccan. Delhi, having no alternative, sent him the title Asaf Jah and its congratulations."
       ],
@@ -999,7 +999,7 @@ const ERAS = [
         {
           kind: "know", title: "The man who declined",
           body: [
-            "Chin Qilich Khan was offered the thing everyone else was killing for — the Vizierate, the office that ran the empire — and took it, held it briefly, and walked away south.",
+            "Chin Qilich Khan was offered the thing everyone else was killing for — the Vizierate, the office that ran the empire, and took it, held it briefly, and walked away south.",
             "The judgement behind that is the whole of his career. The empire's centre had become a place where power was real for about eighteen months and then fatal. The Deccan was a province he already knew, far from Delhi, rich, and defensible.",
             "Gribble's phrase for the decision is that he renounced for ever Delhi ambition and intrigue. Every Nizam who followed him lived off that choice."
           ]
@@ -1028,7 +1028,7 @@ const ERAS = [
       teaser: "Five hundred Frenchmen scattered armies of eighty thousand — and for a decade a European officer made and unmade Nizams.",
       detail: [
         "Asaf Jah's death in 1748 opened a succession war that the Europeans turned into their own contest. Dupleix, from Pondicherry, backed one claimant; the English backed another; and the Deccan discovered what disciplined infantry with artillery could do.",
-        "The Marquis de Bussy commanded the French corps attached to the Nizam Salabat Jung — 500 Europeans and a few thousand trained sepoys — and with it beat Maratha armies many times its size, at Bidar and again near Poona. He was paid with the revenues of the Northern Circars, the entire east-coast strip, which made him effectively a French governor within the Nizam's state.",
+        "The Marquis de Bussy commanded the French corps attached to the Nizam Salabat Jung, 500 Europeans and a few thousand trained sepoys, and with it beat Maratha armies many times its size, at Bidar and again near Poona. He was paid with the revenues of the Northern Circars, the entire east-coast strip, which made him effectively a French governor within the Nizam's state.",
         "When Bussy was recalled in 1758, the Nizam wept in open durbar and called him the guardian angel of his life and fortune. Within three years the French had lost Pondicherry and the century's argument. The door was open for the English."
       ],
       boxes: [
@@ -1053,9 +1053,9 @@ const ERAS = [
       ],
       teaser: "Fourteen thousand men trained by a Frenchman, dissolved in a single morning without a shot fired.",
       detail: [
-        "Michel Raymond, a French officer from Gascony, had built the Nizam a European-drilled army of some 14,000 men with its own foundry, arsenal and powder mills — and was so loved by his troops that Hindus and Muslims alike called him Musa Ram and Moosa Rahim.",
+        "Michel Raymond, a French officer from Gascony, had built the Nizam a European-drilled army of some 14,000 men with its own foundry, arsenal and powder mills, and was so loved by his troops that Hindus and Muslims alike called him Musa Ram and Moosa Rahim.",
         "To the new Governor-General, Lord Wellesley, in a year when Bonaparte was in Egypt and Tipu was corresponding with the French, this was intolerable. Under the treaty of September 1798 the Nizam agreed to dissolve the corps and take an enlarged British subsidiary force instead.",
-        "Raymond had died that March. His successor could not hold the corps together; on 22 October 1798 British battalions surrounded the lines below Asmangarh hill, the sepoys — already mutinous over arrears — laid down their arms, and the most formidable French formation in India ceased to exist without a casualty.",
+        "Raymond had died that March. His successor could not hold the corps together; on 22 October 1798 British battalions surrounded the lines below Asmangarh hill, the sepoys, already mutinous over arrears, laid down their arms, and the most formidable French formation in India ceased to exist without a casualty.",
         "Raymond's tomb still stands above the lines. An annual urs was held there for a Frenchman by Indian soldiers' descendants long after France had forgotten him."
       ],
       boxes: [
@@ -1098,7 +1098,7 @@ const ERAS = [
       detail: [
         "Hyderabad's contingent marched with the British to Seringapatam in 1799, where Tipu Sultan died in the breach; the Nizam took a large share of Mysore. He then handed almost all of it straight back in 1800, ceding it in perpetuity to pay for the Subsidiary Force — the districts that became Bellary, Anantapur, Cuddapah and Kurnool.",
         "In 1803 Arthur Wellesley, commanding with the Nizam's troops beside him, met the combined armies of Scindia and the Bhonsle Raja at Assaye. He had some 9,500 men against perhaps 50,000 with far heavier guns; he crossed a river at an unmarked ford, took appalling casualties and won.",
-        "He called it, decades later and after Waterloo, the bloodiest action for the numbers he had ever seen — and the best thing he ever did in the way of fighting. Hyderabad's reward was the recovery of Berar."
+        "He called it, decades later and after Waterloo, the bloodiest action for the numbers he had ever seen, and the best thing he ever did in the way of fighting. Hyderabad's reward was the recovery of Berar."
       ],
       boxes: [
         {
@@ -1135,7 +1135,7 @@ const ERAS = [
       detail: [
         "The Subsidiary Force was supposed to buy security. What it bought was a permanent liability: about forty lakhs of rupees a year in a time of complete peace, roughly a third of the state's revenue, for a contingent whose officers the Resident appointed and whose numbers no one would reduce.",
         "The arrears mounted into an acknowledged debt. In 1853 Lord Dalhousie demanded, in terms that left no room for negotiation, the assignment of Berar — the state's richest cotton province — as security. Nasir-ud-Daula signed under protest: 'God forbid that I should suffer such disgrace.'",
-        "The debt itself was arguably fictitious. The British had for forty years pocketed the excise revenue of the Secunderabad and Jalna cantonments — money later admitted to be the Nizam's — which over that period roughly equalled the debt claimed. The Resident of the day, Colonel Davidson, wrote plainly that if the two governments' accounts had been dealt with impartially, 'we had no just claim on the Nizam'.",
+        "The debt itself was arguably fictitious. The British had for forty years pocketed the excise revenue of the Secunderabad and Jalna cantonments — money later admitted to be the Nizam's, which over that period roughly equalled the debt claimed. The Resident of the day, Colonel Davidson, wrote plainly that if the two governments' accounts had been dealt with impartially, 'we had no just claim on the Nizam'.",
         "Berar was leased in perpetuity in 1902 for twenty-five lakhs a year. It never returned. It remained the great grievance of Hyderabad statecraft until the state itself ceased to exist."
       ],
       boxes: [
@@ -1154,7 +1154,7 @@ const ERAS = [
           kind: "deep", title: "Gribble's own campaign",
           body: [
             "The author of this history spent a decade on the Berar question. His articles in <i>The Pioneer</i> and the <i>Nineteenth Century</i> put it before the British public, and led eventually to a debate in Parliament.",
-            "The 1902 settlement that followed — a perpetual lease at twenty-five lakhs — satisfied almost nobody in Hyderabad, since the province by then yielded far more and the Contingent it had been ceded to pay for was shortly afterwards abolished.",
+            "The 1902 settlement that followed, a perpetual lease at twenty-five lakhs, satisfied almost nobody in Hyderabad, since the province by then yielded far more and the Contingent it had been ceded to pay for was shortly afterwards abolished.",
             "Volume II of this history breaks off, unfinished, in the middle of that argument. Gribble died before he could complete the chapter."
           ]
         }
@@ -1173,14 +1173,14 @@ const ERAS = [
       detail: [
         "Hyderabad sat between the mutinying north and a quiet south, and everyone knew what its choice was worth. The saying went round British India: if the Nizam goes, all goes.",
         "In June 1857 seditious placards appeared on the city walls; in July a crowd gathered at the Mecca Masjid, raised the green standard, and moved on the Residency. It was met with grapeshot from the ramparts and by the minister's Arab troops holding the city gates. The rising broke.",
-        "The minister who held the line was Salar Jung, then thirty-one and a year into the job — and the British never forgot which man had held Hyderabad. In 1860 the debt was cancelled and Raichur, the Doab and Shorapur were returned; only Berar was kept."
+        "The minister who held the line was Salar Jung, then thirty-one and a year into the job, and the British never forgot which man had held Hyderabad. In 1860 the debt was cancelled and Raichur, the Doab and Shorapur were returned; only Berar was kept."
       ],
       boxes: [
         {
           kind: "deep", title: "Why Hyderabad's choice was worth so much",
           body: [
             "In 1857 the British position in the south rested on very little. The Madras army was quiet but stretched, the Bombay army was watching the Deccan, and almost every regular soldier who could be spared had gone north.",
-            "Hyderabad was the largest state in India, with its own army, a Muslim dynasty, and a population that had every reason to be unimpressed by the Company. If it had declared for the rebellion, the whole of the south would have had to be reconquered rather than merely held — and there was nothing to do it with.",
+            "Hyderabad was the largest state in India, with its own army, a Muslim dynasty, and a population that had every reason to be unimpressed by the Company. If it had declared for the rebellion, the whole of the south would have had to be reconquered rather than merely held, and there was nothing to do it with.",
             "That is the arithmetic behind the saying. It was not flattery; it was a description of what the British could and could not afford."
           ]
         },
@@ -1288,7 +1288,7 @@ const ERAS = [
         "Mir Osman Ali Khan, seventh and last Nizam, appeared on the cover of TIME in February 1937 as the richest man in the world. The Jacob diamond — 184.75 carats, about twice the Koh-i-Nur — was found in the toe of his father's slipper and used, the story goes, as a paperweight.",
         "The frugality alongside the wealth became legend: the same crumpled clothes, cheap cigarettes, guests offered tea in chipped cups, an obsession with small economies in a household of unimaginable scale.",
         "What he did spend on is still standing. Osmania University with its enormous Arts College, the Osmania General Hospital, the High Court, the State Central Library, the City College, Jubilee Hall, the Nizamia Observatory — a public architecture in an invented Indo-Saracenic idiom, much of it designed by Vincent Esch and Zain Yar Jung, in pink granite and Deccan stone. The state ran its own currency, its own postage and its own railway.",
-        "Osmania University was founded in 1918 as the first Indian university to teach in an Indian language — Urdu — with a translation bureau created to produce the textbooks that did not yet exist."
+        "Osmania University was founded in 1918 as the first Indian university to teach in an Indian language, Urdu, with a translation bureau created to produce the textbooks that did not yet exist."
       ],
       boxes: [
         {
