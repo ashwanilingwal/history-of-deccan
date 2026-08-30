@@ -48,26 +48,57 @@ rather than as facts.
 
 ## Settings
 
-`site.config.json` holds the few values that depend on where the site lives.
-Edit it and re-run `scripts/build_seo.py`; the values are written into
-`index.html` and every page under `city/`.
+`site.config.json` holds everything that depends on where the site lives. Edit
+it, re-run `scripts/build_seo.py`, redeploy — the values are written into
+`index.html` and all ten pages under `city/`.
+
+```json
+{
+  "siteUrl": "https://the-deccan.vercel.app",
+  "gscToken": "",
+  "gaId": "G-82EEHRXEMX",
+  "gaAnonymiseIp": true
+}
+```
 
 | Key | What it does |
 |---|---|
-| `siteUrl` | The address the site is served on. Every canonical tag, Open Graph URL and sitemap entry is built from it — a canonical pointing elsewhere tells Google to index that address instead of yours. |
-| `gscToken` | Google Search Console HTML-tag verification. Paste the bare token, the whole `<meta>` tag, or the `content="..."` part; all three work. |
-| `gaId` | Google Analytics 4 measurement ID (`G-XXXXXXXXXX`). **Leave it empty and no analytics code is emitted at all** — no script, no cookies. |
+| `siteUrl` | The address the site is served on. Every canonical tag, Open Graph URL and sitemap entry is built from it. **Getting this wrong is the one setting that can actively hurt you** — a canonical pointing elsewhere tells Google to index that address instead of yours. |
+| `gscToken` | Search Console HTML-tag verification. Paste the bare token, the whole `<meta>` tag, or the `content="…"` fragment; all three are accepted. Only needed if you verify by HTML tag — see below. |
+| `gaId` | Google Analytics 4 measurement ID. **Empty means no analytics code is emitted at all** — no script, no cookies, nothing to consent to. |
 | `gaAnonymiseIp` | Truncate visitor IPs. On by default. |
 
-Any of them can be overridden for one run by the environment variable of the
+Any key can be overridden for a single run by the environment variable of the
 same name in capitals:
 
 ```bash
 SITE_URL=https://staging.example.com python3 scripts/build_seo.py
 ```
 
-The generator is idempotent: re-running never stacks duplicate snippets, and
+The generator is idempotent — re-running never stacks duplicate snippets, and
 clearing a value removes what it previously wrote.
+
+### Are these safe to commit?
+
+Yes. Both are **public by design**: they are served in the HTML of every page,
+so anyone can read them with View Source. Keeping them out of git would hide
+them from you and from nobody else.
+
+- **`gaId`** identifies which property to send hits to. It grants no access to
+  your analytics account. The only real abuse is someone sending junk traffic to
+  pollute your reports, which is a nuisance rather than a breach, and cannot be
+  prevented by hiding an ID that has to ship in client-side code anyway.
+- **`gscToken`** only proves you control this site. Knowing it does not let
+  anyone claim your property — they would have to serve it from your domain.
+
+What must **never** be committed, and is covered by `.gitignore`:
+
+- a GA4 **Measurement Protocol API secret** — that one *is* a credential
+- `.env` files, Vercel tokens, deploy hooks
+- service-account JSON for the Analytics or Search Console APIs
+
+If any of those ever land in a commit, rotate the credential — deleting the file
+in a later commit does not remove it from history.
 
 ## Search engines
 
@@ -85,28 +116,73 @@ only inside `js/chronicle.js` and `js/places.js`. The served HTML carried about
   carrying real coordinates. One page cannot rank for "Golconda Fort",
   "Vijayanagara empire" and "Bijapur Adil Shahi" at once; ten focused pages can
   each go after their own subject.
-- **`robots.txt` and `sitemap.xml`** are written, and the map chips and dynasty
-  cards are real `<a href>` links, so those pages are reachable by a crawler
-  rather than orphaned behind a click handler. With JavaScript the click is
-  intercepted and the overlay opens as before.
+- **The map legend and dynasty cards are pre-rendered as real `<a href>` links**,
+  so all ten city pages are reachable by a crawler. This mattered: they were
+  built by JavaScript at first, which left four of them — Daulatabad, Warangal,
+  Bidar, Aurangabad — with no HTML link anywhere, findable only through the
+  sitemap. JavaScript intercepts the click so the overlay still opens.
+- **`robots.txt` and `sitemap.xml`** are written on every run.
 
 Crawlable text went from **1,507 words to about 35,500**.
 
-Re-run it after editing `chronicle.js` or `places.js`. The output is committed,
-so deploying stays a plain static upload.
+### Google Search Console
 
-Note `cleanUrls` is **off** in `vercel.json` on purpose: with it on, every
-`.html` link, canonical tag and sitemap entry would point at a 308 redirect.
+1. Deploy first — Search Console verifies a live URL.
+2. Add a property at [search.google.com/search-console](https://search.google.com/search-console).
+   Choose **URL prefix**, not Domain: Domain verification needs a DNS TXT record
+   and you do not control DNS for `vercel.app`.
+3. Verify. Any of these work:
+   - **Google Analytics** — simplest here, since the site already has GA under
+     the same account. Leaves no trace in the page.
+   - **HTML tag** — put the token in `gscToken`, re-run the generator, redeploy,
+     *then* click Verify. The tag has to be live before Google looks.
+   - **HTML file** — drop `google*.html` in the project root and redeploy.
+4. **Sitemaps** → enter `sitemap.xml` → Submit. It should find 11 URLs.
+5. **URL Inspection** → paste the homepage → Request Indexing. Rate-limited, so
+   use it on the homepage and your strongest city pages, not all eleven.
+
+Then watch **Pages** for URLs stuck in "Discovered – currently not indexed".
+That is normal for a new site for a week or two; if it persists, the page needs
+links pointing at it from elsewhere.
+
+### Google Analytics
+
+Set `gaId` and re-run the generator. The GA4 snippet goes onto all eleven pages
+— analytics on the homepage alone would miss most traffic, since the city pages
+are what search lands people on. Check **Reports → Realtime** after deploying;
+if you see nothing, it is usually your own ad blocker, so try a private window.
+
+A lighter alternative worth knowing about: **Vercel Analytics** is cookie-less,
+needs no consent banner, and reports Core Web Vitals — which feed back into
+search ranking. It gives page views rather than GA's funnels and audiences.
+
+### A note on consent
+
+GA4 sets cookies. Meaningful EU or UK traffic legally needs a consent banner,
+and India's DPDP Act has its own notice requirements. `gaAnonymiseIp` helps but
+is not a substitute where consent is actually required.
 
 ## Run locally
 
-No build step — plain HTML/CSS/JS. Either open `index.html`, or:
+No build step for the site itself — plain HTML, CSS and JS. Either open
+`index.html`, or:
 
 ```bash
 python3 -m http.server 3500
 ```
 
 Then visit http://localhost:3500.
+
+### Two things to remember when editing
+
+1. **Editing `chronicle.js` or `places.js` no longer updates the site on its
+   own.** The chronicle is pre-rendered into `index.html`, so re-run
+   `python3 scripts/build_seo.py` or the HTML keeps the old text.
+2. **Editing anything in `js/` or `css/` means bumping the `?v=` number** on the
+   four references in `index.html`. Those files are cached for a year as
+   `immutable`, so without a bump returning visitors keep the old copy. It is
+   also why local edits show up immediately instead of being masked by the
+   browser cache.
 
 ## Query parameters
 
@@ -119,55 +195,75 @@ Then visit http://localhost:3500.
 
 ## Deploy
 
-Plain static files, so this works on any static host. There is no build step and
-nothing to configure at the host end.
-
-### Vercel
+Plain static files. There is no build step at the host end and nothing to
+configure there.
 
 ```bash
 npx vercel --prod
 ```
 
-Or import the repo in the Vercel dashboard — framework preset **Other**, no build
-command, output directory `.`.
+Or import the repo in the Vercel dashboard — framework preset **Other**, no
+build command, output directory `.`.
 
-`vercel.json` sets the caching policy, which is the part that matters here:
+`vercel.json` sets the caching policy, which is the part that matters with
+81 MB of photographs:
 
 | Path | Cache-Control | Why |
 |---|---|---|
-| `/images/*` | 1 year, `immutable` | 81 MB that never changes. A returning reader re-downloads none of it. |
-| `/js/*`, `/css/*` | 1 year, `immutable` | Safe **only** because `index.html` requests them with a `?v=` query string |
-| `/`, `/index.html` | `must-revalidate` | It carries the `?v=` that invalidates everything else |
+| `/images/*` | 1 year, `immutable` | Never changes. A returning reader re-downloads none of it. |
+| `/js/*`, `/css/*` | 1 year, `immutable` | Safe **only** because `index.html` requests them with `?v=` |
+| `/`, `/index.html`, `/city/*` | `must-revalidate` | They carry the `?v=` that invalidates everything else |
+| `/sitemap.xml` | 1 hour | |
 
-**The one rule to remember:** if you edit anything in `js/` or `css/`, bump the
-`?v=` number on all four references in `index.html`. Otherwise returning visitors
-keep the old file for a year. (That query string is also why local edits now show
-up immediately instead of being masked by the browser cache.)
+`cleanUrls` is **off** on purpose: with it on, every `.html` link, canonical tag
+and sitemap entry would resolve through a 308 redirect.
 
-`.vercelignore` keeps `scripts/` out of the deployment — those fetch and process
-images at build time and are never requested by the site.
+### Checking a deployment
 
-### A note on size
+```bash
+curl -sI https://the-deccan.vercel.app/css/style.css | grep -i cache-control
+curl -s  https://the-deccan.vercel.app/ | grep -c 'class="event reveal"'   # expect 36
+curl -s  https://the-deccan.vercel.app/ | grep -o 'href="city/[a-z]*\.html"' | sort -u | wc -l   # expect 10
+```
 
-The deployment is about 83 MB, essentially all photographs. That works, but it
-makes each deploy slow and it is the bulk of your bandwidth. The images are
-stored at up to 1920px wide and displayed at a fraction of that; resizing to
-1400px at quality 72 measures at **61% smaller — roughly 81 MB down to 32 MB** —
-with no visible difference at the sizes the site actually uses.
+### Size
+
+The deployment is about 93 MB, almost all photographs. That works, but it makes
+each deploy slow, it is the bulk of your bandwidth, and Core Web Vitals feed
+into search ranking. The images are stored at up to 1920px and displayed at a
+fraction of that; resizing to 1400px at quality 72 measures **61% smaller —
+about 81 MB down to 32 MB** — with no visible difference at the sizes the site
+actually uses.
 
 ## Structure
 
 ```
-index.html          the page shell (hero, map overlay, section headings, gallery, sources)
-css/style.css       dark ink / gold design system
-js/places.js        the 10 cities — facts, chapters, boxes, quotes and city plans
-js/chronicle.js     the timeline — 7 eras, 36 events, each with a teaser and boxes
-js/main.js          renders both data files; nav, markers, overlays, lightbox, reveals
-images/             photographs (see below)
-scripts/fetch_images*.py   the image fetchers, in the order they were run
-scripts/build_map.py       recolours and crops the base map
-images/map/deccan.svg      the base map itself
+index.html            the page shell + the pre-rendered chronicle
+city/*.html           ten generated city pages, one per place
+site.config.json      site URL, analytics ID, verification token
+sitemap.xml           generated
+robots.txt            generated
+vercel.json           caching and security headers
+css/style.css         dark ink / gold design system
+js/places.js          the 10 cities — facts, chapters, boxes, quotes, city plans
+js/chronicle.js       the timeline — 7 eras, 36 events
+js/citymaps.js        generated: the tile grid behind each city plan
+js/main.js            renders the data files; nav, maps, overlays, era scrubber
+images/               photographs
+images/map/           the base maps and their tiles
+scripts/              the generators — see below
 ```
+
+### The scripts
+
+| Script | What it does | When to run |
+|---|---|---|
+| `build_seo.py` | Pre-renders the chronicle, generates the city pages, sitemap, robots, analytics and verification tags | After editing `chronicle.js` or `places.js`, or any setting |
+| `build_map.py` | Recolours and crops the Deccan base map | Only to change the map's framing or palette |
+| `fetch_site_coords.py` | Finds real coordinates for every monument | After adding a site to a city plan |
+| `build_city_maps.py` | Fetches the OpenStreetMap tiles each plan needs | After coordinates change |
+| `add_reading_links.py` | Verifies and attaches further-reading links | After editing its `READING` table |
+| `fetch_images*.py` | The image fetchers, in the order they were run | To add images |
 
 `places.js` and `chronicle.js` are pure data; `main.js` is the only file that
 knows how to draw. Adding a city means adding an object, not touching the

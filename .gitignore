@@ -3,3 +3,15 @@ images/map/_source_india.svg
 
 # scripts/build_city_maps.py caches raw tiles here before they are indexed
 .tilecache/
+
+# Vercel CLI writes the project link here; it is machine-local
+.vercel/
+
+# Never commit these. The GA measurement ID and the Search Console token in
+# site.config.json are public by design — they are served in the page HTML —
+# but anything below is a real credential.
+.env
+.env.*
+*.pem
+*credentials*.json
+*service-account*.json
