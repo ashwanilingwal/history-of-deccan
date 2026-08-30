@@ -20,6 +20,12 @@ const ERAS = [
     {
       year: "6th – 10th c.",
       title: "The centuries cut from rock",
+      reading: [
+        { t: "Ellora Caves", u: "https://en.wikipedia.org/wiki/Ellora_Caves" },
+        { t: "Kailasa Temple, Ellora", u: "https://en.wikipedia.org/wiki/Kailasa_Temple,_Ellora" },
+        { t: "Ajanta Caves", u: "https://en.wikipedia.org/wiki/Ajanta_Caves" },
+        { t: "Rashtrakuta Empire", u: "https://en.wikipedia.org/wiki/Rashtrakuta_Empire" }
+      ],
       teaser: "Before any sultan crossed the Vindhyas, the Deccan carved a temple out of one stone — from the top down.",
       detail: [
         "The Deccan's first golden age left almost no palaces and no chronicles. What it left was rock. Along the basalt scarps north of modern Aurangabad, generations of Buddhist, Hindu and Jain patrons cut sanctuaries into living cliffs — thirty caves at Ajanta, thirty-four at Ellora — until the escarpments themselves became architecture.",
@@ -51,6 +57,12 @@ const ERAS = [
     {
       year: "1163 – 1323",
       title: "Warangal and the thousand pillars",
+      reading: [
+        { t: "Kakatiya dynasty", u: "https://en.wikipedia.org/wiki/Kakatiya_dynasty" },
+        { t: "Rudrama Devi", u: "https://en.wikipedia.org/wiki/Rudrama_Devi" },
+        { t: "Ramappa Temple", u: "https://en.wikipedia.org/wiki/Ramappa_Temple" },
+        { t: "Warangal Fort", u: "https://en.wikipedia.org/wiki/Warangal_Fort" }
+      ],
       teaser: "A dynasty of Telugu kings built a stone city, dammed a whole landscape — and had a queen who ruled as a man.",
       detail: [
         "The Kakatiyas ruled Telangana from Warangal — Orugallu, 'one stone' — behind a double ring of walls: an outer earthen rampart over seven miles round, and inside it a circular stone fort whose four carved gateways, the Kakatiya Kala Thoranam, still stand alone in an empty field, holding up nothing.",
@@ -80,11 +92,35 @@ const ERAS = [
     {
       year: "13th c.",
       title: "Two kingdoms, rich beyond rumour",
+      reading: [
+        { t: "Seuna (Yadava) dynasty", u: "https://en.wikipedia.org/wiki/Seuna_(Yadava)_dynasty" },
+        { t: "Kakatiya dynasty", u: "https://en.wikipedia.org/wiki/Kakatiya_dynasty" },
+        { t: "Golconda diamonds", u: "https://en.wikipedia.org/wiki/Golconda_diamonds" }
+      ],
       teaser: "Gold, diamonds and elephants, in a country the north had never seen. The rumours travelled to Delhi. So did the armies.",
       detail: [
         "On the eve of the invasions the Deccan held two great powers: the Yadavas at Devagiri, whose reach ran to the western coast and south towards Mysore, and the Kakatiyas at Warangal, holding Telangana and the Krishna–Godavari delta. Both were old, wealthy and — as the chroniclers of Delhi kept noting — almost unknown in the north.",
         "The wealth was real and it was local. Gold was washed and mined across the plateau; the Krishna valley held the only diamond mines then known to the world; the forests held elephants. Zia-ud-din Barani wrote that Devagiri 'was exceedingly rich in gold and silver, jewels and pearls, and other valuables', and that 'the people of that country had never heard of the Mussulmans'.",
         "That combination — enormous portable wealth and no experience of the enemy — is the whole explanation for what happened next."
+      ],
+      boxes: [
+        {
+          kind: "legend", title: "The valley of diamonds",
+          body: [
+            "Because the Krishna valley was the only source the world knew of, medieval Europe had no idea where diamonds actually came from. The story that filled the gap was ancient and marvellous: a valley floor carpeted with stones and guarded by serpents, where merchants threw down joints of meat for eagles to carry back up with the diamonds stuck to them. Marco Polo repeats it. Sindbad the Sailor climbs out of it.",
+            "The valley was real. It was simply full of people rather than serpents — alluvial gravel worked by tens of thousands, washed and picked over by hand."
+          ]
+        },
+        {
+          kind: "know", title: "Why the plateau was worth invading",
+          list: [
+            "<b>Gold</b> washed and mined across the uplands, and the only diamond field then known anywhere on earth.",
+            "<b>Elephants</b> from the forests — the heavy armour of Indian warfare, and impossible to breed at speed.",
+            "<b>Irrigation</b>: some five thousand Kakatiya tanks turned a dry plateau into a revenue base.",
+            "<b>Ports</b> on both coasts, trading to Persia, Java and China.",
+            "And no experience whatever of a northern army. That last item is what made the rest collectible."
+          ]
+        }
       ]
     }
 
@@ -100,6 +136,11 @@ const ERAS = [
     {
       year: "1294",
       title: "The raid that bought a throne",
+      reading: [
+        { t: "Alauddin Khalji", u: "https://en.wikipedia.org/wiki/Alauddin_Khalji" },
+        { t: "Alauddin Khalji's raid on Devagiri", u: "https://en.wikipedia.org/wiki/Alauddin_Khalji's_raid_on_Devagiri" },
+        { t: "Jalal-ud-Din Khalji", u: "https://en.wikipedia.org/wiki/Jalal-ud-Din_Khalji" }
+      ],
       figures: [
         { img: "images/alauddin-khalji.jpg", name: "Ala-ud-din Khalji", note: "Governor of Kara; sultan by way of a riverbank" }
       ],
@@ -124,6 +165,12 @@ const ERAS = [
     {
       year: "1309 – 1311",
       title: "Malik Kafur rides to the southern sea",
+      reading: [
+        { t: "Malik Kafur", u: "https://en.wikipedia.org/wiki/Malik_Kafur" },
+        { t: "Siege of Warangal (1310)", u: "https://en.wikipedia.org/wiki/Siege_of_Warangal_(1310)" },
+        { t: "Amir Khusrau", u: "https://en.wikipedia.org/wiki/Amir_Khusrau" },
+        { t: "Koh-i-Noor", u: "https://en.wikipedia.org/wiki/Koh-i-Noor" }
+      ],
       figures: [
         { img: "images/koh-i-noor.jpg", name: "The Koh-i-Nur", note: "A gem “unrivalled in the world” — the Warangal claim is late" }
       ],
@@ -157,11 +204,33 @@ const ERAS = [
     {
       year: "1323",
       title: "The fall of Warangal",
+      reading: [
+        { t: "Siege of Warangal (1318)", u: "https://en.wikipedia.org/wiki/Siege_of_Warangal_(1318)" },
+        { t: "Prataparudra", u: "https://en.wikipedia.org/wiki/Prataparudra" },
+        { t: "Musunuri Nayakas", u: "https://en.wikipedia.org/wiki/Musunuri_Nayakas" }
+      ],
       teaser: "The city was annexed, its name erased — and among the refugees riding south were two brothers who would build the greatest Hindu city India had seen.",
       detail: [
         "After a failed first attempt wrecked by a false rumour of the sultan's death, Ulugh Khan — the future Muhammad bin Tughluq — returned and took Warangal. Prataparudra and his family were sent north; he is said to have died on the road to Delhi. The city's very name was changed to Sultanpur, and Telangana became a province of the Delhi Sultanate.",
         "The dispersal mattered more than the conquest. Warangal's officers, treasurers and soldiers scattered across the plateau. Some — the Musunuri Nayakas — would federate the Telugu chiefs and take Warangal back within thirteen years. Others rode south-west to the gorge of the Tungabhadra.",
         "Among them, in the traditional account, were two brothers of the Kakatiya service: Harihara and Bukka."
+      ],
+      boxes: [
+        {
+          kind: "legend", title: "The golden statue with a chain round its neck",
+          body: [
+            "When Prataparudra finally submitted, he did not simply send tribute. He sent a life-size golden image of himself with a golden chain about its neck — an object whose entire purpose was to say, without a word, that the man it portrayed was now a captive.",
+            "It is one of the more eloquent objects in this history, and nobody knows what became of it. It goes into the Delhi treasury in 1310 and out of the record entirely."
+          ]
+        },
+        {
+          kind: "deep", title: "What the conquest actually scattered",
+          body: [
+            "Empires are usually described as falling on their capitals. What happened here is better described as a dispersal, and it is the reason the fourteenth century in the Deccan looks the way it does.",
+            "Warangal's officers, treasurers, engineers and soldiers went in every direction. The Musunuri Nayakas federated the Telugu chiefs and took the city back within thirteen years. Others carried Kakatiya tank-building and temple-carving south into the Tungabhadra country, which is why the earliest Vijayanagara work looks so familiar.",
+            "Gribble, who admired the Kakatiya waterworks more than almost anything else in the Deccan, put it simply: they bent, but they did not break."
+          ]
+        }
       ],
       link: "warangal"
     },
@@ -169,6 +238,12 @@ const ERAS = [
     {
       year: "1327",
       title: "The march of a capital",
+      reading: [
+        { t: "Muhammad bin Tughluq", u: "https://en.wikipedia.org/wiki/Muhammad_bin_Tughluq" },
+        { t: "Daulatabad Fort", u: "https://en.wikipedia.org/wiki/Daulatabad_Fort" },
+        { t: "Ziauddin Barani", u: "https://en.wikipedia.org/wiki/Ziauddin_Barani" },
+        { t: "Ibn Battuta", u: "https://en.wikipedia.org/wiki/Ibn_Battuta" }
+      ],
       figures: [
         { img: "images/muhammad-bin-tughluq.jpg", name: "Muhammad bin Tughluq", note: "He moved a capital 1,100 km, and then moved it back" }
       ],
@@ -206,6 +281,12 @@ const ERAS = [
     {
       year: "1336",
       title: "Vijayanagara is founded",
+      reading: [
+        { t: "Vijayanagara Empire", u: "https://en.wikipedia.org/wiki/Vijayanagara_Empire" },
+        { t: "Harihara I", u: "https://en.wikipedia.org/wiki/Harihara_I" },
+        { t: "Bukka Raya I", u: "https://en.wikipedia.org/wiki/Bukka_Raya_I" },
+        { t: "Vidyaranya", u: "https://en.wikipedia.org/wiki/Vidyaranya" }
+      ],
       figures: [
         { img: "images/harihara-1.png", name: "Harihara I", note: "Crowned 18 April 1336; whose service he came from is still argued" }
       ],
@@ -238,6 +319,10 @@ const ERAS = [
     {
       year: "1347",
       title: "The Centurions' revolt",
+      reading: [
+        { t: "Bahmani Kingdom", u: "https://en.wikipedia.org/wiki/Bahmani_Kingdom" },
+        { t: "Ala-ud-Din Bahman Shah", u: "https://en.wikipedia.org/wiki/Ala-ud-Din_Bahman_Shah" }
+      ],
       teaser: "The nobles of the Deccan mutinied — and put on the throne a man who, the story goes, had begun life behind a plough.",
       detail: [
         "The same collapse produced the other great Deccan power. Squeezed by Muhammad bin Tughluq's exactions, the <i>Amiran-i-Sadah</i> — the 'Centurions', the hundred-commanders of the Deccan — rose in revolt at Daulatabad. They first raised an Afghan officer, Ismail Mukh, as sultan; he proved too old for the work and stepped aside.",
@@ -277,6 +362,11 @@ const ERAS = [
     {
       year: "1358 – 1375",
       title: "Gunpowder, and a war begun over a song",
+      reading: [
+        { t: "Mohammed Shah I", u: "https://en.wikipedia.org/wiki/Mohammed_Shah_I" },
+        { t: "Bahmani–Vijayanagar War", u: "https://en.wikipedia.org/wiki/Bahmani%E2%80%93Vijayanagar_War" },
+        { t: "Raichur Doab", u: "https://en.wikipedia.org/wiki/Raichur_Doab" }
+      ],
       teaser: "A drunken order to pay three hundred singers out of the enemy's treasury started a war that killed half a million people.",
       detail: [
         "Muhammad Shah I organised what his father had improvised: a standing army with a corps of archers, a body-guard of four thousand, and — decisively — artillery, worked by Turkish and European gunners. The Bahmanis had cannon in the Deccan roughly a century before the Mughals brought them to the north, and it is the single largest reason a smaller army kept beating a larger one.",
@@ -297,6 +387,11 @@ const ERAS = [
     {
       year: "1397 – 1422",
       title: "The ode that came instead of the poet",
+      reading: [
+        { t: "Taj ud-Din Firuz Shah", u: "https://en.wikipedia.org/wiki/Taj_ud-Din_Firuz_Shah" },
+        { t: "Hafez", u: "https://en.wikipedia.org/wiki/Hafez" },
+        { t: "Bande Nawaz", u: "https://en.wikipedia.org/wiki/Bande_Nawaz" }
+      ],
       teaser: "A sultan who spoke a dozen languages invited Hafiz of Shiraz to his court. Hafiz got seasick, turned back, and sent a poem.",
       detail: [
         "Firoz Shah Bahmani was the most cultivated ruler of the dynasty: astronomer, calligrapher, and — by Ferishta's account — able to speak with each of the women of his household in her own tongue, Arabic, Persian, Turkish, Kannada, Marathi, Telugu. He built an observatory near Daulatabad and sent ships each year from Goa and Chaul, with orders to bring back not only merchandise but talent.",
@@ -327,6 +422,11 @@ const ERAS = [
     {
       year: "1432",
       title: "The capital moves to Bidar",
+      reading: [
+        { t: "Ahmad Shah I Wali", u: "https://en.wikipedia.org/wiki/Ahmad_Shah_I_Wali" },
+        { t: "Bidar Fort", u: "https://en.wikipedia.org/wiki/Bidar_Fort" },
+        { t: "Bidriware", u: "https://en.wikipedia.org/wiki/Bidriware" }
+      ],
       teaser: "Ahmad Shah found a better hill, with better water — and raised, as if by magic, one of the most splendid cities in the world.",
       detail: [
         "Marching back from a campaign, Ahmad Shah Wali halted at the old town of Bidar, liked its height, its air and its water, and decided to move his kingdom there. The new city — Ahmadabad Bidar — was finished in 1431–32, and the court left Gulbarga for good.",
@@ -349,6 +449,11 @@ const ERAS = [
     {
       year: "1443",
       title: "An ambassador counts the walls",
+      reading: [
+        { t: "Abd al-Razzaq Samarqandi", u: "https://en.wikipedia.org/wiki/Abd_al-Razzaq_Samarqandi" },
+        { t: "Deva Raya II", u: "https://en.wikipedia.org/wiki/Deva_Raya_II" },
+        { t: "Hampi", u: "https://en.wikipedia.org/wiki/Hampi" }
+      ],
       teaser: "A Persian envoy reached Vijayanagara and gave up describing it: the pupil of the eye, he wrote, has never seen a place like it.",
       detail: [
         "Abdur Razzaq Samarqandi arrived at Vijayanagara in April 1443 as ambassador of the Timurid Shah Rukh, and left the single most detailed description of the city at its height.",
@@ -382,6 +487,11 @@ const ERAS = [
     {
       year: "1472",
       title: "Mahmud Gawan takes Goa",
+      reading: [
+        { t: "Mahmud Gawan", u: "https://en.wikipedia.org/wiki/Mahmud_Gawan" },
+        { t: "Mahmud Gawan Madrasa", u: "https://en.wikipedia.org/wiki/Mahmud_Gawan_Madrasa" },
+        { t: "Goa Velha", u: "https://en.wikipedia.org/wiki/Goa_Velha" }
+      ],
       teaser: "A Persian horse-trader turned minister gave away his fortune, kept a library of 3,000 books, and pushed the sultanate to its greatest extent.",
       detail: [
         "Mahmud Gawan came from Gilan on the Caspian as a merchant, stayed as a servant of the Bahmani state, and became the most capable administrator the Deccan produced before Salar Jung. He reformed the provinces, insisted troops be counted and actually paid, and campaigned along the western coast — taking Goa from Vijayanagara in 1472 and opening the sultanate's best window on the Indian Ocean.",
@@ -414,6 +524,11 @@ const ERAS = [
     {
       year: "1481",
       title: "The murder of Mahmud Gawan",
+      reading: [
+        { t: "Mahmud Gawan", u: "https://en.wikipedia.org/wiki/Mahmud_Gawan" },
+        { t: "Muhammad Shah III Lashkari", u: "https://en.wikipedia.org/wiki/Muhammad_Shah_III_Lashkari" },
+        { t: "Deccan sultanates", u: "https://en.wikipedia.org/wiki/Deccan_sultanates" }
+      ],
       teaser: "A blank sheet, a stolen seal, a drunk king — and a chronogram that reads simply: the ruin of the Deccan.",
       detail: [
         "His enemies could not beat him, so they forged him. An Abyssinian slave with charge of the minister's seals was made drunk and induced to stamp a blank sheet; above the seal his rivals wrote a letter to the Raja of Orissa inviting an invasion and promising to join it.",
@@ -446,6 +561,11 @@ const ERAS = [
     {
       year: "1490",
       title: "A sultan, or a stolen Ottoman prince?",
+      reading: [
+        { t: "Yusuf Adil Shah", u: "https://en.wikipedia.org/wiki/Yusuf_Adil_Shah" },
+        { t: "Sultanate of Bijapur", u: "https://en.wikipedia.org/wiki/Sultanate_of_Bijapur" },
+        { t: "Murad II", u: "https://en.wikipedia.org/wiki/Murad_II" }
+      ],
       figures: [
         { img: "images/yusuf-adil-shah.jpg", name: "Yusuf Adil Shah", note: "Founder of Bijapur, 1490" }
       ],
@@ -471,6 +591,11 @@ const ERAS = [
     {
       year: "1496 – 1518",
       title: "The Turkoman who came from Hamadan",
+      reading: [
+        { t: "Quli Qutb Shah", u: "https://en.wikipedia.org/wiki/Quli_Qutb_Shah" },
+        { t: "Sultanate of Golconda", u: "https://en.wikipedia.org/wiki/Sultanate_of_Golconda" },
+        { t: "Qara Qoyunlu", u: "https://en.wikipedia.org/wiki/Qara_Qoyunlu" }
+      ],
       figures: [
         { img: "images/sultan-quli.jpg", name: "Sultan Quli", note: "Qutb-ul-Mulk — who never called himself sultan" }
       ],
@@ -502,6 +627,12 @@ const ERAS = [
     {
       year: "1509 – 1529",
       title: "Krishnadevaraya",
+      reading: [
+        { t: "Krishnadevaraya", u: "https://en.wikipedia.org/wiki/Krishnadevaraya" },
+        { t: "Amuktamalyada", u: "https://en.wikipedia.org/wiki/Amuktamalyada" },
+        { t: "Battle of Raichur", u: "https://en.wikipedia.org/wiki/Battle_of_Raichur" },
+        { t: "Ashtadiggajas", u: "https://en.wikipedia.org/wiki/Ashtadiggajas" }
+      ],
       figures: [
         { img: "images/krishnadevaraya.jpg", name: "Krishnadevaraya", note: "Poet in Telugu, buyer of 13,000 horses a year" }
       ],
@@ -529,6 +660,12 @@ const ERAS = [
     {
       year: "1565",
       title: "Talikota",
+      reading: [
+        { t: "Battle of Talikota", u: "https://en.wikipedia.org/wiki/Battle_of_Talikota" },
+        { t: "Rama Raya", u: "https://en.wikipedia.org/wiki/Rama_Raya" },
+        { t: "Deccan sultanates", u: "https://en.wikipedia.org/wiki/Deccan_sultanates" },
+        { t: "Hampi", u: "https://en.wikipedia.org/wiki/Hampi" }
+      ],
       figures: [
         { img: "images/ibrahim-quli.jpg", name: "Ibrahim Quli Qutb Shah", note: "One of the four sultans who finally allied" }
       ],
@@ -562,6 +699,12 @@ const ERAS = [
     {
       year: "1591",
       title: "Hyderabad is founded",
+      reading: [
+        { t: "Muhammad Quli Qutb Shah", u: "https://en.wikipedia.org/wiki/Muhammad_Quli_Qutb_Shah" },
+        { t: "Charminar", u: "https://en.wikipedia.org/wiki/Charminar" },
+        { t: "Hyderabad", u: "https://en.wikipedia.org/wiki/Hyderabad" },
+        { t: "Bhagmati", u: "https://en.wikipedia.org/wiki/Bhagmati" }
+      ],
       figures: [
         { img: "images/muhammad-quli-qutb-shah.jpg", name: "Muhammad Quli Qutb Shah", note: "Founder, and one of the first poets in Dakhni Urdu" }
       ],
@@ -595,6 +738,11 @@ const ERAS = [
     {
       year: "1595 – 1600",
       title: "Chand Bibi holds the breach",
+      reading: [
+        { t: "Chand Bibi", u: "https://en.wikipedia.org/wiki/Chand_Bibi" },
+        { t: "Ahmadnagar Sultanate", u: "https://en.wikipedia.org/wiki/Ahmadnagar_Sultanate" },
+        { t: "Tomb of Salabat Khan II", u: "https://en.wikipedia.org/wiki/Tomb_of_Salabat_Khan_II" }
+      ],
       figures: [
         { img: "images/chand-bibi.jpg", name: "Chand Bibi", note: "Regent of two kingdoms; Chand Sultana after 1595" }
       ],
@@ -626,6 +774,12 @@ const ERAS = [
     {
       year: "1600 – 1626",
       title: "Malik Ambar defies an empire",
+      reading: [
+        { t: "Malik Ambar", u: "https://en.wikipedia.org/wiki/Malik_Ambar" },
+        { t: "Jahangir", u: "https://en.wikipedia.org/wiki/Jahangir" },
+        { t: "Siddi", u: "https://en.wikipedia.org/wiki/Siddi" },
+        { t: "Jahangir Shooting the Head of Malik Ambar", u: "https://en.wikipedia.org/wiki/Jahangir_Shooting_the_Head_of_Malik_Ambar" }
+      ],
       figures: [
         { img: "images/malik-ambar.jpg", name: "Malik Ambar", note: "Sold as a child in Harar; regent for twenty-six years" },
         { img: "images/jahangir.jpeg", name: "Jahangir", note: "Who had himself painted shooting Ambar’s severed head" }
@@ -653,6 +807,12 @@ const ERAS = [
     {
       year: "1626 – 1656",
       title: "The dome that should not stand",
+      reading: [
+        { t: "Gol Gumbaz", u: "https://en.wikipedia.org/wiki/Gol_Gumbaz" },
+        { t: "Mohammed Adil Shah of Bijapur", u: "https://en.wikipedia.org/wiki/Mohammed_Adil_Shah_of_Bijapur" },
+        { t: "Ibrahim Adil Shah II", u: "https://en.wikipedia.org/wiki/Ibrahim_Adil_Shah_II" },
+        { t: "Kitab-i Nauras", u: "https://en.wikipedia.org/wiki/Kitab-i_Nauras" }
+      ],
       figures: [
         { img: "images/ibrahim-adil-shah-2.jpg", name: "Ibrahim Adil Shah II", note: "Jagat Guru — who opened his songbook with Saraswati" }
       ],
@@ -690,6 +850,12 @@ const ERAS = [
     {
       year: "1659",
       title: "Shivaji and the tiger claws",
+      reading: [
+        { t: "Battle of Pratapgarh", u: "https://en.wikipedia.org/wiki/Battle_of_Pratapgarh" },
+        { t: "Shivaji", u: "https://en.wikipedia.org/wiki/Shivaji" },
+        { t: "Afzal Khan (general)", u: "https://en.wikipedia.org/wiki/Afzal_Khan_(general)" },
+        { t: "Bagh nakh", u: "https://en.wikipedia.org/wiki/Bagh_nakh" }
+      ],
       figures: [
         { img: "images/shivaji.jpg", name: "Shivaji", note: "Came to the embrace in mail, with hooked blades" },
         { img: "images/afzal-khan.jpg", name: "Afzal Khan", note: "Buried by his enemy at the foot of Pratapgad" }
@@ -701,12 +867,35 @@ const ERAS = [
         "Whose treachery it was depends entirely on which chronicle you read: Maratha accounts have Afzal Khan striking first with a dagger in the embrace; Bijapuri accounts have a straightforward assassination. Shivaji built his enemy a tomb at the foot of the fort, which is still there.",
         "For the Deccan sultanates it was the beginning of the end from below, at the same moment the Mughals were closing in from above."
       ],
+      boxes: [
+        {
+          kind: "deep", title: "Who struck first — and why it cannot be settled",
+          body: [
+            "The Marathi <i>bakhars</i> say Afzal Khan pulled Shivaji into the embrace and stabbed at his back with a concealed <i>bichhwa</i>; the tiger claws answered a dagger already in motion. The Persian accounts of Bijapur and the Mughals say it was an assassination under flag of parley, arranged in advance.",
+            "There is no neutral witness. Both traditions were written by people with a stake in the answer, both within living memory, and both describe an event with two participants, one of whom did not survive it.",
+            "What is agreed: both men came armed in some fashion; the ground was chosen by Shivaji; and the Maratha infantry were already in the ravines when the signal gun went."
+          ]
+        },
+        {
+          kind: "legend", title: "The tomb his enemy built him",
+          body: [
+            "Shivaji had Afzal Khan buried with Islamic rites at the foot of Pratapgad and raised a tomb over him. It is still there, and it has become one of the more contested small buildings in India — the subject of court orders, demolitions of the structures that grew up around it, and an annual argument.",
+            "The gesture reads differently depending on who is telling it: chivalry, propaganda, or ordinary statecraft by a man who had just made himself the enemy of a sultanate and needed his Muslim officers to stay."
+          ]
+        }
+      ],
       link: "bijapur"
     },
 
     {
       year: "1686 – 1687",
       title: "Aurangzeb takes the last two kingdoms",
+      reading: [
+        { t: "Siege of Golconda", u: "https://en.wikipedia.org/wiki/Siege_of_Golconda" },
+        { t: "Siege of Bijapur", u: "https://en.wikipedia.org/wiki/Siege_of_Bijapur" },
+        { t: "Abul Hasan Qutb Shah", u: "https://en.wikipedia.org/wiki/Abul_Hasan_Qutb_Shah" },
+        { t: "Aurangzeb", u: "https://en.wikipedia.org/wiki/Aurangzeb" }
+      ],
       figures: [
         { img: "images/mir-jumla.jpg", name: "Mir Jumla", note: "Golconda’s minister and diamond magnate, who defected to the Mughals" },
         { img: "images/abul-hasan-tana-shah.jpg", name: "Abul Hasan Tana Shah", note: "Ordered breakfast as the imperial troops came in" }
@@ -754,6 +943,11 @@ const ERAS = [
     {
       year: "1687 – 1707",
       title: "Aurangzeb's twenty-year war",
+      reading: [
+        { t: "Deccan wars", u: "https://en.wikipedia.org/wiki/Deccan_wars" },
+        { t: "Aurangzeb", u: "https://en.wikipedia.org/wiki/Aurangzeb" },
+        { t: "Tomb of Aurangzeb", u: "https://en.wikipedia.org/wiki/Tomb_of_Aurangzeb" }
+      ],
       figures: [
         { img: "images/aurangzeb.jpg", name: "Aurangzeb", note: "“I came a stranger into this world, and a stranger I depart”" }
       ],
@@ -778,11 +972,38 @@ const ERAS = [
     {
       year: "1707 – 1724",
       title: "The king-makers",
+      reading: [
+        { t: "Sayyid brothers", u: "https://en.wikipedia.org/wiki/Sayyid_brothers" },
+        { t: "Nizam-ul-Mulk, Asaf Jah I", u: "https://en.wikipedia.org/wiki/Nizam-ul-Mulk,_Asaf_Jah_I" },
+        { t: "Mughal Empire", u: "https://en.wikipedia.org/wiki/Mughal_Empire" }
+      ],
       teaser: "Delhi devoured eight emperors in seventeen years. One man in the south watched, waited, and kept his hands clean.",
       detail: [
         "The Mughal succession collapsed into a factory of puppets. Zulfiqar Khan, then the Sayyid brothers of Barha, raised and unmade emperors at will — blinding one, strangling another — and each king-maker in his turn met the dagger or the bowstring.",
         "Through all of it Chin Qilich Khan, Nizam-ul-Mulk, viceroy of the Deccan, refused to play. He accepted the office of Vizier when it was pressed on him, found it unworkable, and left Delhi for the south — deciding, as Gribble puts it, to renounce 'for ever Delhi ambition and intrigue'.",
         "In 1724 the emperor's court sent an army to remove him. He met it at Shakar Kheda, destroyed it, and made himself the master of the Deccan. Delhi, having no alternative, sent him the title Asaf Jah and its congratulations."
+      ],
+      boxes: [
+        {
+          kind: "numbers", title: "Delhi, 1707–1719",
+          table: [
+            ["Emperors in twelve years", "Eight"],
+            ["Bahadur Shah I", "Died 1712, after a five-year war with his brothers"],
+            ["Jahandar Shah", "Deposed and strangled, 1713"],
+            ["Farrukhsiyar", "Raised by the Sayyids, blinded and killed by them, 1719"],
+            ["Rafi ud-Darajat", "Reigned about three months"],
+            ["Shah Jahan II", "Reigned about three months"],
+            ["The king-makers themselves", "Both Sayyid brothers dead within two years"]
+          ]
+        },
+        {
+          kind: "know", title: "The man who declined",
+          body: [
+            "Chin Qilich Khan was offered the thing everyone else was killing for — the Vizierate, the office that ran the empire — and took it, held it briefly, and walked away south.",
+            "The judgement behind that is the whole of his career. The empire's centre had become a place where power was real for about eighteen months and then fatal. The Deccan was a province he already knew, far from Delhi, rich, and defensible.",
+            "Gribble's phrase for the decision is that he renounced for ever Delhi ambition and intrigue. Every Nizam who followed him lived off that choice."
+          ]
+        }
       ],
       link: "hyderabad"
     }
@@ -799,6 +1020,11 @@ const ERAS = [
     {
       year: "1748 – 1761",
       title: "The French years",
+      reading: [
+        { t: "Marquis de Bussy-Castelnau", u: "https://en.wikipedia.org/wiki/Marquis_de_Bussy-Castelnau" },
+        { t: "Carnatic wars", u: "https://en.wikipedia.org/wiki/Carnatic_wars" },
+        { t: "Joseph François Dupleix", u: "https://en.wikipedia.org/wiki/Joseph_Fran%C3%A7ois_Dupleix" }
+      ],
       teaser: "Five hundred Frenchmen scattered armies of eighty thousand — and for a decade a European officer made and unmade Nizams.",
       detail: [
         "Asaf Jah's death in 1748 opened a succession war that the Europeans turned into their own contest. Dupleix, from Pondicherry, backed one claimant; the English backed another; and the Deccan discovered what disciplined infantry with artillery could do.",
@@ -820,6 +1046,11 @@ const ERAS = [
     {
       year: "1798",
       title: "The French corps is disbanded",
+      reading: [
+        { t: "Michel Joachim Marie Raymond", u: "https://en.wikipedia.org/wiki/Michel_Joachim_Marie_Raymond" },
+        { t: "Subsidiary alliance", u: "https://en.wikipedia.org/wiki/Subsidiary_alliance" },
+        { t: "Richard Wellesley, 1st Marquess Wellesley", u: "https://en.wikipedia.org/wiki/Richard_Wellesley,_1st_Marquess_Wellesley" }
+      ],
       teaser: "Fourteen thousand men trained by a Frenchman, dissolved in a single morning without a shot fired.",
       detail: [
         "Michel Raymond, a French officer from Gascony, had built the Nizam a European-drilled army of some 14,000 men with its own foundry, arsenal and powder mills — and was so loved by his troops that Hindus and Muslims alike called him Musa Ram and Moosa Rahim.",
@@ -827,12 +1058,36 @@ const ERAS = [
         "Raymond had died that March. His successor could not hold the corps together; on 22 October 1798 British battalions surrounded the lines below Asmangarh hill, the sepoys — already mutinous over arrears — laid down their arms, and the most formidable French formation in India ceased to exist without a casualty.",
         "Raymond's tomb still stands above the lines. An annual urs was held there for a Frenchman by Indian soldiers' descendants long after France had forgotten him."
       ],
+      boxes: [
+        {
+          kind: "legend", title: "Musa Ram and Moosa Rahim",
+          body: [
+            "Michel Raymond was a Gascon who arrived in India as a trader, took service with the Nizam, and built him fourteen thousand European-drilled troops with their own foundry, arsenal and powder mills at a cannon works below Asmangarh hill.",
+            "His soldiers, Hindu and Muslim alike, called him Musa Ram and Moosa Rahim — the same name twice, in two religious registers, for a French Catholic. He is said to have worn Indian dress, and he is certainly buried under a simple black granite obelisk marked only <b>J R</b>.",
+            "An annual <i>urs</i> was held at his tomb by the descendants of his sepoys long after France had forgotten he existed. The Nizam's government kept up the observance into the twentieth century."
+          ]
+        },
+        {
+          kind: "deep", title: "Why a treaty ended an army without a battle",
+          body: [
+            "The corps was dissolved in October 1798 without a shot because its position was hopeless before the first British battalion arrived. Raymond had died in March; his successor lacked his hold on the men; the troops were mutinous over arrears; and the Nizam had already signed.",
+            "The wider logic is Wellesley's, and it had nothing to do with Hyderabad. Bonaparte was in Egypt, Tipu was corresponding with the French, and a French-officered army of fourteen thousand in the middle of the Deccan was a strategic problem to be removed rather than a local arrangement to be tolerated.",
+            "What replaced it was larger, British-officered, and paid for by Hyderabad. That is the bargain the next century of this state turns on."
+          ]
+        }
+      ],
       link: "hyderabad"
     },
 
     {
       year: "1799 – 1803",
       title: "Seringapatam and Assaye",
+      reading: [
+        { t: "Siege of Seringapatam (1799)", u: "https://en.wikipedia.org/wiki/Siege_of_Seringapatam_(1799)" },
+        { t: "Battle of Assaye", u: "https://en.wikipedia.org/wiki/Battle_of_Assaye" },
+        { t: "Tipu Sultan", u: "https://en.wikipedia.org/wiki/Tipu_Sultan" },
+        { t: "Arthur Wellesley, 1st Duke of Wellington", u: "https://en.wikipedia.org/wiki/Arthur_Wellesley,_1st_Duke_of_Wellington" }
+      ],
       figures: [
         { img: "images/hyder-ali.jpg", name: "Hyder Ali", note: "Tipu’s father, and the Nizam’s enemy before him" },
         { img: "images/assaye.jpg", name: "Assaye, 1803", note: "9,500 men against perhaps 50,000, across an unmarked ford" },
@@ -844,12 +1099,38 @@ const ERAS = [
         "Hyderabad's contingent marched with the British to Seringapatam in 1799, where Tipu Sultan died in the breach; the Nizam took a large share of Mysore. He then handed almost all of it straight back in 1800, ceding it in perpetuity to pay for the Subsidiary Force — the districts that became Bellary, Anantapur, Cuddapah and Kurnool.",
         "In 1803 Arthur Wellesley, commanding with the Nizam's troops beside him, met the combined armies of Scindia and the Bhonsle Raja at Assaye. He had some 9,500 men against perhaps 50,000 with far heavier guns; he crossed a river at an unmarked ford, took appalling casualties and won.",
         "He called it, decades later and after Waterloo, the bloodiest action for the numbers he had ever seen — and the best thing he ever did in the way of fighting. Hyderabad's reward was the recovery of Berar."
+      ],
+      boxes: [
+        {
+          kind: "numbers", title: "Assaye, 23 September 1803",
+          table: [
+            ["Wellesley's force", "About 9,500, with 17 guns"],
+            ["Against", "Perhaps 50,000, with 100 guns or more"],
+            ["British killed and wounded", "1,584 — about a third of those engaged"],
+            ["Guns captured", "98"],
+            ["Horses shot under Wellesley", "Two"],
+            ["His verdict, long after Waterloo", "The best thing he ever did in the way of fighting"]
+          ]
+        },
+        {
+          kind: "legend", title: "The ford that was not on the map",
+          body: [
+            "Wellesley's guides told him there was no crossing of the Kaitna within reach. Looking across, he saw two villages facing each other on opposite banks and reasoned that people who build villages opposite one another must have a way between them.",
+            "There was a ford, on none of his maps. He put the army over it under fire and came out on the flank of a line drawn to meet him somewhere else entirely.",
+            "It is the kind of inference called genius when it works. The casualty list suggests how narrow the margin was."
+          ]
+        }
       ]
     },
 
     {
       year: "1853",
       title: "Berar assigned",
+      reading: [
+        { t: "Berar Province", u: "https://en.wikipedia.org/wiki/Berar_Province" },
+        { t: "James Broun-Ramsay, 1st Marquess of Dalhousie", u: "https://en.wikipedia.org/wiki/James_Broun-Ramsay,_1st_Marquess_of_Dalhousie" },
+        { t: "Hyderabad State", u: "https://en.wikipedia.org/wiki/Hyderabad_State" }
+      ],
       teaser: "A debt for an army the Nizam never wanted, an ultimatum he could not refuse — and a province that never came back.",
       detail: [
         "The Subsidiary Force was supposed to buy security. What it bought was a permanent liability: about forty lakhs of rupees a year in a time of complete peace, roughly a third of the state's revenue, for a contingent whose officers the Resident appointed and whose numbers no one would reduce.",
@@ -883,11 +1164,35 @@ const ERAS = [
     {
       year: "1857",
       title: "\"If the Nizam goes, all goes\"",
+      reading: [
+        { t: "Indian Rebellion of 1857", u: "https://en.wikipedia.org/wiki/Indian_Rebellion_of_1857" },
+        { t: "Mir Turab Ali Khan, Salar Jung I", u: "https://en.wikipedia.org/wiki/Mir_Turab_Ali_Khan,_Salar_Jung_I" },
+        { t: "Hyderabad State", u: "https://en.wikipedia.org/wiki/Hyderabad_State" }
+      ],
       teaser: "A mob raised the green flag at the Mecca Masjid and marched on the Residency. The south turned on what happened next.",
       detail: [
         "Hyderabad sat between the mutinying north and a quiet south, and everyone knew what its choice was worth. The saying went round British India: if the Nizam goes, all goes.",
         "In June 1857 seditious placards appeared on the city walls; in July a crowd gathered at the Mecca Masjid, raised the green standard, and moved on the Residency. It was met with grapeshot from the ramparts and by the minister's Arab troops holding the city gates. The rising broke.",
         "The minister who held the line was Salar Jung, then thirty-one and a year into the job — and the British never forgot which man had held Hyderabad. In 1860 the debt was cancelled and Raichur, the Doab and Shorapur were returned; only Berar was kept."
+      ],
+      boxes: [
+        {
+          kind: "deep", title: "Why Hyderabad's choice was worth so much",
+          body: [
+            "In 1857 the British position in the south rested on very little. The Madras army was quiet but stretched, the Bombay army was watching the Deccan, and almost every regular soldier who could be spared had gone north.",
+            "Hyderabad was the largest state in India, with its own army, a Muslim dynasty, and a population that had every reason to be unimpressed by the Company. If it had declared for the rebellion, the whole of the south would have had to be reconquered rather than merely held — and there was nothing to do it with.",
+            "That is the arithmetic behind the saying. It was not flattery; it was a description of what the British could and could not afford."
+          ]
+        },
+        {
+          kind: "know", title: "What the loyalty was worth afterwards",
+          list: [
+            "The debt that had cost Berar in 1853 was cancelled in 1860.",
+            "Raichur, the Doab and Shorapur were returned.",
+            "Salar Jung was made a GCSI; the Nizam's rank and salute were confirmed.",
+            "<b>Berar itself was not returned.</b> It was leased in perpetuity in 1902 instead, and remained the standing grievance of Hyderabad statecraft until the state ceased to exist."
+          ]
+        }
       ],
       link: "hyderabad"
     }
@@ -904,6 +1209,11 @@ const ERAS = [
     {
       year: "1853 – 1883",
       title: "Salar Jung remakes the state",
+      reading: [
+        { t: "Mir Turab Ali Khan, Salar Jung I", u: "https://en.wikipedia.org/wiki/Mir_Turab_Ali_Khan,_Salar_Jung_I" },
+        { t: "Salar Jung Museum", u: "https://en.wikipedia.org/wiki/Salar_Jung_Museum" },
+        { t: "Hyderabad State", u: "https://en.wikipedia.org/wiki/Hyderabad_State" }
+      ],
       figures: [
         { img: "images/salar-jung.jpg", name: "Sir Salar Jung I", note: "Minister at twenty-four, for thirty years" }
       ],
@@ -928,6 +1238,12 @@ const ERAS = [
     {
       year: "28 Sept 1908",
       title: "The Musi flood",
+      reading: [
+        { t: "Musi River (India)", u: "https://en.wikipedia.org/wiki/Musi_River_(India)" },
+        { t: "M. Visvesvaraya", u: "https://en.wikipedia.org/wiki/M._Visvesvaraya" },
+        { t: "Osman Sagar", u: "https://en.wikipedia.org/wiki/Osman_Sagar" },
+        { t: "Mahboob Ali Khan", u: "https://en.wikipedia.org/wiki/Mahboob_Ali_Khan" }
+      ],
       figures: [
         { img: "images/mahbub-ali-khan.png", name: "Mahbub Ali Khan", note: "The sixth Nizam, who called in the engineer" },
         { img: "images/visvesvaraya.jpg", name: "M. Visvesvaraya", note: "Whose report produced Osman Sagar and Himayat Sagar" }
@@ -958,6 +1274,12 @@ const ERAS = [
     {
       year: "1911 – 1948",
       title: "The richest man in the world",
+      reading: [
+        { t: "Mir Osman Ali Khan", u: "https://en.wikipedia.org/wiki/Mir_Osman_Ali_Khan" },
+        { t: "Osmania University", u: "https://en.wikipedia.org/wiki/Osmania_University" },
+        { t: "Jacob Diamond", u: "https://en.wikipedia.org/wiki/Jacob_Diamond" },
+        { t: "Vincent Esch", u: "https://en.wikipedia.org/wiki/Vincent_Esch" }
+      ],
       figures: [
         { img: "images/osman-ali-khan.jpg", name: "Mir Osman Ali Khan", note: "TIME’s richest man, 1937; socks he knitted himself" }
       ],
@@ -985,6 +1307,11 @@ const ERAS = [
     {
       year: "13 – 18 Sept 1948",
       title: "Operation Polo",
+      reading: [
+        { t: "Indian annexation of Hyderabad", u: "https://en.wikipedia.org/wiki/Indian_annexation_of_Hyderabad" },
+        { t: "Qasim Razvi", u: "https://en.wikipedia.org/wiki/Qasim_Razvi" },
+        { t: "Telangana Rebellion", u: "https://en.wikipedia.org/wiki/Telangana_Rebellion" }
+      ],
       figures: [
         { img: "images/operation-polo.jpg", name: "September 1948", note: "Five days of fighting; the reckoning came afterwards" }
       ],

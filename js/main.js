@@ -445,6 +445,15 @@
       }
       inner += (ev.detail || []).map((p) => "<p>" + p + "</p>").join("");
       inner += boxesHTML(ev.boxes);
+      /* Where to go next. Every one of these was checked against the live
+         Wikipedia API before it was written — see scripts/add_reading_links.py
+         — so none of them is a guessed URL. */
+      if (ev.reading && ev.reading.length) {
+        inner += '<div class="reading"><span class="rl">Further reading</span>' +
+          ev.reading.map((r) =>
+            '<a href="' + r.u + '" target="_blank" rel="noopener">' + r.t + "</a>"
+          ).join("") + "</div>";
+      }
       if (ev.link) {
         const place = PLACES.find((p) => p.id === ev.link);
         if (place) {

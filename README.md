@@ -15,9 +15,18 @@ The hero offers the two ways in:
 - **By time** — a chronicle of 36 events across 7 ages, from the rock-cut
   centuries to Operation Polo in 1948. Each event shows only a short hook until
   you open it; the detail inside folds further into boxes you can leave shut,
-  and twenty of them carry portraits of the people they are about. A scrubber
+  and twenty of them carry portraits of the people they are about. Each ends
+  with a row of further-reading links. A scrubber
   along the bottom shows the seven ages, which one you are reading and how far
   through the whole arc you have come; clicking an age jumps to it.
+
+## Further reading
+
+Every event closes with links to the articles worth reading next — 122 of them.
+None is a guessed URL: `scripts/add_reading_links.py` checks each title against
+the live Wikipedia API in batches of 40, follows redirects to the article's real
+name, and drops anything that does not resolve rather than shipping a dead link.
+Re-run it after editing its `READING` table and it rewrites every event's list.
 
 ## The four kinds of box
 
