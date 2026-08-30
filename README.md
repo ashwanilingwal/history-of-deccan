@@ -55,8 +55,41 @@ Then visit http://localhost:3500.
 
 ## Deploy
 
-Deploys as-is to any static host. For Vercel: `vercel` from this folder, or import
-the repo in the dashboard — no configuration needed.
+Plain static files, so this works on any static host. There is no build step and
+nothing to configure at the host end.
+
+### Vercel
+
+```bash
+npx vercel --prod
+```
+
+Or import the repo in the Vercel dashboard — framework preset **Other**, no build
+command, output directory `.`.
+
+`vercel.json` sets the caching policy, which is the part that matters here:
+
+| Path | Cache-Control | Why |
+|---|---|---|
+| `/images/*` | 1 year, `immutable` | 81 MB that never changes. A returning reader re-downloads none of it. |
+| `/js/*`, `/css/*` | 1 year, `immutable` | Safe **only** because `index.html` requests them with a `?v=` query string |
+| `/`, `/index.html` | `must-revalidate` | It carries the `?v=` that invalidates everything else |
+
+**The one rule to remember:** if you edit anything in `js/` or `css/`, bump the
+`?v=` number on all four references in `index.html`. Otherwise returning visitors
+keep the old file for a year. (That query string is also why local edits now show
+up immediately instead of being masked by the browser cache.)
+
+`.vercelignore` keeps `scripts/` out of the deployment — those fetch and process
+images at build time and are never requested by the site.
+
+### A note on size
+
+The deployment is about 83 MB, essentially all photographs. That works, but it
+makes each deploy slow and it is the bulk of your bandwidth. The images are
+stored at up to 1920px wide and displayed at a fraction of that; resizing to
+1400px at quality 72 measures at **61% smaller — roughly 81 MB down to 32 MB** —
+with no visible difference at the sizes the site actually uses.
 
 ## Structure
 

@@ -1,0 +1,10 @@
+# Build-time tools — they fetch and process images and the base map, and are
+# never needed by the served site. Keeping them out of the deployment keeps the
+# upload to just what a visitor can actually request.
+scripts/
+
+# The unprocessed upstream map that build_map.py caches on first run.
+images/map/_source_india.svg
+
+README.md
+.gitignore
